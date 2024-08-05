@@ -1,0 +1,315 @@
+/* Periodpage */
+
+
+.phase1-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6F0ED;
+    padding-bottom: 200px;
+    padding-top: 70px;
+}
+
+.phase1-title{
+    text-align: center;
+    font-size: 96px;
+    color: var(--red);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.keywords{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.keywords h3{
+    font-size: 36px;
+    font-style: italic;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+}
+
+.phase-introduction{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+
+
+.phase-intro-text{
+    text-align: left;
+    flex-direction: column;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.phase1-intro-title{
+    color: var(--red);
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 295px;
+    padding: 15px;
+    font-size: 33px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.phase-intro-text p{
+    font-size: 33px;
+    color: #000000;
+    width: 660px;
+    font-weight: 250;
+}
+
+
+
+
+
+.phase-activities{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 60px;
+
+}
+
+.activity{
+    flex-direction: column;
+}
+
+.phase1-activity{
+    text-align: center;
+    color: var(--red);
+    font-size: 32px;
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.detox-image, .cook-image, .journal-image{
+    width: 223px;
+    height: 263px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+
+.journalprompts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    margin-top: 90px;
+    font-size: 36px;
+
+}
+
+.journalprompts h3{
+    background-color: #FFFFFF;
+    color: black;
+    padding: 15px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+}
+
+.journalprompts p{
+    max-width: 1000px;
+    text-align: center;
+}
+.journal-button{
+    background-color: var(--red);
+    border: none;
+    color: white;
+    font-size: 36px;
+    padding: 15px;
+    width: 180px;
+    border-radius: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.journal-button:hover{
+    background-color: #AD9F9F;
+    transition: background-color 0.3s ease;
+}
+
+.menstrualcycle{
+    width: 800px;
+    margin-top: 90px;
+    border-radius: 40px;
+    background-color: white;
+    padding: 20px;
+}
+
+.menstrualcycle-subtext{
+    text-align: center;
+    color: black;
+    font-size: 21px;
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 800px;
+}
+
+
+
+
+
+.nutrient-wrapper{
+    flex-direction: column;
+    display: flex;
+    margin-top: 110px;
+}
+
+.nutrient-title-p1{
+    font-size: 64px;
+    color: var(--red);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 30px;
+}
+
+
+.nutrient-wrapper2{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+
+.nutrient-video{
+    width: 450px;
+    height: 820px;
+    border-radius: 40px;
+}
+
+.nutrient-wrapper3{
+    flex-direction: column;
+    display: flex;
+    margin-top: -50px;
+}
+
+.nutrient-subtitle{
+    font-size: 36px;
+    font-family: "Newsreader", serif;
+    font-weight: 300;
+}
+
+.nutrients{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 800px; /* Set the max width */
+    gap: 30px; /* Adjust gap between items */
+    margin-top: 20px;
+}
+
+.red-background {
+    background-color: var(--red);
+}
+
+
+
+.hormones-info-p1{
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 40px;
+    margin-top: 60px;
+}
+
+.hormones-title-p1{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--red);
+}
+
+.hormones-info-p1 p{
+    font-size: 27px;
+    font-weight: 300;
+}
+
+
+
+
+.connect-p1{
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    color: var(--red);
+    font-style: italic;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.socialmedia{
+    flex-direction: row;
+    display: flex;
+    margin-left: 20px;
+}
+
+.instagram-icon{
+    width: 40px;
+}
+
+
+.socialhandle{
+    margin-left: 18px;
+    border-radius: 15px;
+    font-family: "Newsreader", serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: black;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+.well-beingtips{
+    background-color: white;
+    flex-direction: column;
+    width: 1000px;
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 40px;
+    gap: 15px;
+    text-align: center;
+}
+
+.well-beingtips h2{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--red);
+    margin-bottom: 15px;
+}
+
+.well-beingtips p{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 27px;
+    font-weight: 300;
+    font-style: italic;
+}
+

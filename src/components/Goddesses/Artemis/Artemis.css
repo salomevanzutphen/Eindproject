@@ -1,0 +1,36 @@
+
+.Goddess-card{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 40px;
+}
+
+.Goddess{
+    width: auto;
+    height: 420px;
+    border-radius: 40px;
+}
+.Goddess-message-Artemis{
+    flex-direction: column;
+    width: 350px;
+    font-family: "Newsreader", serif;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.Goddess-name{
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 450;
+    font-size: 30px;
+    font-style: italic;
+}
+.Goddess-description{
+    font-weight: 350;
+    font-size: 25px;
+}

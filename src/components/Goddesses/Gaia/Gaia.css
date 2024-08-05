@@ -1,0 +1,35 @@
+.Goddess-card{
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px 40px;
+    border-radius: 40px;
+}
+
+.Goddess-Gaia{
+    width: auto;
+    height: 420px;
+    border-radius: 40px;
+}
+.Gaia-message{
+    flex-direction: column;
+    width: 450px;
+    font-family: "Newsreader", serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.Gaia-name{
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 450;
+    font-size: 30px;
+    font-style: italic;
+}
+.Gaia-description{
+    font-weight: 350;
+    font-size: 25px;
+
+}

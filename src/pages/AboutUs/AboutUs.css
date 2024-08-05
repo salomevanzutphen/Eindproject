@@ -1,0 +1,101 @@
+/* AboutUs.css */
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #F6F0ED;
+    margin: 0;
+    padding: 0;
+}
+
+.aboutus-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 120px;
+}
+
+.profile-header {
+    position: relative; /* Ensure child elements are positioned relative to this container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headshot {
+    width: 420px;
+    height: 470px;
+    border-radius: 50%; /* Makes the container a circle */
+    object-fit: cover;
+    transform: scaleX(-1);
+    position: relative;
+    z-index: 1;
+    margin-left: -50px;
+    /* Ensure this is below the logo */
+}
+
+.namelogo {
+    position: absolute; /* Position this absolutely within the .profile-header */
+     transform: translate(-50%, -50%); /* Center the logo over the headshot */
+    z-index: 2; /* Ensure this is above the headshot */
+    height: 400px; /* Adjust the size of the logo */
+    margin-top: 700px;
+    margin-left: 330px;
+}
+
+.aboutus-quote{
+    font-family: "La Belle Aurore", cursive;
+    width: 550px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 110px;
+}
+
+.aboutus-maintext{
+    width: 850px;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.aboutus-maintext2{
+    margin-top: 30px;
+}
+
+
+
+
+.aboutus-socialmedia{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 30px;
+    margin-right: 90px;
+
+}
+
+.aboutus-instagram-icon{
+    width: 50px;
+}
+
+.connect-aboutus{
+    background-color: #7F9F65;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
+
+.aboutus-socialhandle{
+    font-size: 25px;
+    color: black;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.sticker{
+    width: 270px;
+    height: auto;
+}
+
