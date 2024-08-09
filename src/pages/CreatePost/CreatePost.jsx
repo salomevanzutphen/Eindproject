@@ -2,50 +2,58 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import './CreatePost.css';
+import axios from 'axios';
 
-const CreatePost = ({ fetchPosts }) => {
+function CreatePost() {
+    // Initialize state variables
     const [title, setTitle] = useState('');
-    const [artist, setArtist] = useState('');
+    const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
+    const [addSuccess, setAddSuccess] = useState(false);
     const fileInputRef = useRef(null);
     const navigate = useNavigate();
 
-    const handleSubmit = async (e) => {
+    async function addPost(e) {
         e.preventDefault();
 
+        // Create a FormData object to handle file uploads
         const formData = new FormData();
         formData.append('title', title);
-        formData.append('artist', artist);
+        formData.append('name', name);
         formData.append('description', description);
-        formData.append('image', fileInputRef.current.files[0]);
+
+        if (fileInputRef.current.files[0]) {
+            formData.append('file', fileInputRef.current.files[0]); // Add the image file
+        } else {
+            console.error('No image file selected');
+            return;
+        }
 
         try {
-            console.log(formData)
-            const response = await fetch('http://localhost:8080/posts', {
-                method: 'POST',
-                body: formData,
+            // Send a POST request to the backend
+            const response = await axios.post('http://localhost:8080/posts', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
             });
 
-            if (!response.ok) {
-                throw new Error('Failed to create post');
-            }
+            console.log(response.data); // Log the response data
+            setAddSuccess(true); // Update success flag
 
-            await fetchPosts();
-
-            // Reset form
+            // Reset form fields
             setTitle('');
-            setArtist('');
+            setName('');
             setDescription('');
             setImage(null);
             fileInputRef.current.value = null;
 
-            // Navigate back to the blog page
+            // Redirect to the blog page after successful submission
             navigate('/blog');
         } catch (error) {
             console.error('Error creating post:', error);
         }
-    };
+    }
 
     const handleImageChange = (e) => {
         setImage(URL.createObjectURL(e.target.files[0]));
@@ -54,40 +62,49 @@ const CreatePost = ({ fetchPosts }) => {
     return (
         <div className="create-post-page">
             <h1>Create a New Post</h1>
-            <form onSubmit={handleSubmit}>
+            {addSuccess && <p>Post created successfully!</p>}
+            <form onSubmit={addPost}>
                 <div className="form-group">
-                    <label>Title</label>
+                    <label htmlFor="post-title">Title</label>
                     <input
                         type="text"
+                        name="post-title-field"
+                        id="post-title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Artist</label>
+                    <label htmlFor="post-name">Name</label>
                     <input
                         type="text"
-                        value={artist}
-                        onChange={(e) => setArtist(e.target.value)}
+                        name="post-name-field"
+                        id="post-name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Description</label>
+                    <label htmlFor="post-description">Description</label>
                     <textarea
+                        name="post-description-field"
+                        id="post-description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Image</label>
+                    <label htmlFor="post-image">Image</label>
                     <input
                         type="file"
                         accept="image/*"
+                        id="post-image"
                         onChange={handleImageChange}
                         ref={fileInputRef}
+                        required
                     />
                     {image && <img src={image} alt="Preview" className="image-preview" />}
                 </div>
@@ -95,10 +112,6 @@ const CreatePost = ({ fetchPosts }) => {
             </form>
         </div>
     );
-};
-
-CreatePost.propTypes = {
-    fetchPosts: PropTypes.func.isRequired,
-};
+}
 
 export default CreatePost;

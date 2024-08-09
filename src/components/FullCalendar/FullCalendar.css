@@ -1,12 +1,53 @@
-.full-calendar-day.red { background-color: red; }
-.full-calendar-day.green { background-color: green; }
-.full-calendar-day.orange { background-color: orange; }
-.full-calendar-day.blue { background-color: blue; }
-.full-calendar-day.selected { border: 2px solid black; } /* Highlight selected date */
+/* Calendar Day Styles */
+.full-calendar-day {
+    color: black; /* Default text color */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* Center the text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Center the circle */
+    transition: background-color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Phase Color Styles */
+.full-calendar-day.red {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: white;
+}
+
+.full-calendar-day.green {
+    background-color: rgba(0, 255, 0, 0.3);
+    color: white;
+}
+
+.full-calendar-day.orange {
+    background-color: rgba(255, 165, 0, 0.3);
+    color: white;
+}
+
+.full-calendar-day.blue {
+    background-color: rgba(0, 0, 255, 0.3);
+    color: white;
+}
+
+/* Highlight Selected Date */
+.full-calendar-day.selected {
+    border: 2px solid black;
+}
 
 
 
 
+/* Empty Day Style */
+.full-calendar-day.empty {
+    background-color: transparent;
+    visibility: hidden;
+}
+
+/* Overlay and Container */
 .full-calendar-overlay {
     position: fixed;
     top: 0;
@@ -30,6 +71,7 @@
     position: relative;
 }
 
+/* Header */
 .full-calendar-header {
     display: flex;
     justify-content: center;
@@ -52,6 +94,7 @@
     font-weight: bold;
 }
 
+/* Close Button */
 .close-button {
     position: absolute;
     top: 10px;
@@ -63,6 +106,7 @@
     background: none;
 }
 
+/* Grid */
 .full-calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -76,28 +120,7 @@
     padding: 10px;
 }
 
-.full-calendar-day {
-    color: black; /* Default text color */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 40px; /* Center the text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto; /* Center the circle */
-}
-
-.full-calendar-day.red { background-color: red; color: white; }
-.full-calendar-day.green { background-color: green; color: white; }
-.full-calendar-day.orange { background-color: orange; color: white; }
-.full-calendar-day.blue { background-color: blue; color: white; }
-.full-calendar-day.selected { border: 2px solid black; }
-
-.full-calendar-day.empty {
-    background-color: transparent;
-}
-
+/* Actions */
 .full-calendar-actions {
     display: flex;
     justify-content: center;
@@ -113,9 +136,23 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.save-button {
-    background-color: #ccc;
+/* Disabled save button */
+.save-button:disabled {
+    background-color: #ccc; /* Grey color */
     color: #333;
+    cursor: not-allowed; /* Change cursor to indicate non-clickable state */
+}
+
+/* Active save button */
+.save-button.active {
+    background-color: green; /* Active color for save button */
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
 }

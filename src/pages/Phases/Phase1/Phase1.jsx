@@ -62,7 +62,7 @@ function Phase1() {
 
     <div className="phase-activities">
         <div className="phase1-activity">
-            <img className="detox-image" src="https://i.pinimg.com/originals/c3/9a/e2/c39ae2791311fe412efb492c9f62980b.jpg" alt="selfcare" />
+            <img className="detox-image" src="https://i.pinimg.com/564x/43/cd/e7/43cde7dfd7da09811bfaf73a754379b6.jpg" alt="selfcare" />
             <p>Self-care</p>
         </div>
         <div className="phase1-activity">

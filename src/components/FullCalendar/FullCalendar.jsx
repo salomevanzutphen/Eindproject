@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './FullCalendar.css';
 
 const FullCalendar = ({ onClose }) => {
-    const [currentDate, setCurrentDate] = useState(new Date(2024, 6, 1)); // Start with July 2024
+    const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
     const [phases, setPhases] = useState([]);
     const [editMode, setEditMode] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
     const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
@@ -22,7 +23,11 @@ const FullCalendar = ({ onClose }) => {
         }
         for (let day = 1; day <= daysInMonth; day++) {
             const date = new Date(year, month, day);
-            const phase = phases.find(phase => date >= new Date(phase.startDate) && date <= new Date(phase.endDate));
+            // Adjusting the endDate by adding one day
+            const phase = phases.find(phase =>
+                new Date(phase.startDate) <= date &&
+                date < new Date(new Date(phase.endDate).setDate(new Date(phase.endDate).getDate() + 1))
+            );
             let className = "full-calendar-day";
             if (phase) {
                 if (phase.phaseName === 'Menstruation') className += " red";
@@ -47,38 +52,56 @@ const FullCalendar = ({ onClose }) => {
 
     const handleSave = async () => {
         if (!selectedDate) return;
+        const token = localStorage.getItem('token');
+        if (!token) {
+            setErrorMessage('Authentication token not found. Please log in again.');
+            return;
+        }
         try {
-            console.log('Selected date:', selectedDate.toISOString().split('T')[0]); // Debug log
             const response = await fetch('http://localhost:8080/cycles', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ startDate: selectedDate.toISOString().split('T')[0] }),
+                body: JSON.stringify({ startDate: selectedDate.toISOString().split('T')[0] })
             });
             if (!response.ok) {
-                throw new Error('Failed to save cycle');
+                throw new Error(`Failed to save cycle, status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('Phases received:', data.phases); // Debug log
             setPhases(data.phases);
             setEditMode(false);
         } catch (error) {
             console.error('Error saving cycle:', error);
+            setErrorMessage(error.message || 'Error saving cycle');
         }
     };
 
     useEffect(() => {
-        const fetchCycle = async () => {
+        const fetchUserCycle = async () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                setErrorMessage('Authentication token not found. Please log in again.');
+                return;
+            }
             try {
-                const response = await fetch('http://localhost:8080/cycles/1'); // Fetch the current cycle for the user (ID 1 as an example)
+                const response = await fetch(`http://localhost:8080/cycles/mycycle`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch cycle, status: ${response.status}`);
+                }
                 const data = await response.json();
                 setPhases(data.phases);
             } catch (error) {
-                console.error('Error fetching cycle:', error);
+                console.error('Error fetching user cycle:', error);
+                setErrorMessage(error.message || 'Error fetching user cycle');
             }
         };
-        fetchCycle();
+        fetchUserCycle();
     }, []);
 
     return (
@@ -100,8 +123,16 @@ const FullCalendar = ({ onClose }) => {
                 </div>
                 <div className="full-calendar-actions">
                     <button className="edit-period-dates" onClick={() => setEditMode(true)}>Edit period dates</button>
-                    <button className="save-button" onClick={handleSave}>Save</button>
+                    <button
+                        type="submit"
+                        className={`save-button ${selectedDate ? 'active' : ''}`}
+                        onClick={handleSave}
+                        disabled={!selectedDate}
+                    >
+                        Save
+                    </button>
                 </div>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
         </div>
     );

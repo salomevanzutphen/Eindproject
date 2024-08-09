@@ -15,20 +15,23 @@ function Navbar() {
     }, [location]);
 
     return (
-        <div style={{ backgroundColor: bgColor, width: '100%' }}>
+        <div className="navbar" style={{ backgroundColor: bgColor }}>
             <ul className="main-navigation-links">
                 <div className="nav-items">
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/" activeClassName="active">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/aboutus">About</NavLink>
+                        <NavLink to="/aboutus" activeClassName="active">About</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/mysync">My Cycle</NavLink>
+                        <NavLink to="/mysync" activeClassName="active">My Cycle</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/blog">Blog</NavLink>
+                        <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/connect" activeClassName="active">Connect</NavLink>
                     </li>
                 </div>
             </ul>

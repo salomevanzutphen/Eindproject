@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from "./components/navigation/Navigation.jsx";
@@ -8,8 +9,10 @@ import MySync from "./pages/MySync/MySync.jsx";
 import Blog from "./pages/Blog/Blog.jsx";
 import CreatePost from "./pages/CreatePost/CreatePost.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
+import Connect from "./pages/Connect/Connect.jsx";
 
 function App() {
+
     return (
         <>
             <Navbar />
@@ -22,6 +25,7 @@ function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/mysync" element={<MySync />} />
                     <Route path="/create-post" element={<CreatePost />} />
+                    <Route path="/connect" element={<Connect />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>
