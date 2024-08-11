@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './FullCalendar.css';
 
+
 const FullCalendar = ({ onClose }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(null);
@@ -8,14 +9,19 @@ const FullCalendar = ({ onClose }) => {
     const [editMode, setEditMode] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
+
     const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
     const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
+
 
     const renderDays = () => {
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
         const daysInMonth = getDaysInMonth(year, month);
         const firstDayOfMonth = getFirstDayOfMonth(year, month);
+        const startOfDay = (date) => {
+            return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        };
 
         const days = [];
         for (let i = 0; i < firstDayOfMonth; i++) {
@@ -23,11 +29,12 @@ const FullCalendar = ({ onClose }) => {
         }
         for (let day = 1; day <= daysInMonth; day++) {
             const date = new Date(year, month, day);
-            // Adjusting the endDate by adding one day
-            const phase = phases.find(phase =>
-                new Date(phase.startDate) <= date &&
-                date < new Date(new Date(phase.endDate).setDate(new Date(phase.endDate).getDate() + 1))
-            );
+            const phase = phases.find(phase => {
+                const startDate = startOfDay(new Date(phase.startDate));
+                const endDate = startOfDay(new Date(phase.endDate));
+                endDate.setDate(endDate.getDate());  // Ensuring the end date is included
+                return startDate <= date && date <= endDate;
+            });
             let className = "full-calendar-day";
             if (phase) {
                 if (phase.phaseName === 'Menstruation') className += " red";
@@ -47,8 +54,10 @@ const FullCalendar = ({ onClose }) => {
         return days;
     };
 
+
     const handlePrevMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
     const handleNextMonth = () => setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+
 
     const handleSave = async () => {
         if (!selectedDate) return;
@@ -57,6 +66,14 @@ const FullCalendar = ({ onClose }) => {
             setErrorMessage('Authentication token not found. Please log in again.');
             return;
         }
+
+
+        // Adjusting date to include timezone offset
+        const offset = selectedDate.getTimezoneOffset();
+        const adjustedDate = new Date(selectedDate.getTime() - (offset * 60 * 1000));
+        const dateToSend = adjustedDate.toISOString().split('T')[0];
+
+
         try {
             const response = await fetch('http://localhost:8080/cycles', {
                 method: 'POST',
@@ -64,7 +81,7 @@ const FullCalendar = ({ onClose }) => {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 },
-                body: JSON.stringify({ startDate: selectedDate.toISOString().split('T')[0] })
+                body: JSON.stringify({ startDate: dateToSend })
             });
             if (!response.ok) {
                 throw new Error(`Failed to save cycle, status: ${response.status}`);
@@ -77,6 +94,7 @@ const FullCalendar = ({ onClose }) => {
             setErrorMessage(error.message || 'Error saving cycle');
         }
     };
+
 
     useEffect(() => {
         const fetchUserCycle = async () => {
@@ -104,6 +122,7 @@ const FullCalendar = ({ onClose }) => {
         fetchUserCycle();
     }, []);
 
+
     return (
         <div className="full-calendar-overlay">
             <div className="full-calendar">
@@ -111,8 +130,8 @@ const FullCalendar = ({ onClose }) => {
                 <div className="full-calendar-header">
                     <button onClick={handlePrevMonth}>&lt;</button>
                     <span>
-                        {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
-                    </span>
+                       {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
+                   </span>
                     <button onClick={handleNextMonth}>&gt;</button>
                 </div>
                 <div className="full-calendar-grid">
@@ -137,5 +156,6 @@ const FullCalendar = ({ onClose }) => {
         </div>
     );
 };
+
 
 export default FullCalendar;

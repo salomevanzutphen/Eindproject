@@ -12,11 +12,6 @@
     background-color: white;
 }
 
-.calendar-container h3 {
-    font-family: "La Belle Aurore", cursive;
-    font-size: 25px;
-}
-
 .calendar-container h2 {
     color: #E74C3C;
     margin-bottom: 20px;
@@ -48,7 +43,7 @@
 
 .calendar-day-number {
     font-size: 120px;
-    color: #E74C3C;
+    color: inherit; /* This ensures it takes the color from the parent element */
 }
 
 .calendar-day-name {
@@ -81,10 +76,43 @@
     color: black; /* Default text color */
 }
 
-.calendar-day.red { background-color: red; color: white; }
-.calendar-day.green { background-color: green; color: white; }
-.calendar-day.orange { background-color: orange; color: white; }
-.calendar-day.blue { background-color: blue; color: white; }
+.phase-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.phase-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    background: gray;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.phase-button.active {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+
+.calendar-day.menstruation { background-color: red; color: white; }
+.calendar-day.follicular { background-color: green; color: white; }
+.calendar-day.ovulation { background-color: orange; color: white; }
+.calendar-day.luteal { background-color: blue; color: white; }
+
+.calendar-container h2.menstruation { color: red; }
+.calendar-container h2.follicular { color: green; }
+.calendar-container h2.ovulation { color: orange; }
+.calendar-container h2.luteal { color: blue; }
+
+
+.calendar-container .menstruation .calendar-day-number { color: red; }
+.calendar-container .follicular .calendar-day-number { color: green; }
+.calendar-container .ovulation .calendar-day-number { color: orange; }
+.calendar-container .luteal .calendar-day-number { color: blue; }
 
 .calendar-buttons {
     display: flex;
@@ -98,19 +126,52 @@
     color: white;
 }
 
-.calendar-buttons button {
+
+
+.menstruation-button{
     background-color: #E74C3C;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
     border: none;
-    color: white;
+    margin-top: 27px;
+}
+
+.follicular-button{
+    background-color: green;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 27px;
+}
+
+.ovulation-button{
+    background-color: yellow;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 27px;
+}
+
+.luteal-button{
+    background-color: #85ACF9;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 27px;
+}
+
+.view-calendar {
+    background-color: #ccc;
+    color: #333;
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
     font-size: 20px;
     font-family: "Josefin Sans", sans-serif;
     margin-top: 28px;
-}
-
-.calendar-buttons .view-calendar {
-    background-color: #ccc;
-    color: #333;
+    border: none;
 }
