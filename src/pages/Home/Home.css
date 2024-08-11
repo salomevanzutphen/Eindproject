@@ -1,233 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
-
-/* ///*recheck some of the code, especially to do with background image. I think you can get rid of a lot. Margins may create the white space*/
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=La+Belle+Aurore&display=swap');
 
 .home-page-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100%;
 }
 
-.background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+.home-part1 {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -100;
-}
-
-
-
-.home-intro {
+    height: 100vh;  /* Or adjust the height as needed */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: center;
-}
-
-
-.home-inner-container{
-    font-size: 2em;
-    margin-left: 7em;
-    margin-top: 7em;
-    height: fit-content;
-    width: fit-content;
-    font-family: 'Josefin Slab', sans-serif;
-}
-
-.title h2{
-    font-size: 88px;
-    font-weight: normal;
-    color: #444623
-}
-
-.title p{
-    font-size: 40px;
-    font-weight: normal;
-    font-style: italic;
-    margin-top: 25px;
-    color: #444623
-}
-
-.reference{
-    font-weight: lighter;
-    font-style: italic;
-    font-size: 20px;
-    font-family: 'Josefin Slab', sans-serif;
-    color: #444623;
-    margin-top: 9em;
-    margin-left: 2em;
-    margin-bottom: 1em;
-}
-
-
-.welcome-section{
-    padding: 6em;
-    display: flex;
-    background: #95A052;
+    align-items: center;
     justify-content: center;
-    font-family: 'Josefin Slab', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;  /* Ensures no overflow of the image */
 }
 
-.welcome-article{
+.background-image1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);  /* Centers the image */
+    object-fit: cover;  /* Covers the entire area, may crop */
+    z-index: -1;
+}
+.home-part1 p {
+    color: white;
+    font-size: 4rem; /* Adjust size as needed */
+    max-width: 80%; /* Keeps text within a manageable width */
+    position: relative;
+    z-index: 1;
+    font-family: "Gruppo", sans-serif;
+    background-color: rgba(68, 70, 35, 0.58);
+    padding: 30px 30px;
+    border-radius: 40px;
+    margin-top: 250px;
+}
+
+.home-part2 {
+    background-color: #ACB569; /* Light gray background for better contrast */
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
     display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 120px;
+}
+
+.intro-image {
+    width: 400px; /* Ensures image takes full width of the section */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 60px;
+}
+
+.home-part2-info {
+    padding: 20px;
+    margin-bottom: 20px;
     flex-direction: column;
-    width: 720px;
-    margin: 2em;
 }
 
-.intro-image{
-    height: 40em;
-    border-radius: 20px;
+.homepage-quote{
+    width: 800px;
+    color: white;
+    background-color: rgba(68, 70, 35, 0.58);
+    padding: 20px;
+    margin-left: -120px;
+    margin-top: -80px;
+    font-size: 25px;
+    font-family: "La Belle Aurore", cursive;
+    border-radius: 40px;
 }
 
-.welcome-article h2{
-    color: #FFFFFF;
+
+.home-part2-images {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.home-image {
+    width: 200px; /* Three images, minus margin */
+    height: 200px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 35px;/* Soft shadow for depth */
+    object-fit: cover;
+}
+
+
+.home-part2-info h2{
+    color: #F5F5F5;
     font-size: 80px;
-    font-weight: normal;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-family: "Gruppo", sans-serif;
 }
 
-.welcome-text {
-    color: #FFFFFF;
-    font-size: 37px;
-    margin-top: 15px;
+.cycleliving-p{
+    font-size: 33px;
+    color: black;
+    margin-left: 15px;
+    margin-bottom: 25px;
+    font-family: "Gruppo", sans-serif;
 }
 
-.read-further-button{
- background-color: #FFFFFF;
+
+.mystory {
+    background-color: #F5F5F5; /* Green background for the button */
     color: #34622C;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 10px;
-    width: 300px;
-    font-size: 37px;
-    margin-top: 50px;
-    font-family: 'Josefin Slab', sans-serif;
+    transition: background-color 0.3s;
+    font-family: "Gruppo", sans-serif;
+    font-size: 30px;
+    border-radius: 20px;
 }
 
-.read-further-button:hover{
+.mystory:hover {
     background-color: grey;
     color: white;
 }
-
-/*.title {*/
-    /*    position: absolute;*/
-    /*    top: 50%; !* Position the title at the vertical center of the container *!*/
-    /*    left: 30%; !* Position the title at the horizontal center of the container *!*/
-    /*    transform: translate(-50%, -50%); !* Center the title *!*/
-    /*    text-align: center; !* Align text to the center *!*/
-/*}*/
-
-/*.title h2,*/
-/*.title p {*/
-/*    font-family: 'Josefin Slab', sans-serif;*/
-/*    color: #444623;*/
-/*    margin: 10px 0; !* Add space above and below each element *!*/
-/*}*/
-
-/*.title h2 {*/
-/*    font-size: 77px;*/
-/*    font-weight: normal;*/
-/*}*/
-
-/*.title p {*/
-/*    font-size: 40px;*/
-/*    font-style: italic;*/
-/*}*/
-
-/*.reference{*/
-/*    font-size: 40px;*/
-/*    font-family: 'Josefin Slab', sans-serif;*/
-/*    color: #444623;*/
-/*    position: absolute;*/
-/*    bottom: 0; !* Adjust the distance from the bottom as needed *!*/
-/*    right: 10px;*/
-/*}*/
-
-/*.home-container1,*/
-/*.home-container2{*/
-/*    display: flex;*/
-/*    background-color: #95A052;*/
-/*}*/
-
-/*.home-container2 h2, .home-container2 p {*/
-/*    color: #ffffff ;*/
-/*}*/
-
-.science-part{
-    background-color: #F6F0ED;
-    font-family: 'Josefin Slab', sans-serif;
-    margin-top: 50px;
-}
-
-.science-intro{
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    margin-top: 60px;
-
-}
-
-.science-intro h2{
-    font-size: 90px;
-    font-weight: 420;
-    color: #2d2222;
-    margin-bottom: 25px;
-
-}
-
-.science-intro p{
-    margin-top: -10px;
-    color: #2d2222;
-    font-size: 28px;
-    width: 800px;
-    text-align: center;
-    font-weight: 370;
-}
-
-.cycle{
-    width: 800px;
-    margin-top: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.science-samples{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.homepage-ending{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-bottom: 150px;
-    margin-top: 60px;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.sign-up-homepage, .log-in-homepage{
-    font-size: 40px;
-    font-family: 'Josefin Slab', sans-serif;
-    padding: 20px 40px;
-    border-radius: 20px;
-    color: white;
-    background: #7F9F65;
-    transition: background-color 0.3s ease;
-    border: #7F9F65;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.sign-up-homepage:hover, .log-in-homepage:hover{
-    background-color: grey;
-}
-
-

@@ -1,65 +1,36 @@
 import React from 'react';
 import "./Home.css";
-import powerStandImage from "../../../src/assets/powerstand.jpg";
-import cyclegraph from "../../../src/assets/cycle.jpg";
-import food from "../../assets/food-plate.jpg";
 import {useNavigate} from "react-router-dom";
+import mainimage from "../../assets/backgroundsalome.jpg";
 
 function Home() {
-    const navigate = useNavigate();
-
-    const handleSignUp = () => {
-        navigate('/signup');
-    };
-
-    const handleLogIn = () => {
-        navigate('/login');
-    };
+    const navigate = useNavigate(); // If you need navigation
 
     return (
-
         <div className="home-page-wrapper">
-            <section className="home-intro">
-                <img className="background-image" src={food} alt="background-image"/>
+            <section className="home-part1">
+                <img className="background-image1" src={mainimage} alt="background-image"/>
+                <p>Transform your Health, < br/> Connect to your Cycle’s Rhythm</p>
+            </section>
 
-                <article className="home-inner-container">
-                    <div className="title">
-                        <h2>Living in Sync</h2>
-                        <p>Track your cycle <br/>& optimise your wellbeing</p>
+            <section className="home-part2">
+                <img className="intro-image" src="https://i.pinimg.com/736x/87/2d/b7/872db7503d2347cc15483e31b70413f7.jpg" alt="Profileshot"/>
+                <div className="home-part2-info">
+                    <p className="homepage-quote"> 'My mother's health issues were a wake-up call for me.
+                    Now I strive to be a role-model for those who want to also
+                    I'm not sure what I'm writing here but im trying my best hahah' </p>
+
+                    <div className="home-part2-images">
+                        <img className="home-image" src="https://i.pinimg.com/564x/ca/bc/30/cabc30dc52bcb870cb5a6af69d603439.jpg" alt="home-image"/>
+                        <img className="home-image" src="https://i.pinimg.com/564x/04/cd/71/04cd718725f9d5878375b72e007bdc89.jpg" alt="home-image"/>
+                        <img className="home-image" src="https://i.pinimg.com/564x/20/3a/c8/203ac84719f087f7da3ff51a6fa718c0.jpg" alt="home-image"/>
                     </div>
-                </article>
-                <h3 className="reference">
-                    Image designed by Freepik
-                </h3>
-            </section>
 
-            <section className="welcome-section">
-                <img className="intro-image" src={powerStandImage} alt="Power Stand"/>
-                <article className="welcome-article">
-                    <h2>Welcome,</h2>
-                    <p className="welcome-text">
-                        to a holistic health platform that I designed to improve the wellbeing of women. A few years ago, I became very interested in women's healthcare after my mom fell ill from a cyst on one of her ovaries. Upon research, I found out that iron deficiency is very common among many women, and this motivated me to create a resource that addresses such critical health issues.
-                    </p>
-                    <button className="read-further-button"> Read my story </button>
-                </article>
-            </section>
-
-            <section className="science-part">
-                <div className="science-intro">
-                    <h2>Connect to your Cycle</h2>
-                    <p>
-                        Every woman goes through a monthly cycle of fluctuating hormones. Find out when you have the most strength to be highly productive, when you should rest and what nutrition you benefit from most. Live in sync with the rhythm of your body.
-                    </p>
-                    <img className="cycle" src={cyclegraph} alt="cycle"/>
+                    <h2>Cycle-synced living</h2>
+                    <p className="cycleliving-p">Find out what inspired me < br/> to create this application</p>
+                    <button className="mystory" onClick={() => navigate('/aboutus')}>Read my story</button>
                 </div>
-                <article>
-                    <div className="homepage-ending">
-                        <button className="sign-up-homepage" onClick={handleSignUp}>Sign up</button>
-                        <button className="log-in-homepage" onClick={handleLogIn}>Log in</button>
-                    </div>
-                </article>
             </section>
-
         </div>
     );
 }
