@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './SignUp.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import SuccessModal from './SignUpSuccess/SignUpSuccess.jsx'; // Import the SuccessModal component
 
-const SignUp = ({ close }) => {  // Add a close function prop
+const SignUp = ({ close }) => { // Receive the close function as a prop
 
     // State for signup data
     const [username, setUsername] = useState('');
@@ -15,7 +15,7 @@ const SignUp = ({ close }) => {  // Add a close function prop
     // Functionality state
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
-    const navigate = useNavigate();
+    const [success, setSuccess] = useState(false); // State to control modal visibility
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -30,8 +30,10 @@ const SignUp = ({ close }) => {  // Add a close function prop
                 name: name,
                 birthday: birthday,
             });
-            //terug naar de connect pagina wanneer registratie gelukt is
-            navigate('/connect');
+
+            // Show success modal and hide the signup form
+            setSuccess(true);
+
         } catch (e) {
             console.error(e);
             toggleError(true);
@@ -40,71 +42,83 @@ const SignUp = ({ close }) => {  // Add a close function prop
         toggleLoading(false);
     }
 
+    // Close modal and navigate to /connect page
+    const closeModal = () => {
+        setSuccess(false);
+        close();  // Close the sign-up modal as well
+    };
+
     return (
-        <div className="signup-container">
-            <button className="close-button" onClick={close}>X</button>
-            <h1>Welcome, join today!</h1>
-            <form className="signup-form" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                        required
-                    />
+        <div>
+            {success ? (
+                <SuccessModal close={closeModal} />
+            ) : (
+                <div className="signup-container">
+                    <button className="close-button" onClick={close}>X</button>
+                    <h1>Welcome, join today!</h1>
+                    <form className="signup-form" onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="username">Username</label>
+                            <input
+                                type="text"
+                                id="username"
+                                name="username"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="birthday">Birthday</label>
+                            <input
+                                type="date"
+                                id="birthday"
+                                name="birthday"
+                                value={birthday}
+                                onChange={(e) => setBirthday(e.target.value)}
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="signup-button">
+                            {loading ? 'Signing Up...' : 'Sign Up'}
+                        </button>
+                        {error && <p className="error-message">There was an error signing up. Please try again.</p>}
+                    </form>
                 </div>
-                <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <label htmlFor="birthday">Birthday</label>
-                    <input
-                        type="date"
-                        id="birthday"
-                        name="birthday"
-                        value={birthday}
-                        onChange={(e) => setBirthday(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit" className="signup-button">
-                    {loading ? 'Signing Up...' : 'Sign Up'}
-                </button>
-                {error && <p className="error-message">There was an error signing up. Please try again.</p>}
-            </form>
+            )}
         </div>
     );
 };
