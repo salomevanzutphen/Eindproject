@@ -36,6 +36,7 @@ function Phase4() {
 
     return (
         <div className="phase4-wrapper">
+            <p className="phase-welcome-script">Welcome to your</p>
             <h1 className="phase4-title">
                 Follicular Phase
             </h1>

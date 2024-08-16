@@ -38,20 +38,25 @@ function Phase1() {
 
     return (
 <div className="phase1-wrapper">
+    <p className="phase-welcome-script">Welcome to your</p>
     <h1 className="phase1-title">
         Menstrual Phase
     </h1>
-    <div className="keywords">
-        <h3>Reflect</h3>
-        <h3>Recharge</h3>
-        <h3>Renew</h3>
+    <div className="phase1-keywords">
+        <p>Reflect</p>
+        <p>Recharge</p>
+        <p>Renew</p>
     </div>
-    <div className="phase-introduction">
+    <div className="phase1-introduction">
         <Calendar />
-        <div className="phase-intro-text">
+        <div className="phase1-intro-text">
             <h3 className="phase1-intro-title">Cycle of Renewal</h3>
             <p>
-                Embrace menstruation as a natural cycle of renewal, where the body undergoes a transformative process of shedding old layers. Take the time to rest and release, allowing yourself to reflect on what no longer aligns with your goals. What aspects of your life could benefit from a renewal? Do you need to release any thinking patterns? What are you grateful for this month?Prioritize self-care, rest and reflection during this phase. Use your intuition, which is extra strong at this time, to figure out what type of self-care you would benefit from most.
+                Embrace menstruation as a natural cycle of renewal, where the body undergoes a transformative process of shedding old layers.
+                Take the time to rest and release, allowing yourself to reflect on what no longer aligns with your goals. What aspects of your life could benefit from a renewal?
+                Do you need to release any thinking patterns? What are you grateful for this month?
+                Prioritize self-care, rest and reflection during this phase.
+                Use your intuition, which is extra strong at this time, to figure out what type of self-care you would benefit from most.
             </p>
         </div>
     </div>

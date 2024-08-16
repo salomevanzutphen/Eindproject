@@ -11,14 +11,26 @@ function MySync() {
     const [currentPhase, setCurrentPhase] = useState('Welcome');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        fetchCycleData();
+        checkAuthenticationAndFetchCycleData();
     }, []);
 
-    const fetchCycleData = async () => {
+    const checkAuthenticationAndFetchCycleData = () => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            setIsAuthenticated(true);
+            fetchCycleData(token);
+        } else {
+            setIsAuthenticated(false);
+            setCurrentPhase('Welcome');
+        }
+    };
+
+    const fetchCycleData = async (token) => {
         setLoading(true);
-        const token = localStorage.getItem('token'); // Make sure the token is being correctly retrieved
+
         const config = {
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -27,10 +39,15 @@ function MySync() {
 
         try {
             const response = await axios.get('http://localhost:8080/cycles/mycycle', config);
-            if (response.data && response.data.phases) {
-                determineCurrentPhase(response.data.phases);
+            if (response.status === 200 && response.data && response.data.phases) {
+                if (response.data.phases.length === 0) {
+                    // No cycle data available, render the welcome phase
+                    setCurrentPhase('Welcome');
+                } else {
+                    determineCurrentPhase(response.data.phases);
+                }
             } else {
-                throw new Error("Invalid data structure: 'phases' key not found");
+                throw new Error("Invalid data structure or response");
             }
         } catch (error) {
             console.error('Error fetching cycle data:', error);
@@ -43,7 +60,7 @@ function MySync() {
 
     const determineCurrentPhase = (phases) => {
         const today = new Date();
-        today.setHours(0, 0, 0, 0);  // Reset hours to start of day for comparison
+        today.setHours(0, 0, 0, 0);
 
         const currentPhase = phases.find(phase => {
             const startDate = new Date(phase.startDate);
@@ -65,8 +82,9 @@ function MySync() {
             return <div>Loading...</div>;
         }
 
-        if (error) {
-            return <div>Error: {error}</div>;
+        if (error || !isAuthenticated) {
+            // Render the welcome phase if there's an error or if the user is not authenticated
+            return <WelcomePhase />;
         }
 
         switch (currentPhase) {

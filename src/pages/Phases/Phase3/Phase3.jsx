@@ -58,6 +58,7 @@ function Phase3(){
     return(
 
         <div className="phase3-wrapper">
+            <p className="phase-welcome-script">Welcome to your</p>
             <h1 className="phase3-title">
                 Ovulation Phase
             </h1>
