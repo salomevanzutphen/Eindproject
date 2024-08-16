@@ -84,7 +84,7 @@ const Calendar = ({ onPhaseChange }) => {
     const nextSixDays = getNextSixDays(currentDate);
 
     const currentPhase = getPhaseForDate(currentDate);
-    const title = currentPhase ? currentPhase.phaseName : (phases.length === 0 ? "Your cycle calendar" : "No Phase");
+    const title = currentPhase ? currentPhase.phaseName : (phases.length === 0 ? "Sync your Cycle" : "No Phase");
     const phaseClass = currentPhase ? currentPhase.phaseName.toLowerCase() : "";
 
     return (
