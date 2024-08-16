@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './CreatePost.css';
 import axios from 'axios';
+import './CreatePost.css';
+import { AuthContext } from '../../context/AuthContext.jsx'; // Zorg ervoor dat het pad correct is
 
 function CreatePost() {
     // Initialize state variables
@@ -14,6 +14,17 @@ function CreatePost() {
     const fileInputRef = useRef(null);
     const navigate = useNavigate();
 
+    // Gebruik de authContext
+    const { roles } = useContext(AuthContext);
+
+    useEffect(() => {
+        // Controleer of de gebruiker een admin is
+        const isAdmin = roles.some(role => role.authority === 'ROLE_ADMIN');
+        if (!isAdmin) {
+            navigate('/unauthorized');
+        }
+    }, [roles, navigate]);
+
     async function addPost(e) {
         e.preventDefault();
 
@@ -24,7 +35,7 @@ function CreatePost() {
         formData.append('description', description);
 
         if (fileInputRef.current.files[0]) {
-            formData.append('file', fileInputRef.current.files[0]); // Add the image file
+            formData.append('image', fileInputRef.current.files[0]); // Add the image file
         } else {
             console.error('No image file selected');
             return;
@@ -32,9 +43,11 @@ function CreatePost() {
 
         try {
             // Send a POST request to the backend
+            const token = localStorage.getItem('token'); // Assuming the token is stored in localStorage
             const response = await axios.post('http://localhost:8080/posts', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
+                    'Authorization': `Bearer ${token}`, // Include the token in the Authorization header
                 },
             });
 
@@ -52,6 +65,7 @@ function CreatePost() {
             navigate('/blog');
         } catch (error) {
             console.error('Error creating post:', error);
+            // Handle error (e.g., show an error message to the user)
         }
     }
 

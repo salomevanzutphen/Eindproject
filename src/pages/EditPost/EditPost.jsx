@@ -1,98 +1,112 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';  // Import PropTypes
-import { useParams, useNavigate } from 'react-router-dom';
-import './EditPost.css';
+import React, { useState, useRef, useEffect, useContext } from 'react';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
+import axios from 'axios';
+import '../CreatePost/CreatePost.css';
+import { AuthContext } from '../../context/AuthContext.jsx';
 
-const EditPost = ({ posts, setPosts }) => {
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const [post, setPost] = useState(null);
-    const [title, setTitle] = useState('');
-    const [artist, setArtist] = useState('');
-    const [description, setDescription] = useState('');
+function EditPost() {
+    const { id } = useParams(); // Get the post ID from the URL
+    const location = useLocation();
+    const { post } = location.state || {}; // Get the post data from the state passed via navigate
+    const [title, setTitle] = useState(post?.title || '');
+    const [name, setName] = useState(post?.name || '');
+    const [description, setDescription] = useState(post?.description || '');
     const [image, setImage] = useState(null);
+    const fileInputRef = useRef(null);
+    const navigate = useNavigate();
+
+    const { roles } = useContext(AuthContext);
 
     useEffect(() => {
-        const postToEdit = posts.find(p => p.id === parseInt(id));
-        if (postToEdit) {
-            setPost(postToEdit);
-            setTitle(postToEdit.title);
-            setArtist(postToEdit.artist);
-            setDescription(postToEdit.description);
-            setImage(postToEdit.image);
+        const isAdmin = roles.some(role => role.authority === 'ROLE_ADMIN');
+        if (!isAdmin) {
+            navigate('/unauthorized');
         }
-    }, [id, posts]);
+    }, [roles, navigate]);
 
-    const handleSubmit = (e) => {
+    async function updatePost(e) {
         e.preventDefault();
-        const updatedPost = {
-            ...post,
-            title,
-            artist,
-            description,
-            image,
-        };
-        const updatedPosts = posts.map(p => p.id === parseInt(id) ? updatedPost : p);
-        setPosts(updatedPosts);
-        navigate('/');
-    };
+
+        const formData = new FormData();
+        formData.append('title', title);
+        formData.append('name', name);
+        formData.append('description', description);
+
+        if (fileInputRef.current.files[0]) {
+            formData.append('image', fileInputRef.current.files[0]);
+        }
+
+        try {
+            const token = localStorage.getItem('token');
+            const response = await axios.put(`http://localhost:8080/posts/${id}`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization': `Bearer ${token}`,
+                },
+            });
+
+            console.log(response.data);
+            navigate('/blog'); // Redirect to the blog page after successful update
+        } catch (error) {
+            console.error('Error updating post:', error);
+        }
+    }
 
     const handleImageChange = (e) => {
         setImage(URL.createObjectURL(e.target.files[0]));
     };
 
-    if (!post) return <p>Loading...</p>;
-
     return (
-        <div className="edit-post-page">
+        <div className="create-post-page">
             <h1>Edit Post</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={updatePost}>
                 <div className="form-group">
-                    <label>Title</label>
+                    <label htmlFor="post-title">Title</label>
                     <input
                         type="text"
+                        name="post-title-field"
+                        id="post-title"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Artist</label>
+                    <label htmlFor="post-name">Name</label>
                     <input
                         type="text"
-                        value={artist}
-                        onChange={(e) => setArtist(e.target.value)}
+                        name="post-name-field"
+                        id="post-name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Description</label>
+                    <label htmlFor="post-description">Description</label>
                     <textarea
+                        name="post-description-field"
+                        id="post-description"
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                         required
                     />
                 </div>
                 <div className="form-group">
-                    <label>Image</label>
-                    <input type="file" accept="image/*" onChange={handleImageChange} />
+                    <label htmlFor="post-image">Image</label>
+                    <input
+                        type="file"
+                        accept="image/*"
+                        id="post-image"
+                        onChange={handleImageChange}
+                        ref={fileInputRef}
+                    />
                     {image && <img src={image} alt="Preview" className="image-preview" />}
                 </div>
-                <button type="submit">Save Changes</button>
+                <button type="submit">Update</button>
             </form>
         </div>
     );
-};
-
-EditPost.propTypes = {
-    posts: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        title: PropTypes.string.isRequired,
-        artist: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-    })).isRequired,
-    setPosts: PropTypes.func.isRequired,
-};
+}
 
 export default EditPost;

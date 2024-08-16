@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Blog.css';
 import ImageCard from './ImageCard/ImageCard.jsx'; // Import the ImageCard component
 import ImageModal from './ImageModal/ImageModal.jsx'; // Import the ImageModal component
+import { AuthContext } from '../../context/AuthContext'; // Import AuthContext to access roles
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState(null);
+    const { roles } = useContext(AuthContext); // Access roles from AuthContext
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -55,9 +57,12 @@ const Blog = () => {
     return (
         <>
             <div className="blog-page">
-                <button className="create-post-button" onClick={handleCreateNewPost}>
-                    Create New Post
-                </button>
+                {/* Conditionally render the Create New Post button for admins */}
+                {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
+                    <button className="create-post-button" onClick={handleCreateNewPost}>
+                        Create New Post
+                    </button>
+                )}
                 <div className="posts">
                     {posts.map((post) => (
                         <ImageCard key={post.id} post={post} onImageClick={handleImageClick} />
