@@ -10,7 +10,7 @@
 .main-navigation-links {
     list-style-type: none;
     margin: 0;
-    padding: 15px; /* Keep it responsive */
+    padding: 20px; /* Keep it responsive */
     display: flex;
     justify-content: center; /* Center navigation items */
     background-color: inherit;
@@ -27,7 +27,7 @@
 .main-navigation-links li a {
     text-decoration: none;
     color: #34622C;
-    font-family: 'Josefin Slab', sans-serif;
+    font-family: "Gruppo", sans-serif;
     font-size: 25px; /* Use a responsive font size */
     padding: 10px 20px;
     border-radius: 10px;
@@ -43,5 +43,23 @@
 }
 
 .main-navigation-links li a:hover {
+    background-color: #CCCCCC;
+}
+
+.logout-button {
+    background-color: #FFFFFF;
+    color: #34622C;
+    font-family: "Gruppo", sans-serif;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+}
+
+.logout-button:hover {
     background-color: #CCCCCC;
 }
