@@ -40,8 +40,15 @@ const FullCalendar = ({ onClose, onSave }) => {
             if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
                 className += " selected";
             }
+            if (editMode) {
+                className += " editable";
+            }
             days.push(
-                <div className={className} key={day} onClick={() => editMode && setSelectedDate(date)}>
+                <div
+                    className={className}
+                    key={day}
+                    onClick={() => editMode && setSelectedDate(date)}
+                >
                     {day}
                 </div>
             );
@@ -85,7 +92,7 @@ const FullCalendar = ({ onClose, onSave }) => {
             }
             const data = await response.json();
             setPhases(data.phases);
-            setEditMode(false);
+            setEditMode(false); // Disable edit mode after saving
             setErrorMessage(''); // Clear any previous error message
             if (onSave) {
                 onSave(data); // Call onSave only if it's defined
@@ -129,11 +136,11 @@ const FullCalendar = ({ onClose, onSave }) => {
     return (
         <div className="full-calendar-overlay">
             <div className="full-calendar">
-                <button className="close-button" onClick={() => { onClose(); window.location.reload(); }}>×</button> {/* Trigger page refresh on close */}
+                <button className="close-button" onClick={() => { onClose(); window.location.reload(); }}>×</button>
                 <div className="full-calendar-header">
                     <button onClick={handlePrevMonth}>&lt;</button>
                     <span>
-                       {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
+                       {currentDate.toLocaleString('en-US', { month: 'long' })} {currentDate.getFullYear()}
                    </span>
                     <button onClick={handleNextMonth}>&gt;</button>
                 </div>
@@ -144,7 +151,12 @@ const FullCalendar = ({ onClose, onSave }) => {
                     {renderDays()}
                 </div>
                 <div className="full-calendar-actions">
-                    <button className="edit-period-dates" onClick={() => setEditMode(true)}>Edit period dates</button>
+                    <button
+                        className={`period-button ${editMode ? 'grey' : ''}`}
+                        onClick={() => setEditMode(true)}
+                    >
+                        Select Date
+                    </button>
                     <button
                         type="submit"
                         className={`save-button ${selectedDate ? 'active' : ''}`}

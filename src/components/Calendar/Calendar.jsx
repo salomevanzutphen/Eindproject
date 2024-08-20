@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Calendar.css';
 import FullCalendar from '../FullCalendar/FullCalendar.jsx';
+import questionmark from "../../assets/question.png";
+import ExplenationMessage from '../ExplenationMessage/ExplenationMessage.jsx';
 
 const Calendar = ({ onPhaseChange }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [showFullCalendar, setShowFullCalendar] = useState(false);
     const [phases, setPhases] = useState([]);
+    const [showExplenation, setShowExplenation] = useState(false);
 
     const getNextSixDays = (date) => {
         const dates = [];
@@ -56,29 +59,27 @@ const Calendar = ({ onPhaseChange }) => {
     const getPhaseForDate = (date) => {
         const startOfDay = (date) => new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
-        // Ensure the 'date' parameter is set to the start of the day for accurate comparison
         const targetDate = startOfDay(date);
 
         return phases.find(phase => {
             const startDate = startOfDay(new Date(phase.startDate));
-            const endDate = new Date(new Date(phase.endDate).setHours(23, 59, 59, 999)); // Ensuring the end date includes the entire day
+            const endDate = new Date(new Date(phase.endDate).setHours(23, 59, 59, 999));
 
             return targetDate >= startDate && targetDate <= endDate;
         });
     };
-
 
     const updateCurrentPhase = (date) => {
         const phase = getPhaseForDate(date);
         if (phase) {
             onPhaseChange(phase.phaseName);
         } else {
-            onPhaseChange("No Phase"); // Or "Your cycle calendar" if no phases are set
+            onPhaseChange("No Phase");
         }
     };
 
     const formatDate = (date) => {
-        return date.toLocaleString('default', { weekday: 'short' }).toUpperCase(); // Only weekday is shown
+        return date.toLocaleString('en-US', { weekday: 'short' }).toUpperCase();
     };
 
     const nextSixDays = getNextSixDays(currentDate);
@@ -94,12 +95,12 @@ const Calendar = ({ onPhaseChange }) => {
                 <button onClick={handlePrevDay}>&lt;</button>
                 <div className={`calendar-current-day ${phaseClass}`}>
                     <div className="calendar-day-number">{currentDate.getDate()}</div>
-                    <div className="calendar-day-name">{currentDate.toLocaleString('default', { weekday: 'long' }).toUpperCase()}</div>
+                    <div className="calendar-day-name">{currentDate.toLocaleString('en-US', { weekday: 'long' }).toUpperCase()}</div>
                 </div>
                 <button onClick={handleNextDay}>&gt;</button>
             </div>
             <div className="calendar-month-year">
-                {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
+                {currentDate.toLocaleString('en-US', { month: 'long' })} {currentDate.getFullYear()}
             </div>
             <div className="calendar-grid">
                 {nextSixDays.map((date, index) => {
@@ -118,8 +119,15 @@ const Calendar = ({ onPhaseChange }) => {
             </div>
             <div className="calendar-buttons">
                 <button className="view-calendar" onClick={() => setShowFullCalendar(true)}>Calendar</button>
+                <img
+                    className="questionmark"
+                    src={questionmark}
+                    alt="questionmark"
+                    onClick={() => setShowExplenation(true)} // Show explanation message on click
+                />
             </div>
             {showFullCalendar && <FullCalendar onClose={() => { setShowFullCalendar(false); fetchCycle(); }} />}
+            <ExplenationMessage show={showExplenation} onClose={() => setShowExplenation(false)} /> {/* Render the explanation message */}
         </div>
     );
 };

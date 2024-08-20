@@ -14,22 +14,22 @@
 
 /* Phase Color Styles */
 .full-calendar-day.red {
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: var(--red);
     color: white;
 }
 
 .full-calendar-day.green {
-    background-color: rgba(0, 255, 0, 0.3);
+    background-color: var(--green);
     color: white;
 }
 
 .full-calendar-day.orange {
-    background-color: rgba(255, 165, 0, 0.3);
+    background-color: var(--orange);
     color: white;
 }
 
 .full-calendar-day.blue {
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: var(--blue);
     color: white;
 }
 
@@ -128,15 +128,27 @@
     margin-top: 30px;
 }
 
-.edit-period-dates, .save-button {
+
+.period-button{
     background-color: var(--red);
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
     border: none;
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.period-button.grey {
+    background-color: grey;
+}
+
+
+.period-button:hover{
+    color: white;
+    background-color: grey;
 }
 
 /* Disabled save button */
@@ -152,7 +164,7 @@
 }
 
 .error-message {
-    color: red;
+    color: var(--red);
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -170,4 +182,9 @@
     font-style: italic;
     margin-top: 0; /* No margin on top to ensure it stays close to the error message */
     padding: 0 10px; /* Add some padding for better readability */
+}
+
+.full-calendar-day.editable:hover {
+    background-color: grey;
+    cursor: pointer;
 }

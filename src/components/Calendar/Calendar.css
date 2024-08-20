@@ -15,7 +15,7 @@
 .calendar-container h2 {
     color: black;
     margin-bottom: 25px;
-    margin-top: 5px;
+    margin-top: 15px;
     font-size: 40px;
 }
 
@@ -67,14 +67,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    line-height: 40px; /* Center the text vertically */
-    margin: auto; /* Center the circle */
+    line-height: 45px; /* Center the text vertically */
+    margin-top: 5px;  /* Center the circle */
     color: black; /* Default text color */
 }
+
 
 .phase-buttons {
     display: flex;
@@ -98,25 +98,26 @@
 }
 
 
-.calendar-day.menstruation { background-color: red; color: white; }
-.calendar-day.follicular { background-color: green; color: white; }
-.calendar-day.ovulation { background-color: orange; color: white; }
-.calendar-day.luteal { background-color: blue; color: white; }
+.calendar-day.menstruation { background-color:  var(--red); color: white; }
+.calendar-day.follicular { background-color: var(--green); color: white; }
+.calendar-day.ovulation { background-color: var(--orange); color: white; }
+.calendar-day.luteal { background-color: var(--blue); color: white; }
 
-.calendar-container h2.menstruation { color: red; }
-.calendar-container h2.follicular { color: green; }
-.calendar-container h2.ovulation { color: orange; }
-.calendar-container h2.luteal { color: blue; }
+.calendar-container h2.menstruation { color:  var(--red); }
+.calendar-container h2.follicular { color: var(--green); }
+.calendar-container h2.ovulation { color: var(--orange); }
+.calendar-container h2.luteal { color: var(--blue); }
 
 
-.calendar-container .menstruation .calendar-day-number { color: red; }
-.calendar-container .follicular .calendar-day-number { color: green; }
-.calendar-container .ovulation .calendar-day-number { color: orange; }
-.calendar-container .luteal .calendar-day-number { color: blue; }
+.calendar-container .menstruation .calendar-day-number { color:  var(--red); }
+.calendar-container .follicular .calendar-day-number { color: var(--green); }
+.calendar-container .ovulation .calendar-day-number { color: var(--orange); }
+.calendar-container .luteal .calendar-day-number { color: var(--blue); }
 
 .calendar-buttons {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 10px;
     margin-top: 30px;
 }
@@ -138,3 +139,17 @@
     margin-top: 28px;
     border: none;
 }
+
+.questionmark {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-top: 18px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transform to the transition */
+}
+
+.questionmark:hover {
+    transform: scale(1.1); /* Slightly increase the size */
+}
+
