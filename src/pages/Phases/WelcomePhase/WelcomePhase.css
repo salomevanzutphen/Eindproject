@@ -10,7 +10,9 @@
 
 .welcome-phase-wrapper h1{
     text-align: center;
-    font-size: 80px;
+    font-size: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: var(--blue);
     font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
@@ -21,7 +23,6 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
-    margin-top: 60px;
 }
 
 .calendar{
@@ -41,18 +42,27 @@
     color: var(--blue);
     background-color: #FFFFFF;
     border-radius: 15px;
-    width: 295px;
+    width: 350px;
     padding: 15px;
     font-size: 33px;
     font-style: italic;
     text-align: center;
     font-weight: 600;
-
+    margin-top: 30px;
 }
 
 .welcome-info ul, .welcome-info p{
     font-size: 33px;
     color: #000000;
     font-weight: 250;
+    margin-left: 15px;
+}
+
+.welcome-info p{
+    margin-top: 10px;
+}
+
+.welcome-info li{
+    margin-top: 20px;
 }
 
