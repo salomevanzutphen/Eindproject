@@ -15,16 +15,17 @@
     transition: background-color 0.3s;
     font-size: 32px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    text-align: center;
+
 }
 
 .magnesium:hover {
     background-color: grey;
 }
 
-.magnesium h3{
-    margin-left: 5px;
-    margin-top: 10px;
-}
 
 
 

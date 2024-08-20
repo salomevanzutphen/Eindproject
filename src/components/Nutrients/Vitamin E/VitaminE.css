@@ -14,12 +14,12 @@
     transition: background-color 0.3s;
     font-size: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.vitaminE h3{
-    line-height: 90px; /* Match this to the height of the .vitaminE element */
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
     text-align: center;
 }
+
 
 
 .vitaminE:hover {

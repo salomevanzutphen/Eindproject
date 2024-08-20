@@ -14,11 +14,10 @@
     transition: background-color 0.3s;
     font-size: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.vitaminC h3{
-    margin-left: 23px;
-    margin-top: 20px;
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    text-align: center;
 }
 
 

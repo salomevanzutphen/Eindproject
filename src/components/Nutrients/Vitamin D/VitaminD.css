@@ -16,12 +16,12 @@
     transition: background-color 0.3s;
     font-size: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    text-align: center;
 }
 
-.vitaminD h3{
-    margin-left: 27px;
-    margin-top: 23px;
-}
 
 
 .vitaminD:hover {

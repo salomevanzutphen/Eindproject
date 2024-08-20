@@ -15,16 +15,18 @@
     transition: background-color 0.3s;
     font-size: 32px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    text-align: center;
 }
 
 .iron:hover {
     background-color: grey;
 }
 
-.iron h3{
-    margin-left: 5px;
-    margin-top: 9px;
-}
+
 
 .iron-description {
     position: absolute; /* Add this */
