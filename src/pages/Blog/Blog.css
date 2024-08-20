@@ -1,6 +1,6 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: #F6F0ED;
+    background-color: var(--background);
     margin: 0;
     padding: 0;
 }
@@ -16,13 +16,13 @@ body {
 .create-post-button {
     padding: 15px 25px;
     font-size: 30px;
-    background-color: #7F9F65;
+    background-color: #7AA04B;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     margin-bottom: 20px;
-    font-family: "Gruppo", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .posts {

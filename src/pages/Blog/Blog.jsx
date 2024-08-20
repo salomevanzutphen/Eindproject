@@ -60,7 +60,7 @@ const Blog = () => {
                 {/* Conditionally render the Create New Post button for admins */}
                 {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
                     <button className="create-post-button" onClick={handleCreateNewPost}>
-                        Create New Post
+                        Create Post
                     </button>
                 )}
                 <div className="posts">
