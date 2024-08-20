@@ -46,6 +46,7 @@
     font-size: 20px;
     margin: 0 10px;
     border: none;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .buttons button:hover {
