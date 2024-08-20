@@ -1,121 +1,101 @@
-.modal {
+.blogmodal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    border-radius: 20px;
-    border: 1px solid #888;
-    display: flex;
-    flex-direction: column;
-    padding: 20px 40px;
-    width: 80%; /* Make the container wider */
-    max-width: 900px; /* Set a maximum width */
-}
-
-.modal-content-innercontainer {
+.blogmodal-content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Align the items to the top */
-}
-
-.modal-content-innercontainer img {
-    width: 50%; /* Adjust the image width to allow more space for text */
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-.post-information {
-    flex: 1; /* Allow the text container to take up remaining space */
-    display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-.modal-text {
+.blogmodal-content img {
+    height: 500px; /* Ensures the image does not overflow */
+    width: auto;
+    object-fit: cover;
+    padding: 20px;
+    background-color: white;
+}
+
+.blogpost-info {
+    height: 500px;
+    max-width: 400px;
+    background-color: white;
     text-align: left;
-    font-family: "Josefin Sans", sans-serif;
-    margin-top: 25px;
-    margin-bottom: 40px;
-    max-width: 100%; /* Ensure the text container takes full available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced between top and bottom */
+    padding-top: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
-.modal-text h2 {
-    font-weight: normal;
-    font-size: 36px;
+.blogpost-text {
+    flex-grow: 1; /* Allow the text area to grow and take up remaining space */
+    margin-top: 10px;
+    max-height: 400px; /* Set a max-height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Optional: Adds some padding for scrollbar */
 }
 
-.modal-text h3 {
-    font-weight: 300;
+.blogpost-text h2 {
+    font-size: 35px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blogpost-text h3 {
     font-size: 27px;
     font-style: italic;
-    margin-top: 10px;
+    color: #666;
 }
 
-.modal-text p {
-    font-weight: 320;
-    font-style: italic;
-    margin-top: 10px;
-}
-
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    align-self: flex-end;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.blogpost-text p {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6em;
 }
 
 .admin-editing {
+    margin-top: 20px;
     display: flex;
-    flex-direction: row;
     gap: 10px;
-    margin-top: -20px;
+    justify-content: center;
+    align-items: flex-end; /* Align at the bottom of the container */
+    padding-bottom: 20px; /* Add some padding at the bottom */
 }
 
 .edit-button,
 .delete-button {
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    font-family: "Josefin Sans", sans-serif;
-}
-
-.edit-button {
-    background-color: #7F9F65;
+    background-color: #007bff;
     color: white;
-}
-
-.edit-button:hover {
-    background-color: #45a049;
+    transition: background-color 0.3s;
 }
 
 .delete-button {
-    background-color: #e24438;
-    color: white;
+    background-color: #dc3545;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
 }
 
 .delete-button:hover {
-    background-color: #da190b;
+    background-color: #c82333;
 }

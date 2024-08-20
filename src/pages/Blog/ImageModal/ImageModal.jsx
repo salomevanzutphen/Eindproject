@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './ImageModal.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import DeleteConfirmation from '../../../components/DeleteConfirmation/DeleteConfirmation.jsx';
+import { AuthContext } from '../../../context/AuthContext'; // Import AuthContext
 
 const ImageModal = ({ selectedPost, onClose }) => {
     const navigate = useNavigate();
     const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+    const { roles } = useContext(AuthContext); // Access roles from AuthContext
 
     if (!selectedPost) return null;
-
-    const roles = JSON.parse(localStorage.getItem('roles') || '[]'); // Fetch roles from localStorage
 
     const handleEdit = () => {
         navigate(`/edit-post/${selectedPost.id}`, { state: { post: selectedPost } });
@@ -33,39 +33,41 @@ const ImageModal = ({ selectedPost, onClose }) => {
     };
 
     const handleConfirmDelete = () => {
-        setShowDeleteConfirmation(false); // Close the confirmation dialog
-        handleDelete(); // Proceed with deletion
+        setShowDeleteConfirmation(false);
+        handleDelete();
     };
 
     const handleCancelDelete = () => {
-        setShowDeleteConfirmation(false); // Close the confirmation dialog
+        setShowDeleteConfirmation(false);
+    };
+
+    // Convert new lines to <br> tags
+    const formatDescription = (text) => {
+        return text.split('\n').map((str, index) => (
+            <React.Fragment key={index}>
+                {str}
+                <br />
+            </React.Fragment>
+        ));
     };
 
     return (
-        <div className="modal" onClick={onClose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                <span className="close" onClick={onClose}>&times;</span>
-                <div className="modal-content-innercontainer">
-                    <img src={`data:image/jpeg;base64,${selectedPost.imgdata}`} alt={selectedPost.title} />
-                    <div className="post-information">
-                        <div className="modal-text">
-                            <h2>{selectedPost.title}</h2>
-                            <h3>by {selectedPost.artist}</h3>
-                            <p>{selectedPost.description}</p>
-                        </div>
-                        {/* Conditionally render Edit and Delete buttons for admins */}
-                        {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
-                            <div className="admin-editing">
-                                <button className="edit-button" onClick={handleEdit}>Edit</button>
-                                <button
-                                    className="delete-button"
-                                    onClick={() => setShowDeleteConfirmation(true)}
-                                >
-                                    Delete
-                                </button>
-                            </div>
-                        )}
+        <div className="blogmodal" onClick={onClose}>
+            <div className="blogmodal-content" onClick={(e) => e.stopPropagation()}>
+                <img src={`data:image/jpeg;base64,${selectedPost.imgdata}`} alt={selectedPost.title} />
+                <div className="blogpost-info">
+                    <div className="blogpost-text">
+                        <h2>{selectedPost.title}</h2>
+                        <h3>{selectedPost.subtitle}</h3>
+                        <p>{formatDescription(selectedPost.description)}</p> {/* Use formatted description */}
                     </div>
+                    {/* Conditionally render edit and delete buttons for admins */}
+                    {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
+                        <div className="admin-editing">
+                            <button className="edit-button" onClick={handleEdit}>Edit</button>
+                            <button className="delete-button" onClick={() => setShowDeleteConfirmation(true)}>Delete</button>
+                        </div>
+                    )}
                 </div>
             </div>
 
