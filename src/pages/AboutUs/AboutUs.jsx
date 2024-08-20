@@ -14,7 +14,7 @@ function AboutUs() {
                     <img className="headshot" src="https://i.pinimg.com/736x/3b/3c/a1/3b3ca1a8415ec99dd632c57fb40813f5.jpg" alt="Salomé van Zutphen Logo" />
                     <img className="namelogo" src={logo} alt="Salomé van Zutphen Logo" />
                     <blockquote className="aboutus-quote">
-                        'I aspire to break taboos about the menstrual cycle. It should be celebrated as a natural and empowering aspect of womanhood!'
+                        'I aspire to break taboos about the menstrual cycle. < br/> It should be celebrated as a natural and empowering aspect of womanhood!'
                     </blockquote>
                 </div>
             <p className="aboutus-maintext">
