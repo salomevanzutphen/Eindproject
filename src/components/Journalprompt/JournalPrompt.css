@@ -8,10 +8,11 @@
 }
 
 .journalprompts h3 {
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.7);
     color: black;
     padding: 15px;
     border-radius: 20px;
+    font-style: italic;
     width: 400px;
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
@@ -19,12 +20,13 @@
 }
 
 .journalprompts p {
-    max-width: 1000px;
+    max-width: 1200px;
     text-align: center;
-    margin: 15px;
+    height: 150px;
     border-radius: 20px;
     font-family: "La Belle Aurore", cursive;
     font-weight: 400;
+    align-content: center;
 }
 
 .journal-button {
