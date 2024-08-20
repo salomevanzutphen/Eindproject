@@ -6,7 +6,7 @@ const SignUpSuccess = ({ close }) => {
         <div className="modal-overlay">
             <div className="modal-content">
                 <button className="close-button" onClick={close}>X</button>
-                <h2>Sign Up Successful!</h2>
+                <h2>You are signed up!</h2>
                 <p>You can now log in with your new details.</p>
             </div>
         </div>

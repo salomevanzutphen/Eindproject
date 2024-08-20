@@ -62,7 +62,7 @@ const Login = ({ close }) => {  // Accept a 'close' function prop
                 <button type="submit" className="login-button">
                     {loading ? 'Logging In...' : 'Log In'}
                 </button>
-                {error && <p className="error-message">There was an error logging in. Please try again.</p>}
+                {error && <p className="error-message">Error logging in. Please try again.</p>}
             </form>
         </div>
     );

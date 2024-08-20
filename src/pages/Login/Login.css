@@ -12,6 +12,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     z-index: 10;  // Ensure it's above the overlay
 width: 300px;
+
 }
 
 .close-button {
@@ -45,6 +46,7 @@ z-index: 5;  // Lower than the modal but above everything else
     margin-bottom: 10px;
     font-size: 24px;
     color: #333;
+    margin-top: 10px;
 }
 
 .login-container p {
@@ -81,12 +83,13 @@ z-index: 5;  // Lower than the modal but above everything else
 
 .loginbutton {
     padding: 10px;
-    background-color: #90BE6D;
+    background-color: #7AA04B;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .loginbutton:hover {
