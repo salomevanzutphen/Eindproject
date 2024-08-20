@@ -7,7 +7,7 @@ import { AuthContext } from '../../context/AuthContext.jsx'; // Zorg ervoor dat 
 function CreatePost() {
     // Initialize state variables
     const [title, setTitle] = useState('');
-    const [name, setName] = useState('');
+    const [subtitle, setSubtitle] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
     const [addSuccess, setAddSuccess] = useState(false);
@@ -31,7 +31,7 @@ function CreatePost() {
         // Create a FormData object to handle file uploads
         const formData = new FormData();
         formData.append('title', title);
-        formData.append('name', name);
+        formData.append('subtitle', subtitle);
         formData.append('description', description);
 
         if (fileInputRef.current.files[0]) {
@@ -56,7 +56,7 @@ function CreatePost() {
 
             // Reset form fields
             setTitle('');
-            setName('');
+            setSubtitle('');
             setDescription('');
             setImage(null);
             fileInputRef.current.value = null;
@@ -90,13 +90,13 @@ function CreatePost() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="post-name">Name</label>
+                    <label htmlFor="post-subtitle">Subtitle</label>
                     <input
                         type="text"
-                        name="post-name-field"
-                        id="post-name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        name="post-subtitle-field"
+                        id="post-subtitle"
+                        value={subtitle}
+                        onChange={(e) => setSubtitle(e.target.value)}
                         required
                     />
                 </div>

@@ -9,7 +9,7 @@ function EditPost() {
     const location = useLocation();
     const { post } = location.state || {}; // Get the post data from the state passed via navigate
     const [title, setTitle] = useState(post?.title || '');
-    const [name, setName] = useState(post?.name || '');
+    const [subtitle, setSubtitle] = useState(post?.subtitle || '');
     const [description, setDescription] = useState(post?.description || '');
     const [image, setImage] = useState(null);
     const fileInputRef = useRef(null);
@@ -29,7 +29,7 @@ function EditPost() {
 
         const formData = new FormData();
         formData.append('title', title);
-        formData.append('name', name);
+        formData.append('subtitle', subtitle);
         formData.append('description', description);
 
         if (fileInputRef.current.files[0]) {
@@ -72,13 +72,13 @@ function EditPost() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="post-name">Name</label>
+                    <label htmlFor="post-name">Subtitle</label>
                     <input
                         type="text"
-                        name="post-name-field"
-                        id="post-name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        name="post-subtitle-field"
+                        id="post-subtitle"
+                        value={subtitle}
+                        onChange={(e) => setSubtitle(e.target.value)}
                         required
                     />
                 </div>

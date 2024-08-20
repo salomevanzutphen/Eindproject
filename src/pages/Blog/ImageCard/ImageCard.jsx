@@ -12,7 +12,7 @@ const ImageCard = ({ post, onImageClick }) => {
                     <div className="text">
                         <div className="overlay">
                         <div className="title-artist">{post.title}</div>
-                        <div className="name-artist">{post.artist}</div>
+                        <div className="name-artist">{post.subtitle}</div>
                         </div>
                 </div>
             </div>
