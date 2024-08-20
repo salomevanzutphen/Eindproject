@@ -43,47 +43,50 @@
 .home-part2 {
     background-color: #ACB569; /* Light gray background for better contrast */
     width: 100%;
-    box-sizing: border-box;
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    padding-top: 150px;
-    padding-bottom: 120px;
-}
-
-.home-profile-image {
-    width: 400px; /* Ensures image takes full width of the section */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 60px;
-}
-
-.home-part2-info {
-    padding: 20px;
-    margin-bottom: 20px;
     flex-direction: column;
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 120px;
+    align-items: center;
+    text-align: center; /* Ensures text inside <p> is also centered */
+    margin: 0 auto;
 }
 
-.homepage-quote{
-    width: 800px;
-    color: white;
-    background-color: rgba(68, 70, 35, 0.58);
-    padding: 20px;
-    margin-left: -120px;
-    margin-top: -80px;
-    font-size: 25px;
-    font-family: "La Belle Aurore", cursive;
-    border-radius: 40px;
+.cycle-synced{
+    color: #F5F5F5;
+    font-size: 110px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-family: "Gruppo", sans-serif;
 }
 
+.homepage-subtitle{
+    color: #F5F5F5;
+    font-size: 50px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    font-family: "Gruppo", sans-serif;
+}
 
-.home-part2-images {
+.home-part2-pillars{
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    gap: 30px;
+    gap: 60px;
     margin-top: 30px;
     margin-left: 15px;
+}
+
+.pillar{
+    flex-direction: column;
+    display: flex;
+    gap: 10px;
+}
+
+.pillar h3{
+    font-family: "Gruppo", sans-serif;
+    color: black;
+    font-size: 30px;
 }
 
 .home-image {
@@ -95,20 +98,18 @@
 }
 
 
-.cycle-synced{
-    color: #F5F5F5;
-    font-size: 80px;
-    margin-left: 15px;
+.homepage-quote{
+    width: 800px;
+    color: white;
+    background-color: rgba(68, 70, 35, 0.58);
+    padding: 30px;
+    font-size: 25px;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 40px;
     margin-bottom: 20px;
-    font-family: "Gruppo", sans-serif;
-}
-
-.cycleliving-p{
-    font-size: 33px;
-    color: black;
-    margin-left: 15px;
-    margin-bottom: 25px;
-    font-family: "Gruppo", sans-serif;
+    font-weight: lighter;
+    line-height: 1.6;
+    margin-top: 25px;
 }
 
 
@@ -122,6 +123,7 @@
     font-family: "Gruppo", sans-serif;
     font-size: 30px;
     border-radius: 20px;
+    width: 250px;
 }
 
 .mystory:hover {
