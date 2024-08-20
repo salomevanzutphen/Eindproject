@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F6F0ED;
+    background-color: var(--background);
     padding-bottom: 200px;
 }
 
@@ -23,15 +23,20 @@
     gap: 40px;
 }
 
-.phase1-keywords p{
+.phase1-keywords p {
     font-size: 36px;
     font-style: italic;
-    font-weight: lighter;
     background-color: #D9D9D9;
     border-radius: 20px;
     padding: 20px;
     margin-top: 25px;
-    font-family: "Gruppo", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.phase1-keywords p:hover {
+    transform: scale(1.05); /* Slightly increase the size */
 }
 
 .phase1-introduction{
@@ -46,7 +51,8 @@
 .phase1-intro-text{
     text-align: left;
     flex-direction: column;
-    font-family: 'Josefin Slab', sans-serif;
+    width: 580px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .phase1-intro-title{
@@ -101,7 +107,12 @@
     object-fit: cover;
 }
 
-
+.foodoption1{
+    width: 222px;
+    height: 222px;
+    border-radius: 40px;
+    object-fit: cover;
+}
 .journalprompts{
     display: flex;
     flex-direction: column;
@@ -155,7 +166,7 @@
 .menstrualcycle-subtext{
     text-align: center;
     color: black;
-    font-size: 21px;
+    font-size: 24px;
     font-style: italic;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
@@ -310,5 +321,27 @@
     font-size: 27px;
     font-weight: 300;
     font-style: italic;
+}
+
+.mealtip-phase1{
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.meal1{
+    width: 222px;
+    height: 222px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.tip-phase1{
+    max-width: 450px;
+    text-align: left;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 30px;
+    align-content: center;
+    margin-left: 15px;
 }
 

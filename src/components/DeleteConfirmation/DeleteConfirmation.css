@@ -32,15 +32,16 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .confirm-button {
-    background-color: #d9534f;
+    background-color: var(--red);
     color: white;
 }
 
 .cancel-button {
-    background-color: #5bc0de;
+    background-color: #408ADB;
     color: white;
 }
 

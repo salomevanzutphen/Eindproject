@@ -40,7 +40,7 @@ function Phase4() {
             <h1 className="phase4-title">
                 Follicular Phase
             </h1>
-            <div className="keywords">
+            <div className="phase4-keywords">
                 <h3>Balance</h3>
                 <h3>Ground</h3>
                 <h3>Evaluate</h3>
@@ -74,7 +74,7 @@ function Phase4() {
                 </div>
             </div>
 
-            <img className="menstrualcycle" src={cycle} alt="tempimage"/>
+            <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
             <div className="progesterone-info">
                 <h2>How progesterone shapes your luteal phase experience</h2>
                 <p>As estrogen levels drop, progesterone begins to rise, playing a crucial role in your body's hormonal balance. Progesterone helps soothe your mood by stimulating GABA receptors in your brain, making you feel more calm and collected. Its mild sedative properties also promote better sleep. Additionally, progesterone acts as a natural diuretic, helping to release excess fluid from your body. If you experience chronic anxiety, mood swings, insomnia, and excessive bloating during the luteal phase, it could indicate that your progesterone levels are too low.
@@ -100,6 +100,12 @@ function Phase4() {
                         <img className="nutrient-video" src={tempimage} alt="tempimage"/>
 
                     <div className="nutrient-wrapper3">
+                        <div className="mealtip-phase4">
+                            <img className="meal4" src="https://i.pinimg.com/564x/08/a5/45/08a545461a6ca71323b2024a7835a198.jpg" alt="tempimage"/>
+                            <blockquote className="tip-phase4">
+                                'Dark chocolate is my favourite treat to get a boost of magnesium!'
+                            </blockquote>
+                        </div>
                         <p className="nutrient-subtitle">Select a nutrient for more information</p>
                         <div className="nutrients">
 
@@ -156,15 +162,6 @@ function Phase4() {
                                 Additionally, serotonin levels can drop during this phase, which may cause you to crave carbohydrates, as these foods help boost serotonin production.
                             </p>
                         </div>
-
-                        <h2 className="connect-p4">Let's connect! </h2>
-
-                        <div className="socialmedia">
-                            <img className="instagram-icon" src={instagram} alt="tempimage"/>
-                            <a className="socialhandle"
-                               href="https://www.instagram.com/salome__vz/" target="_blank">@salome__vz</a>
-                        </div>
-
 
 
                     </div>

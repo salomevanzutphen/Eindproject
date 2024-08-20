@@ -38,14 +38,14 @@ function Phase2() {
         <div className="phase2-wrapper">
             <p className="phase-welcome-script">Welcome to your</p>
             <h1 className="phase2-title">Follicular Phase</h1>
-            <div className="keywords">
+            <div className="phase2-keywords">
                 <h3>Grow</h3>
                 <h3>Explore</h3>
                 <h3>Empower</h3>
             </div>
             <div className="phase-introduction">
                 <Calendar />
-                <div className="phase-intro-text">
+                <div className="phase2-intro-text">
                     <h3 className="phase2-intro-title">Boost of Energy</h3>
                     <p>The follicular phase brings a surge of energy and enthusiasm for life! Your creativity and problem-solving skills are increasing, making it an ideal period for tackling complex tasks or learning a new skill. This is the perfect time to go out of your comfort zone, as your tolerance to stress and anxiety is much higher than before. Use this energy to take on any challenges with confidence! Initiate new projects, start a hobby and engage in networking opportunities. Expand your physical, social and mental horizons.
                     </p>
@@ -72,28 +72,21 @@ function Phase2() {
 
             </div>
 
-                <img className="estrogenimage" src={estrogenimage} alt="estrogen" />
-                <img className="cycle-graph-image" src={cycle} alt="tempimage" />
+
+                <img className="cycle-graph-image" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage" />
             <h3 className="cycle-graph-image-subtext">
                 Right after your period ends, the follicular phase starts with your body prepping some eggs and thickening the uterine lining.
                 Estrogen starts to rise here.
             </h3>
-
+            <img className="estrogenimage" src={estrogenimage} alt="estrogen" />
 
             <div className="estrogen-information">
                 <div className="estrogen-description">
-                    <h3>What is estrogen dominance?</h3>
+                    <h2>Estrogen Dominance</h2>
                     <p>
                         During the follicular phase, estrogen rises. As a result, you're likely to be in a better mood and feel more energized. However, many women struggle with estrogen dominance. This refers to an imbalance of too much estrogen compared to progesterone. If this is you, you might suffer from irregular periods, sensitive breasts, low libido, fatigue, difficulty concentrating and an increased risk of certain cancers. You are also likely to have increased PMS (premenstrual syndrome) symptoms, which are a mixture of physical and emotional symptoms during the luteal phase (phase before menstruation).
                     </p>
 
-                    <h2 className="connect-p2">Let's connect! </h2>
-
-                    <div className="socialmedia-p2">
-                        <img className="instagram-icon-p2" src={instagram} alt="tempimage"/>
-                        <a className="socialhandle-p2"
-                           href="https://www.instagram.com/salome__vz/" target="_blank">@salome__vz</a>
-                    </div>
                 </div>
                 <img className="estrogen-video" src={tempimage} alt="estrogenvideo" />
             </div>

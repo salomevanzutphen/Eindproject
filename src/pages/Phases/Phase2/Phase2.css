@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #F6F0ED;
+    background-color: var(--background);
     padding-bottom: 200px;
 }
 
@@ -16,13 +16,13 @@
     font-weight: 700;
 }
 
-.keywords{
+.phase2-keywords{
     display: flex;
     flex-direction: row;
     gap: 40px;
 }
 
-.keywords h3{
+.phase2-keywords h3{
     font-size: 36px;
     font-style: italic;
     background-color: #D9D9D9;
@@ -31,8 +31,12 @@
     margin-top: 25px;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
 
+.phase2-keywords h3:hover {
+    transform: scale(1.05); /* Slightly increase the size */
+}
 .phase-introduction{
     display: flex;
     flex-direction: row;
@@ -40,16 +44,10 @@
     margin-top: 60px;
 }
 
-.calendar{
-    width: 570px;
-    height: 550px;
-}
-
-
-.phase-intro-text{
+.phase2-intro-text{
     text-align: left;
     flex-direction: column;
-    width: 566px;
+    width: 620px;
     font-family: "Josefin Sans", sans-serif;
 }
 
@@ -57,18 +55,19 @@
     color: var(--green);
     background-color: #FFFFFF;
     border-radius: 15px;
-    padding: 15px 20px;
+    width: 295px;
+    padding: 15px;
     font-size: 33px;
     font-style: italic;
     text-align: center;
     font-weight: 600;
-    display: inline-block;
 
 }
 
-.phase-intro-text p{
+.phase2-intro-text p{
     font-size: 33px;
     color: #000000;
+    width: 660px;
     font-weight: 250;
 }
 
@@ -120,12 +119,12 @@
 .cycle-graph-image-subtext{
     text-align: center;
     color: black;
-    font-size: 21px;
+    font-size: 24px;
     font-style: italic;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
     margin-top: 20px;
-    width: 800px;
+    width: 820px;
 }
 
 
@@ -136,12 +135,12 @@
     flex-direction: row;
     display: flex;
     gap: 40px;
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .estrogen-description{
     width: 500px;
-    height: 640px;
+    height: 520px;
     padding: 20px;
     font-family: "Josefin Sans", sans-serif;
     background-color: #FFFFFF;
@@ -161,7 +160,7 @@
 
 
 
-.estrogen-description h3{
+.estrogen-description h2{
     font-size: 32px;
     color: var(--green);
     font-weight: 450;
@@ -170,7 +169,7 @@
 
 .estrogen-description p{
     font-size: 24px;
-    margin-top: 0;
+    margin-top: 10px;
     width: 400px;
     margin-left: 20px;
 }

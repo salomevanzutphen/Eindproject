@@ -54,7 +54,7 @@ function Phase1() {
             <p>
                 Embrace menstruation as a natural cycle of renewal, where the body undergoes a transformative process of shedding old layers.
                 Take the time to rest and release, allowing yourself to reflect on what no longer aligns with your goals. What aspects of your life could benefit from a renewal?
-                Do you need to release any thinking patterns? What are you grateful for this month?
+                What patterns should you let go off?
                 Prioritize self-care, rest and reflection during this phase.
                 Use your intuition, which is extra strong at this time, to figure out what type of self-care you would benefit from most.
             </p>
@@ -84,7 +84,7 @@ function Phase1() {
 
 
 
-    <img className="menstrualcycle" src={cycle} alt="tempimage"/>
+    <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
     <h3 className="menstrualcycle-subtext">Your cycle starts when you have your period. During this phase your body is clearing out last month's buildup by getting rid of the old uterine lining. Estrogen and progesterone levels are at their lowest now.
     </h3>
 
@@ -98,6 +98,12 @@ function Phase1() {
                 <img className="nutrient-video" src={tempimage} alt="tempimage"/>
 
             <div className="nutrient-wrapper3">
+                <div className="mealtip-phase1">
+                    <img className="meal1" src="https://i.pinimg.com/564x/ba/92/f8/ba92f885cfcbc8be3d980a04a5264884.jpg" alt="tempimage"/>
+                    <blockquote className="tip-phase1">
+                        'I like eating a meal with animal and plant based iron, like ground beef with spinach'
+                    </blockquote>
+                </div>
                 <p className="nutrient-subtitle">Select a nutrient for more information</p>
                 <div className="nutrients">
                     <VitaminD
@@ -150,13 +156,6 @@ function Phase1() {
                     </p>
                 </div>
 
-                <h2 className="connect-p1">Let's connect! </h2>
-
-                <div className="socialmedia">
-                <img className="instagram-icon" src={instagram} alt="tempimage"/>
-                <a className="socialhandle"
-                   href="https://www.instagram.com/salome__vz/" target="_blank">@salome__vz</a>
-            </div>
 
             </div>
 
