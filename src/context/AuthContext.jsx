@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {jwtDecode} from 'jwt-decode';  // Correct the import, remove braces for default export
+import {jwtDecode} from 'jwt-decode';
 import axios from 'axios';
 
 export const AuthContext = createContext({});
@@ -25,7 +25,6 @@ function AuthContextProvider({ children }) {
                 fetchUserData(decoded.sub, token);
             } catch (error) {
                 console.error("Failed to decode JWT:", error);
-                // Handle decoding error by clearing invalid token
                 localStorage.removeItem('token');
                 setAuthState((prevState) => ({ ...prevState, status: 'done' }));
             }
@@ -46,7 +45,7 @@ function AuthContextProvider({ children }) {
             localStorage.setItem('token', JWT);
             try {
                 const decoded = jwtDecode(JWT);
-                fetchUserData(decoded.sub, JWT, '/mysync');
+                fetchUserData(decoded.sub, JWT);
             } catch (error) {
                 console.error("Failed to decode JWT during login:", error);
             }
@@ -69,8 +68,12 @@ function AuthContextProvider({ children }) {
         console.log('User is signed out!');
         navigate('/');
     }
-    useEffect(()=>{console.log(authState)},[authState]);
-    async function fetchUserData(username, token, redirectUrl) {
+
+    useEffect(() => {
+        console.log(authState);
+    }, [authState]);
+
+    async function fetchUserData(username, token) {
         try {
             const result = await axios.get(`http://localhost:8080/users/me`, {
                 headers: {
@@ -83,13 +86,16 @@ function AuthContextProvider({ children }) {
                 isAuth: true,
                 username: result.data.username,
                 name: result.data.name,
-                roles: result.data.authorities,
+                roles: result.data.authorities || [],
                 token: token,
                 status: 'done',
             });
 
-            if (redirectUrl) {
-                navigate(redirectUrl);
+            // Redirect based on roles only when logging in
+            if (result.data.authorities[0].authority === 'ROLE_ADMIN') {
+                navigate('/blog');
+            } else {
+                navigate('/mysync');
             }
 
         } catch (e) {
@@ -105,7 +111,7 @@ function AuthContextProvider({ children }) {
         }
     }
 
-    // Helper function to validate JWT
+
     function isValidToken(token) {
         return typeof token === 'string' && token.split('.').length === 3;
     }
@@ -118,7 +124,11 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={contextData}>
-            {authState.status === 'done' ? children : <p>Loading...</p>}
+            {authState.status === 'done' ? (
+                <div>{children}</div>
+            ) : (
+                <p>Loading...</p>
+            )}
         </AuthContext.Provider>
     );
 }

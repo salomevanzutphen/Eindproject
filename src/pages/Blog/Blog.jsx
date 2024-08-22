@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Blog.css';
-import ImageCard from './ImageCard/ImageCard.jsx'; // Import the ImageCard component
-import ImageModal from './ImageModal/ImageModal.jsx'; // Import the ImageModal component
+import PostView from './postView/PostView.jsx'; // Import the ImageCard component
+import ImageCard from './imageCard/ImageCard.jsx'; // Import the ImageModal component
 import { AuthContext } from '../../context/AuthContext'; // Import AuthContext to access roles
 
 const Blog = () => {
@@ -55,9 +55,8 @@ const Blog = () => {
     };
 
     return (
-        <>
+        <div className="blog-page-container">
             <div className="blog-page">
-                {/* Conditionally render the Create New Post button for admins */}
                 {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
                     <button className="create-post-button" onClick={handleCreateNewPost}>
                         Create Post
@@ -65,17 +64,17 @@ const Blog = () => {
                 )}
                 <div className="posts">
                     {posts.map((post) => (
-                        <ImageCard key={post.id} post={post} onImageClick={handleImageClick} />
+                        <PostView key={post.id} post={post} onImageClick={handleImageClick} />
                     ))}
                 </div>
-                <ImageModal
+                <ImageCard
                     selectedPost={selectedPost}
                     onClose={handleCloseModal}
                     onEdit={handleEditPost}
                     onDelete={handleDeletePost}
                 />
             </div>
-        </>
+        </div>
     );
 };
 

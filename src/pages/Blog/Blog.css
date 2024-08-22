@@ -1,8 +1,6 @@
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: var(--background);
-    margin: 0;
-    padding: 0;
+.blog-page-container {
+    background-color: #F6F0ED;
+    min-height: 100%; /* Ensures the background covers the entire viewport */
 }
 
 .blog-page {

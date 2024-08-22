@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
-import { AuthContext } from "../../context/AuthContext.jsx"; // Ensure this path is correct
+import { AuthContext } from "../../context/AuthContext.jsx";
 
 function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
     const [bgColor, setBgColor] = useState("#F6F0ED");
-    const { isAuth, logout, roles } = useContext(AuthContext); // Access auth state and roles from context
+    const { isAuth, logout, roles } = useContext(AuthContext);
 
     useEffect(() => {
         if (location.pathname === "/") {
@@ -22,7 +22,6 @@ function Navbar() {
         navigate("/");
     };
 
-    // Check if the first role in the roles array is 'ROLE_USER'
     const isRegularUser = roles.length > 0 && roles[0].authority === 'ROLE_USER';
 
     return (

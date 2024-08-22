@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './Connect.css';
-import Login from '../Login/Login.jsx';
-import SignUp from '../Signup/SignUp.jsx';
+import Login from './login/Login.jsx';
+import SignUp from './signUp/SignUp.jsx';
 import logo2 from '../../assets/logotrans.png';
 import { AuthContext } from '../../context/AuthContext.jsx'; // Ensure this path is correct
 
@@ -25,7 +25,7 @@ const Connect = () => {
 
             <div className="overlay" style={{ display: (showLogin || showSignUp) ? 'block' : 'none' }}></div>
             <div className="connectpage">
-                <img className="logo2" src={logo2} alt="Living in Sync" />
+                <img className="transparent-logo" src={logo2} alt="Living in Sync" />
                 <div className="connect-innercontainer">
                     <h1>Start tracking your cycle today!</h1>
                     <p>
@@ -36,13 +36,13 @@ const Connect = () => {
                         privacy concerns and everything in between.
                     </p>
                 </div>
-                <div className="buttons">
+                <div className="connect-buttons">
                     {isAuth ? (
                         <button onClick={logout}>Sign Out</button>
                     ) : (
                         <>
-                            <button onClick={() => setShowLogin(true)}>Log In</button>
-                            <button onClick={() => setShowSignUp(true)}>Sign Up</button>
+                            <button onClick={() => setShowLogin(true)}>Log in</button>
+                            <button onClick={() => setShowSignUp(true)}>Sign up</button>
                         </>
                     )}
                 </div>
