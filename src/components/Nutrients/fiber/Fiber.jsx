@@ -1,7 +1,5 @@
 import "./Fiber.css";
 
-
-
 function Fiber({ backgroundColorClass, description, showDescription, onClick }){
     return (
         <div className="fiber-container">

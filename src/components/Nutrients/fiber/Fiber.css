@@ -20,15 +20,9 @@
     text-align: center;
 }
 
-
-
-
 .fiber:hover {
     background-color: grey;
 }
-
-
-
 
 .fiber-description {
     position: absolute;
@@ -54,4 +48,10 @@
     border-right: 10px solid transparent;
     border-bottom: 20px solid white;
 }
+
+
+
+
+
+
 

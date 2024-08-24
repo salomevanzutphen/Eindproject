@@ -12,7 +12,7 @@ function VitaminC({ backgroundColorClass, description, showDescription, onClick 
                     <div className="vitaminC-description-content">
                         <p className="vitaminC-intro">
                             {description} </p>
-                </div>
+                    </div>
                 </div>
             )}
         </div>
