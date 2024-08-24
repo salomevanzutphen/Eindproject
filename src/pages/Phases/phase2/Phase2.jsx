@@ -1,13 +1,10 @@
 import {useState} from "react";
 import './Phase2.css';
 
-import estrogenimage from "../../../assets/estrogen.jpg";
-
 import Magnesium from "../../../components/Nutrients/magnesium/Magnesium.jsx";
 import Glycine from "../../../components/Nutrients/glycine/Glycine.jsx";
 import Catechins from "../../../components/Nutrients/catechins/Catechins.jsx";
 import Indole3Carbinol from "../../../components/Nutrients/indole-3Carbinol/Indole.jsx";
-import Selenium from "../../../components/Nutrients/selenium/Selenium.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
 
@@ -49,33 +46,6 @@ function Phase2() {
                     </p>
                 </div>
             </div>
-
-
-
-            <div className="phase-activities">
-                <div className="phase2-activity">
-                    <img className="innovate-image" src="https://i.pinimg.com/564x/2c/be/7f/2cbe7fec868a62ef8d92b6409d1175cc.jpg" alt="tempimage" />
-                    <p>Strength</p>
-                </div>
-                <div className="phase2-activity">
-                    <img className="read-image" src="https://i.pinimg.com/564x/62/29/16/622916128cc043bf404dc51bf3fb497c.jpg" alt="tempimage" />
-                    <p>Read</p>
-                </div>
-                <div className="phase2-activity">
-                    <img className="travel-image" src="https://i.pinimg.com/564x/bf/88/02/bf880281566e8419aeb58cf542748cc0.jpg" alt="tempimage" />
-                    <p>Travel</p>
-                </div>
-
-
-
-            </div>
-
-
-                <img className="cycle-graph-image" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage" />
-            <h3 className="cycle-graph-image-subtext">
-                Right after your period ends, the follicular phase starts with your body prepping some eggs and thickening the uterine lining.
-                Estrogen starts to rise here.
-            </h3>
 
 
             <div className="estrogen-information">
@@ -125,12 +95,6 @@ function Phase2() {
                                 showDescription={openDescription === 'Indole3Carbinol'}
                                 description={descriptionIndole2}
                                 onClick={() => handleToggleDescription('Indole3Carbinol')}
-                            />
-                            <Selenium
-                                backgroundColorClass="green-background"
-                                description={descriptionSelenium2}
-                                showDescription={openDescription === 'Selenium'}
-                                onClick={() => handleToggleDescription('Selenium')}
                             />
 
                         </div>

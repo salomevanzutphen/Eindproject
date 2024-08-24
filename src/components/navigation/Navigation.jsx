@@ -28,23 +28,7 @@ function Navbar() {
         <div className="navbar" style={{ backgroundColor: bgColor }}>
             <ul className="main-navigation-links">
                 <div className="nav-items">
-                    {/* Home and About are accessible to everyone */}
-                    <li>
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) => (isActive ? "active" : "")}
-                        >
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/aboutus"
-                            className={({ isActive }) => (isActive ? "active" : "")}
-                        >
-                            About
-                        </NavLink>
-                    </li>
+
 
                     {/* Blog is accessible to all authenticated users */}
                     {isAuth && (
@@ -78,7 +62,7 @@ function Navbar() {
                             </button>
                         ) : (
                             <NavLink
-                                to="/connect"
+                                to="/"
                                 className={({ isActive }) => (isActive ? "active" : "")}
                             >
                                 Connect

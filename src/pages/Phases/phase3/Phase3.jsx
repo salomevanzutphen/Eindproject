@@ -5,8 +5,6 @@ import Calcium from "../../../components/Nutrients/calcium/Calcium.jsx";
 import Zinc from "../../../components/Nutrients/zinc/Zinc.jsx";
 import Selenium from "../../../components/Nutrients/selenium/Selenium.jsx";
 import VitaminE from "../../../components/Nutrients/e/VitaminE.jsx";
-import Iodine from "../../../components/Nutrients/iodine/Iodine.jsx";
-import Folicacid from "../../../components/Nutrients/folicAcid/Folicacid.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
 
@@ -24,8 +22,6 @@ function Phase3(){
     const descriptionCalcium3 = "Calcium plays a crucial role in regulating various hormones, including those that govern the menstrual cycle. It also helps strengthen bones, teeth, and muscles, including the uterine muscles. Effective muscle function within the reproductive system is essential for the release of a mature egg during ovulation."
     const descriptionZinc3 = "Zinc is crucial for regulating estrogen and progesterone levels. Studies indicate that higher zinc intake in the 90 days before ovulation results in healthier follicles and eggs."
     const descriptionSelenium3 = "Selenium plays a role in the synthesis and metabolism of thyroid hormones, which are crucial for regulating the menstrual cycle and reproductive hormonal balance. Therefore, imbalances in thyroid function can negatively influence fertility."
-    const descriptionFolicacid3 = "Folic acid plays a significant role in managing stress and inflammation in the body. High stress levels increase the body's need for folate. Factors such as advanced maternal age and lifestyle habits like smoking can affect a woman's fertility, but adequate folic acid intake can help manage these stress-related effects."
-    const descriptionIodine3 = "Iodine plays a crucial role in fertility by supporting the production of thyroid hormones, which are essential for regulating ovulation, metabolism, and maintaining a healthy weight—key factors influencing fertility. Adequate iodine levels ensure proper thyroid function, which in turn helps to create a favorable environment for conception and pregnancy."
     const descriptionVitaminE3 = "Vitamin E is a powerful antioxidant that protects cells from oxidative stress. It also supports the blood flow to the arteries and increases the thickness of the uterine lining. A thicker uterine lining supports the conception process, thereby boosting fertility in women."
 
 
@@ -54,26 +50,6 @@ function Phase3(){
                 </div>
             </div>
 
-            <div className="phase-activities">
-                <div className="phase3-activity">
-                    <img className="move-image" src="https://i.pinimg.com/564x/26/d5/d4/26d5d4727ade0b16467039230fa88fc2.jpg" alt="move"/>
-                    <p>Brainstorm</p>
-                </div>
-                <div className="phase3-activity">
-                    <img className="DIY-image" src="https://i.pinimg.com/564x/8c/88/0b/8c880b5635703449d4b21e23417bacc8.jpg" alt="diy"/>
-                    <p>DIY project</p>
-                </div>
-                <div className="phase3-activity">
-                    <img className="socializing-image" src="https://i.pinimg.com/564x/f2/88/ef/f288efc656ebd4d670f78c064aa54716.jpg" alt="socialize"/>
-                    <p>Socialize</p>
-                </div>
-            </div>
-
-            <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
-             <h3 className="menstrualcycle-subtext">
-                 Welcome to ovulation! During this phase one of your eggs gets released from the ovary.
-                 It's the peak moment of your cycle, usually happening around day 14.
-             </h3>
 
 
             <div className="nutrient-wrapper">
@@ -116,7 +92,6 @@ function Phase3(){
                             />
 
 
-
                             <VitaminE
                                 backgroundColorClass="orange-background"
                                 description={descriptionVitaminE3}
@@ -124,20 +99,8 @@ function Phase3(){
                                 onClick={() => handleToggleDescription('VitaminE')}
                             />
 
-                            <Iodine
-                                backgroundColorClass="orange-background"
-                                description={descriptionIodine3}
-                                showDescription={openDescription === 'Iodine'}
-                                onClick={() => handleToggleDescription('Iodine')}
-                            />
 
 
-                            <Folicacid
-                                backgroundColorClass="orange-background"
-                                description={descriptionFolicacid3}
-                                showDescription={openDescription === 'Folicacid'}
-                                onClick={() => handleToggleDescription('Folicacid')}
-                            />
 
 
                         </div>
@@ -154,18 +117,6 @@ function Phase3(){
 
                 </div>
 
-                <div className="phase3-well-beingtips">
-                    <h2>Well-being tip: Be creative!</h2>
-                    <p>
-                        A text about exploring your creative energies, which are at an alltime high. This creative energy
-                        can manifest itself in various ways. Physically, your body will feel the urge to create new life,
-                        which may expresses itself in an increased libido. But not everyone is ready to be a mother of course.
-                        You can also channel this creative energy in other pursuits: perhaps a hobby or project that you're working on.
-                        Allow yourself to become inspired, explore and socialize more with others, sharing and having conversations.
-
-
-                    </p>
-                </div>
 
 
             </div>
