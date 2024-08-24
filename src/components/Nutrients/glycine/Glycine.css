@@ -15,8 +15,8 @@
     font-size: 32px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -28,10 +28,10 @@
 
 
 .glycine-description {
-    position: absolute; /* Add this */
-    top: 120px; /* Adjust as necessary */ /* Align with the left border of the button */
+    position: absolute;
+    top: 120px;
     z-index: 10;
-    left: 0px;
+    left: 0;
     background-color: white;
     padding: 25px;
     border-radius: 25px;
@@ -43,8 +43,8 @@
 .glycine-description::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust to position the arrow */
-    left: 75px; /* Adjust to align with the button */
+    top: -20px;
+    left: 75px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;

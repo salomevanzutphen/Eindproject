@@ -15,10 +15,9 @@
     transition: background-color 0.3s;
     font-size: 32px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -26,12 +25,10 @@
     background-color: grey;
 }
 
-
-
 .iron-description {
-    position: absolute; /* Add this */
-    top: 120px; /* Adjust as necessary */
-    left: 0px;
+    position: absolute;
+    top: 120px;
+    left: 0;
     z-index: 10;
     background-color: white;
     padding: 25px;
@@ -44,8 +41,8 @@
 .iron-description::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust to position the arrow */
-    left: 50px; /* Adjust to align with the button */
+    top: -20px;
+    left: 50px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;

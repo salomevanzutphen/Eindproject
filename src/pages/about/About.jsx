@@ -1,4 +1,3 @@
-import React from 'react';
 import "./About.css";
 import logo from '../../assets/logo.jpg';
 import instagram from "../../assets/instagram.png";
@@ -8,8 +7,6 @@ function About() {
 
 
         <div className="about-page">
-
-
                 <div className="profile-header">
                     <img className="headshot" src="https://i.pinimg.com/736x/3b/3c/a1/3b3ca1a8415ec99dd632c57fb40813f5.jpg" alt="Salomé van Zutphen Logo" />
                     <img className="namelogo" src={logo} alt="Salomé van Zutphen Logo" />
@@ -18,13 +15,13 @@ function About() {
                     </blockquote>
                 </div>
             <p className="about-maintext">
-                <div className="about-maintext1">
+                <p className="about-maintext1">
                 Cycle syncing is a holistic approach that aligns your lifestyle and nutrition choices with the rhythm of your menstrual cycle. By understanding the natural ebbs and flows of your body, you can recognize that not every day needs to be highly productive. Many of us put immense pressure on ourselves, which can lead to burnout, especially when paired with a nutrient-deficient diet.
 
                 My mother’s long struggle with hormonal issues initially sparked my interest in women's healthcare. When she reached a low point in her illness, I began to do a lot of research to help out. I wanted to know the root of the problem and how I could adjust my life now to avoid getting sick later.
 
 
-                </div>
+                </p>
                 <div className="about-maintext2">
                 Did you know that before 1993, women were rarely included in clinical trials? Unfortunately this research disparity continues to affect women today. For example, many women go undiagnosed for ADHD, because the symptoms show up differently for them than it does for men. Without enough research, women won’t find the help from the healthcare system that they need.
 

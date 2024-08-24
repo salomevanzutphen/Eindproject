@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './Phase2.css';
 
 import estrogenimage from "../../../assets/estrogen.jpg";
@@ -76,7 +76,7 @@ function Phase2() {
                 Right after your period ends, the follicular phase starts with your body prepping some eggs and thickening the uterine lining.
                 Estrogen starts to rise here.
             </h3>
-            <img className="estrogenimage" src={estrogenimage} alt="estrogen" />
+
 
             <div className="estrogen-information">
                 <div className="estrogen-description">
@@ -86,7 +86,7 @@ function Phase2() {
                     </p>
 
                 </div>
-                <img className="estrogen-video" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="estrogenvideo" />
+                <iframe className="estrogen-video" src="https://player.vimeo.com/video/1002123534?h=4259258ace" width="640" height="360" frameBorder="0"    allowFullScreen></iframe>
             </div>
 
 
@@ -94,10 +94,8 @@ function Phase2() {
             <div className="nutrient-wrapper">
                 <h2 className="nutrient-title-p2">Nutrients that support the liver</h2>
                 <div className="nutrient-wrapper2">
-                    <div className="mediacontent-p2">
-                        <img className="nutrient-video" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage" />
 
-                    </div>
+                    <iframe className="nutrient-video" src="https://player.vimeo.com/video/1002128743?h=1ab45de5a4" width="640" height="360" frameBorder="0"    allowFullScreen></iframe>
                     <div className="nutrient-wrapper3-p2">
                         <p className="liver-information">
                             The liver plays an important role in detoxifying the body from harmful substances, including excess estrogen.

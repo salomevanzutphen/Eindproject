@@ -1,4 +1,3 @@
-import React, {useState} from "react";
 import "./VitaminC.css";
 
 function VitaminC({ backgroundColorClass, description, showDescription, onClick }){

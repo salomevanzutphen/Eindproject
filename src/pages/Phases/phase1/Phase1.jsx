@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import './Phase1.css';
 
 
@@ -93,8 +93,7 @@ function Phase1() {
 
         <div className="nutrient-wrapper2">
 
-                <img className="nutrient-video" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
-
+            <iframe className="nutrient-video" src="https://player.vimeo.com/video/1002130259?h=631adeae56" width="640" height="564" frameBorder="0"    allowFullScreen></iframe>
             <div className="nutrient-wrapper3">
                 <div className="mealtip-phase1">
                     <img className="meal1" src="https://i.pinimg.com/564x/ba/92/f8/ba92f885cfcbc8be3d980a04a5264884.jpg" alt="tempimage"/>

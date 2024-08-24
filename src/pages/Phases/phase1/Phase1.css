@@ -135,6 +135,29 @@
     margin-top: -50px;
 }
 
+.mealtip-phase1{
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.meal1{
+    width: 222px;
+    height: 222px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.tip-phase1{
+    max-width: 450px;
+    text-align: left;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 30px;
+    align-content: center;
+    margin-left: 15px;
+}
+
+
 .nutrient-subtitle{
     font-size: 36px;
     font-family: "Newsreader", serif;
@@ -202,26 +225,3 @@
     font-weight: 300;
     font-style: italic;
 }
-
-.mealtip-phase1{
-    flex-direction: row;
-    display: flex;
-    margin-bottom: 40px;
-}
-
-.meal1{
-    width: 222px;
-    height: 222px;
-    border-radius: 40px;
-    object-fit: cover;
-}
-
-.tip-phase1{
-    max-width: 450px;
-    text-align: left;
-    font-family: "La Belle Aurore", cursive;
-    font-size: 30px;
-    align-content: center;
-    margin-left: 15px;
-}
-

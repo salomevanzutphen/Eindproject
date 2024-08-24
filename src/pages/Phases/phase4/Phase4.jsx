@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './Phase4.css';
 
 import PMSsymptoms from "../../../assets/PMSsymptoms.jpg";
@@ -95,9 +95,7 @@ function Phase4() {
                 <h2 className="nutrient-title-p4">Nutrients that aid PMS symptoms</h2>
 
                 <div className="nutrient-wrapper2">
-
-                        <img className="nutrient-video" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
-
+                    <iframe className="nutrient-video" src="https://player.vimeo.com/video/1002116495?h=0b075435e5" width="640" height="360" frameBorder="0"    allowFullScreen></iframe>
                     <div className="nutrient-wrapper3">
                         <div className="mealtip-phase4">
                             <img className="meal4" src="https://i.pinimg.com/564x/08/a5/45/08a545461a6ca71323b2024a7835a198.jpg" alt="tempimage"/>

@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Blog.css';
-import PostView from './postView/PostView.jsx'; // Import the ImageCard component
-import ImageCard from './imageCard/ImageCard.jsx'; // Import the ImageModal component
-import { AuthContext } from '../../context/AuthContext'; // Import AuthContext to access roles
+import PostView from './postView/PostView.jsx';
+import ImageCard from './imageCard/ImageCard.jsx';
+import { AuthContext } from '../../context/AuthContext';
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState(null);
-    const { roles } = useContext(AuthContext); // Access roles from AuthContext
+    const { roles } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {

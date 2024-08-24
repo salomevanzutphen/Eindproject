@@ -1,4 +1,3 @@
-import React from "react";
 import './WelcomePhase.css';
 import Calendar from "../../../components/calendar/Calendar.jsx";
 

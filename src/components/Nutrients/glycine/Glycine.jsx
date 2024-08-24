@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./Glycine.css";
 
 function Glycine({ backgroundColorClass, description, showDescription, onClick }){

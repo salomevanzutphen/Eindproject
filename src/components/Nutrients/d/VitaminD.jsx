@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./VitaminD.css";
 
 function VitaminD({ backgroundColorClass, description, showDescription, onClick }){
@@ -10,7 +9,7 @@ function VitaminD({ backgroundColorClass, description, showDescription, onClick 
             {showDescription && (
                 <div className="vitaminD-description">
                     <div className="vitaminD-description-content">
-                        <p className="vitaminD-intro">
+                        <p>
                             {description}
                           </p>
 

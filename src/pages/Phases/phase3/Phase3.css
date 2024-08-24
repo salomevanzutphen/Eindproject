@@ -27,11 +27,6 @@
     margin-top: 60px;
 }
 
-.calendar{
-    width: 570px;
-    height: 550px;
-}
-
 .phase3-intro-text{
     text-align: left;
     flex-direction: column;
@@ -159,8 +154,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 800px; /* Set the max width */
-    gap: 30px; /* Adjust gap between items */
+    width: 800px;
+    gap: 30px;
     margin-top: 20px;
 }
 

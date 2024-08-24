@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import './Phase3.css';
 
 import Calcium from "../../../components/Nutrients/calcium/Calcium.jsx";
@@ -80,8 +80,7 @@ function Phase3(){
                 <h2 className="nutrient-title-p3">Nutrients that boost fertility</h2>
 
                 <div className="nutrient-wrapper2">
-
-                        <img className="nutrient-video" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="tempimage"/>
+                    <iframe className="nutrient-video" src="https://player.vimeo.com/video/1002110934?h=1b6298ba9a" width="640" height="564" frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
 
 
                     <div className="nutrient-wrapper3">

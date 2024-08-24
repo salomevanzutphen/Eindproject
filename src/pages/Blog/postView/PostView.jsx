@@ -1,4 +1,3 @@
-import React from 'react';
 import './PostView.css';
 
 const PostView = ({ post, onImageClick }) => {
@@ -6,9 +5,6 @@ const PostView = ({ post, onImageClick }) => {
         <div className="image-card" onClick={() => onImageClick(post)}>
             <div className="image-container">
                 <img src={`data:image/jpeg;base64,${post.imgdata}`} alt={post.title} />
-
-
-
                     <div className="imagecard-text">
                         <div className="imagecard-overlay">
                         <div className="imagecard-title">{post.title}</div>

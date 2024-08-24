@@ -1,4 +1,3 @@
-import React from 'react';
 import './DeleteConfirmation.css';
 
 const DeleteConfirmation = ({ onConfirm, onCancel }) => {

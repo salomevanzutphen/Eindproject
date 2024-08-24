@@ -1,4 +1,4 @@
-.blogmodal {
+.blogmodal-imagecard {
     position: fixed;
     top: 0;
     left: 0;
@@ -19,14 +19,6 @@
     justify-content: center;
 }
 
-.blogmodal-content img {
-    height: 500px; /* Ensures the image does not overflow */
-    width: auto;
-    object-fit: cover;
-    padding: 20px;
-    background-color: white;
-}
-
 .blogpost-info {
     height: 500px;
     max-width: 400px;
@@ -34,28 +26,38 @@
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure content is spaced between top and bottom */
+    justify-content: space-between;
     padding-top: 20px;
     padding-right: 20px;
     box-sizing: border-box;
 }
 
+.blogmodal-content img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    padding: 20px;
+    background-color: white;
+}
+
+
 .blogpost-text {
-    flex-grow: 1; /* Allow the text area to grow and take up remaining space */
+    flex-grow: 1;
     margin-top: 10px;
-    max-height: 400px; /* Set a max-height */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding-right: 10px; /* Optional: Adds some padding for scrollbar */
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 .blogpost-text h2 {
-    font-size: 35px;
+    font-size: 25px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .blogpost-text h3 {
-    font-size: 27px;
+    font-size: 20px;
     font-style: italic;
     color: #666;
 }
@@ -72,8 +74,8 @@
     display: flex;
     gap: 10px;
     justify-content: center;
-    align-items: flex-end; /* Align at the bottom of the container */
-    padding-bottom: 20px; /* Add some padding at the bottom */
+    align-items: flex-end;
+    padding-bottom: 20px;
 }
 
 .edit-button,

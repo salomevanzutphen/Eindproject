@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './SignUp.css';
 import axios from 'axios';
 import SuccessModal from '../../../components/signUpSuccess/SignUpSuccess.jsx';
 
 const SignUp = ({ close }) => {
 
-    // State for signup data
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [birthday, setBirthday] = useState('');
 
-    // Functionality state
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
     const [success, setSuccess] = useState(false);

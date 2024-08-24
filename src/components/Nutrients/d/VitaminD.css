@@ -1,5 +1,3 @@
-
-
 .vitaminD-container {
     position: relative;
     display: flex;
@@ -17,12 +15,10 @@
     font-size: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
-
-
 
 .vitaminD:hover {
     background-color: grey;
@@ -30,10 +26,10 @@
 
 
 .vitaminD-description {
-    position: absolute; /* Add this */
-    top: 120px; /* Adjust as necessary */
-    left: 0; /* Align with the left border of the button */
-    z-index: 10; /* Ensure it is above other elements */
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 10;
     background-color: white;
     padding: 20px;
     border-radius: 25px;
@@ -45,8 +41,8 @@
 .vitaminD-description::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust to position the arrow */
-    left: 33px; /* Adjust to align with the button */
+    top: -20px;
+    left: 33px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
@@ -55,7 +51,7 @@
 }
 
 
-.vitaminD-intro{
+.vitaminD-description-content p{
     margin-left: 10px;
 }
 

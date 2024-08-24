@@ -1,6 +1,6 @@
 .blog-page-container {
     background-color: #F6F0ED;
-    min-height: 100%; /* Ensures the background covers the entire viewport */
+    min-height: 100%;
 }
 
 .blog-page {

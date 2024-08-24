@@ -5,7 +5,6 @@ import axios from 'axios';
 import DeleteConfirmation from '../../../components/deleteConfirmation/DeleteConfirmation.jsx';
 import { AuthContext } from '../../../context/AuthContext';
 
-
 const ImageCard = ({ selectedPost, onClose }) => {
     const navigate = useNavigate();
     const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
@@ -53,7 +52,7 @@ const ImageCard = ({ selectedPost, onClose }) => {
     };
 
     return (
-        <div className="blogmodal" onClick={onClose}>
+        <div className="blogmodal-imagecard" onClick={onClose}>
             <div className="blogmodal-content" onClick={(e) => e.stopPropagation()}>
                 <img src={`data:image/jpeg;base64,${selectedPost.imgdata}`} alt={selectedPost.title} />
                 <div className="blogpost-info">

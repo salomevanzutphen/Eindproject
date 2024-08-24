@@ -15,8 +15,8 @@
     font-size: 32px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -26,9 +26,9 @@
 }
 
 .zinc-description {
-    position: absolute; /* Add this */
-    top: 118px; /* Adjust as necessary */
-    right: -270px; /* Align with the left border of the button */
+    position: absolute;
+    top: 118px;
+    right: -270px;
     z-index: 10;
     background-color: white;
     padding: 25px;
@@ -41,8 +41,8 @@
 .zinc-description::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust to position the arrow */
-    left: 290px; /* Adjust to align with the button */
+    top: -20px;
+    left: 290px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;

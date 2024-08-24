@@ -16,8 +16,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
     display: flex;
-    align-items: center; /* Vertically center */
-    justify-content: center; /* Horizontally center */
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
@@ -29,8 +29,8 @@
 
 
 .catechins-description {
-    position: absolute; /* Add this */
-    top: 120px; /* Adjust as necessary */ /* Align with the left border of the button */
+    position: absolute;
+    top: 120px;
     z-index: 10;
     left: -150px;
     background-color: white;
@@ -52,52 +52,3 @@
     border-bottom: 20px solid white;
 }
 
-
-.catechins-foods{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-top: 25px;
-}
-
-.catechins-1, .catechins-2, .catechins-3, .catechins-4, .catechins-5, .catechins-6{
-    flex-direction: row;
-    display: flex;
-    flex-basis: calc(50% - 26px);
-}
-
-
-
-.catechins-image {
-    width: 73px;
-    height: 73px;
-    border-radius: 50%; /* Makes the container a circle */
-    overflow: hidden;
-    display: flex; /* Ensure it acts as a flex container */
-    align-items: center; /* Center the image vertically */
-    justify-content: center; /* Center the image horizontally */
-}
-
-
-.catechins-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the container without being distorted */
-}
-
-.catechins-text{
-    flex-direction: column;
-    display: flex;
-    margin-left: 15px;
-    margin-top: 15px;
-}
-
-.catechins-text h3{
-    font-size: 24px;
-}
-
-.catechins-text p{
-    font-style: italic;
-    font-size: 20px;
-}

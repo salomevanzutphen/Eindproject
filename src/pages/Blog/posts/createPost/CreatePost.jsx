@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import { useState, useRef, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../CreateEditPost.css';
-import { AuthContext } from '../../../../context/AuthContext.jsx'; // Zorg ervoor dat het pad correct is
+import { AuthContext } from '../../../../context/AuthContext.jsx';
 
 function CreatePost() {
     const [title, setTitle] = useState('');

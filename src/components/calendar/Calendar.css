@@ -1,3 +1,4 @@
+/* Calendar.css */
 .calendar-container {
     width: 470px;
     height: 480px;
@@ -42,7 +43,7 @@
 
 .calendar-day-number {
     font-size: 120px;
-    color: inherit;
+    color: inherit; /* This ensures it takes the color from the parent element */
 }
 
 .calendar-day-name {
