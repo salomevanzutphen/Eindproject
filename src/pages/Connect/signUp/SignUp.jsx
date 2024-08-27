@@ -5,7 +5,6 @@ import SuccessModal from '../../../components/signUpSuccess/SignUpSuccess.jsx';
 
 const SignUp = ({ close }) => {
 
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
@@ -16,10 +15,35 @@ const SignUp = ({ close }) => {
     const [loading, toggleLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
+    const [passwordError, setPasswordError] = useState('');
+
+    function validatePassword(password) {
+        if (password.length < 8) {
+            setPasswordError('Password must be at least 8 characters long.');
+            return false;
+        }
+        if (!/[a-z]/.test(password)) {
+            setPasswordError('Password must contain at least one lowercase letter.');
+            return false;
+        }
+        if (!/[A-Z]/.test(password)) {
+            setPasswordError('Password must contain at least one uppercase letter.');
+            return false;
+        }
+        setPasswordError(''); // No errors
+        return true;
+    }
+
     async function handleSubmit(e) {
         e.preventDefault();
         toggleError(false);
         toggleLoading(true);
+
+        // Validate password before making the API request
+        if (!validatePassword(password)) {
+            toggleLoading(false);
+            return;
+        }
 
         try {
             await axios.post('http://localhost:8080/users', {
@@ -75,6 +99,7 @@ const SignUp = ({ close }) => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
+                            {passwordError && <p className="error-message">{passwordError}</p>}
                         </div>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
