@@ -66,7 +66,7 @@ function CreatePost() {
 
     return (
         <div className="create-post-page">
-            <h1>Create a New Post</h1>
+            <h1>Create New Post</h1>
             {addSuccess && <p>Post created successfully!</p>}
             <form onSubmit={addPost}>
                 <div className="form-group">
