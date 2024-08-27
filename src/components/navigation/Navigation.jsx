@@ -29,6 +29,13 @@ function Navbar() {
             <ul className="main-navigation-links">
                 <div className="nav-items">
 
+                    <li>
+                        <NavLink to="/" activeClassName="active">Home</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/about" activeClassName="active">About</NavLink>
+                    </li>
+
 
                     {/* Blog is accessible to all authenticated users */}
                     {isAuth && (
@@ -58,11 +65,11 @@ function Navbar() {
                     <li>
                         {isAuth ? (
                             <button className="logout-button" onClick={handleLogout}>
-                                Log Out
+                                Log out
                             </button>
                         ) : (
                             <NavLink
-                                to="/"
+                                to="/connect"
                                 className={({ isActive }) => (isActive ? "active" : "")}
                             >
                                 Connect
