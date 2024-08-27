@@ -20,11 +20,13 @@
 
 .journalprompts p {
     max-width: 1000px;
+    height: 180px;
     text-align: center;
     margin: 15px;
     border-radius: 20px;
     font-family: "La Belle Aurore", cursive;
     font-weight: 400;
+    align-content: center;
 }
 
 .journal-button {
