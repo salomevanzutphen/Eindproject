@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './FullCalendar.css';
+import {getDaysInMonth, getFirstDayOfMonth, findPhaseForDate, isSelectedDate} from '../../helpers/FullCalendarHelpers.jsx';
 
 const FullCalendar = ({ onClose, onSave }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -8,28 +9,21 @@ const FullCalendar = ({ onClose, onSave }) => {
     const [editMode, setEditMode] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
-    const getDaysInMonth = (year, month) => new Date(year, month + 1, 0).getDate();
-    const getFirstDayOfMonth = (year, month) => new Date(year, month, 1).getDay();
-
     const renderDays = () => {
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
         const daysInMonth = getDaysInMonth(year, month);
         const firstDayOfMonth = getFirstDayOfMonth(year, month);
-        const startOfDay = (date) => new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
         const days = [];
+
         for (let i = 0; i < firstDayOfMonth; i++) {
             days.push(<div className="full-calendar-day empty" key={`empty-${i}`} />);
         }
+
         for (let day = 1; day <= daysInMonth; day++) {
             const date = new Date(year, month, day);
-            const phase = phases.find(phase => {
-                const startDate = startOfDay(new Date(phase.startDate));
-                const endDate = startOfDay(new Date(phase.endDate));
-                endDate.setDate(endDate.getDate());
-                return startDate <= date && date <= endDate;
-            });
+            const phase = findPhaseForDate(date, phases);
             let className = "full-calendar-day";
             if (phase) {
                 if (phase.phaseName === 'Menstruation') className += " red";
@@ -37,7 +31,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                 if (phase.phaseName === 'Ovulation') className += " orange";
                 if (phase.phaseName === 'Luteal') className += " blue";
             }
-            if (selectedDate && date.toDateString() === selectedDate.toDateString()) {
+            if (isSelectedDate(selectedDate, date)) {
                 className += " selected";
             }
             if (editMode) {
@@ -53,6 +47,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                 </div>
             );
         }
+
         return days;
     };
 
