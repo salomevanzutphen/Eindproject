@@ -2,16 +2,18 @@ import { useState } from 'react';
 import './SignUp.css';
 import axios from 'axios';
 import SuccessModal from '../../../components/signUpSuccess/SignUpSuccess.jsx';
+import Button from '../../../components/button/Button.jsx';
 
 const SignUp = ({ close }) => {
-
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [birthday, setBirthday] = useState('');
 
-    const [error, toggleError] = useState(false);
+    const [usernameError, setUsernameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [generalError, setGeneralError] = useState('');
     const [loading, toggleLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
@@ -30,16 +32,18 @@ const SignUp = ({ close }) => {
             setPasswordError('Password must contain at least one uppercase letter.');
             return false;
         }
-        setPasswordError(''); // No errors
+        setPasswordError('');
         return true;
     }
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toggleError(false);
+        setUsernameError('');
+        setEmailError('');
+        setGeneralError('');
         toggleLoading(true);
 
-        // Validate password before making the API request
+
         if (!validatePassword(password)) {
             toggleLoading(false);
             return;
@@ -55,10 +59,20 @@ const SignUp = ({ close }) => {
             });
 
             setSuccess(true);
-
         } catch (e) {
-            console.error(e);
-            toggleError(true);
+            console.error("Signup failed:", e.response);
+            if (e.response && e.response.data) {
+                const errorMessage = e.response.data;
+                if (errorMessage.includes("Username is already taken")) {
+                    setUsernameError('Username is already taken.');
+                } else if (errorMessage.includes("Email already exists")) {
+                    setEmailError('Email is already taken.');
+                } else {
+                    setGeneralError('There was an error signing up. Please try again.');
+                }
+            } else {
+                setGeneralError('There was an error signing up. Please try again.');
+            }
         }
 
         toggleLoading(false);
@@ -88,6 +102,7 @@ const SignUp = ({ close }) => {
                                 onChange={(e) => setUsername(e.target.value)}
                                 required
                             />
+                            {usernameError && <p className="error-message">{usernameError}</p>}
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
@@ -122,6 +137,7 @@ const SignUp = ({ close }) => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
+                            {emailError && <p className="error-message">{emailError}</p>}
                         </div>
                         <div className="form-group">
                             <label htmlFor="birthday">Birthday</label>
@@ -134,10 +150,17 @@ const SignUp = ({ close }) => {
                                 required
                             />
                         </div>
-                        <button type="submit" className="signup-button">
-                            {loading ? 'Signing Up...' : 'Sign Up'}
-                        </button>
-                        {error && <p className="error-message">There was an error signing up. Please try again.</p>}
+
+                        <div className="signupbutton-wrapper">
+                            <Button
+                                type="submit"
+                                text={loading ? 'Signing Up...' : 'Sign Up'}
+                                backgroundColor="#90BE6D"
+                                onClick={handleSubmit}
+                            />
+                        </div>
+
+                        {generalError && <p className="error-message">{generalError}</p>}
                     </form>
                 </div>
             )}

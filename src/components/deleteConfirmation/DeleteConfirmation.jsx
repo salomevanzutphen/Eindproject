@@ -1,4 +1,5 @@
 import './DeleteConfirmation.css';
+import Button from '../button/Button.jsx';
 
 const DeleteConfirmation = ({ onConfirm, onCancel }) => {
     return (
@@ -6,8 +7,22 @@ const DeleteConfirmation = ({ onConfirm, onCancel }) => {
             <div className="delete-confirmation-box">
                 <h2>Are you sure?</h2>
                 <div className="delete-confirmation-actions">
-                    <button className="confirm-button" onClick={onConfirm}>Delete</button>
-                    <button className="cancel-button" onClick={onCancel}>Cancel</button>
+
+                    <div>
+                    <Button
+                        text="Delete"
+                        backgroundColor="var(--red)"
+                        onClick={onConfirm}
+                    />
+                </div>
+
+                    <div>
+                    <Button
+                        text="Cancel"
+                        backgroundColor="#6c757d"
+                        onClick={onCancel}
+                    />
+                    </div>
                 </div>
             </div>
         </div>
