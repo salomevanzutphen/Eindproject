@@ -8,6 +8,8 @@ import Connect from "./pages/Connect/Connect.jsx";
 import ScrollToTop from './helpers/ScrollToTop.jsx';
 import EditPost from "./pages/Blog/posts/editPost/EditPost.jsx";
 import NotFound from './pages/notFound/NotFound.jsx';
+import About from "./pages/about/About.jsx";
+import Home from "./pages/home/Home.jsx";
 
 function App() {
     return (
@@ -16,11 +18,13 @@ function App() {
             <ScrollToTop />
             <div className="app">
                 <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/edit-post/:id" element={<EditPost />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/mysync" element={<MyCycle />} />
                     <Route path="/create-post" element={<CreatePost />} />
-                    <Route path="/" element={<Connect />} />
+                    <Route path="/connect" element={<Connect />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </div>

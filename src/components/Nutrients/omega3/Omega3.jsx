@@ -1,6 +1,5 @@
 import "./Omega3.css";
 
-
 function Omega3({ backgroundColorClass, description, showDescription, onClick }){
 
     return (

@@ -1,6 +1,5 @@
 import "./Selenium.css";
 
-
 function Selenium2({ backgroundColorClass, description, showDescription, onClick }){
     return (
         <div className="selenium-container">

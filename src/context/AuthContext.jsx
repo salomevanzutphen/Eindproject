@@ -91,7 +91,6 @@ function AuthContextProvider({ children }) {
                 status: 'done',
             });
 
-            // Redirect based on roles only when logging in
             if (result.data.authorities[0].authority === 'ROLE_ADMIN') {
                 navigate('/blog');
             } else {

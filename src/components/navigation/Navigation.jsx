@@ -2,12 +2,15 @@ import { useEffect, useState, useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { AuthContext } from "../../context/AuthContext.jsx";
+import profileIcon from "../../assets/profile.png";
+import UserProfile from "../../pages/account/UserProfile.jsx";
 
 function Navbar() {
     const location = useLocation();
     const navigate = useNavigate();
     const [bgColor, setBgColor] = useState("#F6F0ED");
     const { isAuth, logout, roles } = useContext(AuthContext);
+    const [showUserProfile, setShowUserProfile] = useState(false);
 
     useEffect(() => {
         if (location.pathname === "/") {
@@ -24,11 +27,14 @@ function Navbar() {
 
     const isRegularUser = roles.length > 0 && roles[0].authority === 'ROLE_USER';
 
+    const toggleUserProfile = () => {
+        setShowUserProfile(!showUserProfile);
+    };
+
     return (
         <div className="navbar" style={{ backgroundColor: bgColor }}>
             <ul className="main-navigation-links">
                 <div className="nav-items">
-
                     <li>
                         <NavLink to="/" activeClassName="active">Home</NavLink>
                     </li>
@@ -36,8 +42,6 @@ function Navbar() {
                         <NavLink to="/about" activeClassName="active">About</NavLink>
                     </li>
 
-
-                    {/* Blog is accessible to all authenticated users */}
                     {isAuth && (
                         <li>
                             <NavLink
@@ -49,7 +53,6 @@ function Navbar() {
                         </li>
                     )}
 
-                    {/* My Cycle is accessible to regular users only */}
                     {isRegularUser && (
                         <li>
                             <NavLink
@@ -61,7 +64,6 @@ function Navbar() {
                         </li>
                     )}
 
-                    {/* Connect/Logout: Connect for guests, Logout for authenticated users */}
                     <li>
                         {isAuth ? (
                             <button className="logout-button" onClick={handleLogout}>
@@ -76,8 +78,20 @@ function Navbar() {
                             </NavLink>
                         )}
                     </li>
+
+                    {isRegularUser && (
+                        <li>
+                            <img
+                                className="profile-icon"
+                                src={profileIcon}
+                                alt="profile-icon"
+                                onClick={toggleUserProfile}
+                            />
+                        </li>
+                    )}
                 </div>
             </ul>
+            {showUserProfile && <UserProfile onClose={toggleUserProfile} />}
         </div>
     );
 }

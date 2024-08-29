@@ -43,8 +43,8 @@
 .catechins-description::before {
     content: "";
     position: absolute;
-    top: -20px; /* Adjust to position the arrow */
-    left: 240px; /* Adjust to align with the button */
+    top: -20px;
+    left: 240px;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;

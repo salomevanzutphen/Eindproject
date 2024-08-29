@@ -13,9 +13,9 @@
     margin-top: 25px;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300;
-    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+    transition: transform 0.3s ease;
 }
 
 .keyword:hover {
-    transform: scale(1.05); /* Slightly increase the size */
+    transform: scale(1.05);
 }

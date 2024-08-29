@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import "./Zinc.css";
-
 
 function Zinc3({ backgroundColorClass, description, showDescription, onClick }){
     return (

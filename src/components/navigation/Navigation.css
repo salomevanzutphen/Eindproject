@@ -45,6 +45,18 @@
     background-color: #CCCCCC;
 }
 
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: -7px;
+}
+
+.profile-icon:hover {
+    transform: scale(1.2);
+}
+
 .logout-button {
     background-color: #FFFFFF;
     color: #34622C;
