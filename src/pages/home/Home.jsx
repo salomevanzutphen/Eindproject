@@ -32,7 +32,9 @@ function Home() {
                     </div>
                 </div>
 
-                    <p className="homepage-quote"> "When my mother got sick, I wanted to find the root of the problem. Or is medication the only solution?" - Salomé </p>
+                <blockquote className="homepage-quote">
+                    "When my mother got sick, I wanted to find the root of the problem. Or is medication the only solution?" - Salomé
+                </blockquote>
                     <button className="mystory" onClick={() => navigate('/about')}>Read my story</button>
 
 
