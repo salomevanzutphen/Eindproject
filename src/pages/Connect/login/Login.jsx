@@ -17,7 +17,6 @@ const Login = ({ close }) => {
         setLoading(true);
 
         try {
-            // Attempt to authenticate the user
             const result = await axios.post('http://localhost:8080/authenticate', {
                 username: username,
                 password: password,
@@ -67,7 +66,6 @@ const Login = ({ close }) => {
                 </div>
 
                 <div className="loginbutton-wrapper">
-                    {/* Styled button specifically for the login form */}
                     <button
                         type="submit"
                         className="login-button"
