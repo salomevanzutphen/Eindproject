@@ -69,13 +69,14 @@
     flex-direction: row;
     display: flex;
     align-items: center;
-    gap: 30px;
     margin-right: 90px;
 
 }
 
 .aboutus-instagram-icon{
     width: 50px;
+    margin-right: 13px;
+    margin-left: 20px;
 }
 
 .connect-aboutus{
