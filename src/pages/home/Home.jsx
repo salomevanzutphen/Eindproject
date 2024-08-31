@@ -2,6 +2,7 @@ import "./Home.css";
 import {useNavigate} from "react-router-dom";
 import mainimage from "../../assets/backgroundsalome.jpg";
 
+
 function Home() {
     const navigate = useNavigate();
 

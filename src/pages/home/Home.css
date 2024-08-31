@@ -82,10 +82,6 @@
     object-fit: cover;
 }
 
-.home-image:hover{
-    transform: scale(1.10);
-}
-
 .homepage-pillars p{
     color: black;
     font-size: 35px;
