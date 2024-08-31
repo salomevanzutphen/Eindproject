@@ -61,7 +61,7 @@ const Blog = () => {
                 {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
                     <Button
                         text="Create Post"
-                        backgroundColor="#90BE6D" // Customize button color as needed
+                        backgroundColor="#90BE6D"
                         onClick={handleCreateNewPost}
                     />
                 )}
