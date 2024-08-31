@@ -3,6 +3,7 @@ import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../CreateEditPost.css';
 import { AuthContext } from '../../../../context/AuthContext.jsx';
+import Button from '../../../../components/button/Button.jsx';
 
 function EditPost() {
     const { id } = useParams();
@@ -102,7 +103,14 @@ function EditPost() {
                     />
                     {image && <img src={image} alt="Preview" className="image-preview" />}
                 </div>
-                <button type="submit">Update</button>
+                <div className="button-createupdate-post">
+                <Button
+                    type="submit"
+                    text="Update"
+                    backgroundColor="#90BE6D"
+                    onClick={updatePost}
+                />
+                </div>
             </form>
         </div>
     );
