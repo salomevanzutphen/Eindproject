@@ -4,6 +4,7 @@ import './Blog.css';
 import PostView from './postView/PostView.jsx';
 import ImageCard from './imageCard/ImageCard.jsx';
 import { AuthContext } from '../../context/AuthContext';
+import Button from '../../components/button/Button.jsx';
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
@@ -58,9 +59,11 @@ const Blog = () => {
         <div className="blog-page-container">
             <div className="blog-page">
                 {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
-                    <button className="create-post-button" onClick={handleCreateNewPost}>
-                        Create Post
-                    </button>
+                    <Button
+                        text="Create Post"
+                        backgroundColor="#90BE6D" // Customize button color as needed
+                        onClick={handleCreateNewPost}
+                    />
                 )}
                 <div className="posts">
                     {posts.map((post) => (
