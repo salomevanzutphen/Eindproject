@@ -41,17 +41,15 @@ function Navbar() {
                     <li>
                         <NavLink to="/about" activeClassName="active">About</NavLink>
                     </li>
-
-                    {isAuth && (
-                        <li>
-                            <NavLink
-                                to="/blog"
-                                className={({ isActive }) => (isActive ? "active" : "")}
-                            >
-                                Blog
-                            </NavLink>
-                        </li>
-                    )}
+                    {/* Blog link accessible to everyone */}
+                    <li>
+                        <NavLink
+                            to="/blog"
+                            className={({ isActive }) => (isActive ? "active" : "")}
+                        >
+                            Blog
+                        </NavLink>
+                    </li>
 
                     {isRegularUser && (
                         <li>
