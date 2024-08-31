@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';  // Corrected import for jwt-decode
 import axios from 'axios';
 
 export const AuthContext = createContext({});
@@ -14,6 +14,7 @@ function AuthContextProvider({ children }) {
         token: null,
         status: 'pending',
     });
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,9 +23,10 @@ function AuthContextProvider({ children }) {
         if (token && isValidToken(token)) {
             try {
                 const decoded = jwtDecode(token);
+                console.log('Decoded token:', decoded); // Debugging line
                 fetchUserData(decoded.sub, token);
             } catch (error) {
-                console.error("Failed to decode JWT:", error);
+                console.error('Failed to decode JWT:', error);
                 localStorage.removeItem('token');
                 setAuthState((prevState) => ({ ...prevState, status: 'done' }));
             }
@@ -45,12 +47,13 @@ function AuthContextProvider({ children }) {
             localStorage.setItem('token', JWT);
             try {
                 const decoded = jwtDecode(JWT);
+                console.log('Decoded token during login:', decoded); // Debugging line
                 fetchUserData(decoded.sub, JWT);
             } catch (error) {
-                console.error("Failed to decode JWT during login:", error);
+                console.error('Failed to decode JWT during login:', error);
             }
         } else {
-            console.error("Invalid JWT received:", JWT);
+            console.error('Invalid JWT received:', JWT);
         }
     }
 
@@ -69,15 +72,12 @@ function AuthContextProvider({ children }) {
         navigate('/');
     }
 
-    useEffect(() => {
-        console.log(authState);
-    }, [authState]);
-
     async function fetchUserData(username, token) {
         try {
-            const result = await axios.get(`http://localhost:8080/users/me`, {
+            console.log('Fetching user data with token:', token); // Debugging line
+            const result = await axios.get('http://localhost:8080/users', {
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
                 },
             });
@@ -96,9 +96,8 @@ function AuthContextProvider({ children }) {
             } else {
                 navigate('/mysync');
             }
-
         } catch (e) {
-            console.error("Error fetching user data:", e);
+            console.error('Error fetching user data:', e);
             setAuthState({
                 isAuth: false,
                 username: null,
@@ -109,7 +108,6 @@ function AuthContextProvider({ children }) {
             });
         }
     }
-
 
     function isValidToken(token) {
         return typeof token === 'string' && token.split('.').length === 3;
