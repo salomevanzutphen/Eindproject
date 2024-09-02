@@ -106,7 +106,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                 return;
             }
             try {
-                const response = await fetch(`http://localhost:8080/cycles/mycycle`, {
+                const response = await fetch(`http://localhost:8080/cycles`, { // Updated endpoint
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -154,7 +154,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                     </button>
                     <button
                         type="submit"
-                        className={`save-button ${selectedDate ? 'active' : ''}`}
+                        className={`saveperiod-button ${selectedDate ? 'active' : ''}`}
                         onClick={handleSave}
                         disabled={!selectedDate}
                     >

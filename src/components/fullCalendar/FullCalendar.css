@@ -137,6 +137,18 @@
     cursor: pointer;
 }
 
+.saveperiod-button{
+    background-color: var(--green);
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
 .period-button.grey {
     background-color: grey;
 }
