@@ -18,7 +18,7 @@ const Calendar = ({ onPhaseChange }) => {
     const fetchCycle = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:8080/cycles', { // Updated endpoint
+            const response = await fetch('http://localhost:8080/cycles/mycycle', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -34,7 +34,6 @@ const Calendar = ({ onPhaseChange }) => {
             console.error('Error fetching cycle:', error);
         }
     };
-
 
     const updateCurrentPhase = (date) => {
         const phase = getPhaseForDate(date, phases);

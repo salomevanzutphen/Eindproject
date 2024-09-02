@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import DeleteConfirmation from '../../../components/deleteConfirmation/DeleteConfirmation.jsx';
 import { AuthContext } from '../../../context/AuthContext';
-import Button from '../../../components/button/Button.jsx';
 
 const ImageCard = ({ selectedPost, onClose }) => {
     const navigate = useNavigate();
@@ -41,6 +40,8 @@ const ImageCard = ({ selectedPost, onClose }) => {
     const handleCancelDelete = () => {
         setShowDeleteConfirmation(false);
     };
+
+    // Convert new lines to <br> tags
     const formatDescription = (text) => {
         return text.split('\n').map((str, index) => (
             <React.Fragment key={index}>
@@ -63,16 +64,8 @@ const ImageCard = ({ selectedPost, onClose }) => {
 
                     {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
                         <div className="admin-editing">
-                            <Button
-                                text="Edit"
-                                backgroundColor="var(--green-vibrant)"
-                                onClick={handleEdit}
-                            />
-                            <Button
-                                text="Delete"
-                                backgroundColor="var(--red)"
-                                onClick={() => setShowDeleteConfirmation(true)}
-                            />
+                            <button className="edit-button" onClick={handleEdit}>Edit</button>
+                            <button className="delete-button" onClick={() => setShowDeleteConfirmation(true)}>Delete</button>
                         </div>
                     )}
                 </div>
