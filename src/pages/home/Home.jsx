@@ -2,6 +2,7 @@ import "./Home.css";
 import {useNavigate} from "react-router-dom";
 import mainimage from "../../assets/backgroundsalome.jpg";
 
+
 function Home() {
     const navigate = useNavigate();
 
@@ -31,7 +32,9 @@ function Home() {
                     </div>
                 </div>
 
-                    <p className="homepage-quote"> "Driven by mother's illness, I am committed to improving women's healthcare by addressing the root cause" - Salomé </p>
+                <blockquote className="homepage-quote">
+                    "When my mother got sick, I wanted to find the root of the problem. Or is medication the only solution?" - Salomé
+                </blockquote>
                     <button className="mystory" onClick={() => navigate('/about')}>Read my story</button>
 
 
