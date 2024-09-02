@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../CreateEditPost.css';
 import { AuthContext } from '../../../../context/AuthContext.jsx';
+import Button from '../../../../components/button/Button.jsx';
 
 function CreatePost() {
     const [title, setTitle] = useState('');
@@ -113,7 +114,17 @@ function CreatePost() {
                     />
                     {image && <img src={image} alt="Preview" className="image-preview" />}
                 </div>
-                <button type="submit">Submit</button>
+
+                <div className="button-createupdate-post">
+
+                <Button
+                    type="submit"
+                    text="Submit"
+                    backgroundColor="#90BE6D"
+                    onClick={addPost}
+                />
+
+                </div>
             </form>
         </div>
     );

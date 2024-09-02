@@ -1,32 +1,37 @@
 import { useContext, useState } from 'react';
 import './Login.css';
 import { AuthContext } from '../../../context/AuthContext.jsx';
-import axios from 'axios';
 import PropTypes from 'prop-types';
+import axios from "axios";
 
-const Login = ({ close }) => {  // Accept a 'close' function prop
+const Login = ({ close }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [error, toggleError] = useState(false);
+    const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
     const { login } = useContext(AuthContext);
 
     async function handleSubmit(e) {
         e.preventDefault();
-        toggleError(false);
+        setError(false);
         setLoading(true);
 
         try {
             const result = await axios.post('http://localhost:8080/authenticate', {
                 username: username,
                 password: password,
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
             });
 
             console.log("Login successful", result.data);
             login(result.data.jwt);
+
         } catch (e) {
             console.error("Login failed", e);
-            toggleError(true);
+            setError(true);
         } finally {
             setLoading(false);
         }
@@ -59,9 +64,18 @@ const Login = ({ close }) => {  // Accept a 'close' function prop
                         required
                     />
                 </div>
-                <button type="submit" className="login-button">
-                    {loading ? 'Logging In...' : 'Log In'}
-                </button>
+
+                <div className="loginbutton-wrapper">
+                    <button
+                        type="submit"
+                        className="login-button"
+                        style={{ backgroundColor: loading ? '#8DAA9D' : '#90BE6D' }}
+                        disabled={loading}
+                    >
+                        {loading ? 'Logging In...' : 'Log In'}
+                    </button>
+                </div>
+
                 {error && <p className="error-message">Error logging in. Please try again.</p>}
             </form>
         </div>
