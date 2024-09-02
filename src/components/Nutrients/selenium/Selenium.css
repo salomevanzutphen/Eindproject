@@ -1,0 +1,51 @@
+.selenium-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selenium {
+    color: white;
+    width: 210px;
+    height: 90px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.selenium:hover {
+    background-color: grey;
+}
+
+
+.selenium-description {
+    position: absolute;
+    top: 118px;
+    right: -120px;
+    z-index: 10;
+    background-color: white;
+    padding: 25px;
+    border-radius: 25px;
+    width: 720px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selenium-description::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 220px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+}

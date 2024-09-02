@@ -1,18 +1,17 @@
-/* Navigation.css */
 .navbar {
-    position: fixed; /* Ensure navbar stays on top */
+    position: fixed;
     top: 0;
     width: 100%;
-    background-color: #F6F0ED; /* Matches your default bgColor */
-    z-index: 10; /* Higher than overlays or modals */
+    background-color: #F6F0ED;
+    z-index: 10;
 }
 
 .main-navigation-links {
     list-style-type: none;
     margin: 0;
-    padding: 15px; /* Keep it responsive */
+    padding: 20px;
     display: flex;
-    justify-content: center; /* Center navigation items */
+    justify-content: center;
     background-color: inherit;
 }
 
@@ -27,8 +26,8 @@
 .main-navigation-links li a {
     text-decoration: none;
     color: #34622C;
-    font-family: 'Josefin Slab', sans-serif;
-    font-size: 25px; /* Use a responsive font size */
+    font-family: "Gruppo", sans-serif;
+    font-size: 25px;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #FFFFFF;
@@ -38,10 +37,40 @@
 
 .main-navigation-links li a.active {
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1px;
     text-underline-offset: 5px;
 }
 
 .main-navigation-links li a:hover {
+    background-color: #CCCCCC;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-top: -7px;
+}
+
+.profile-icon:hover {
+    transform: scale(1.2);
+}
+
+.logout-button {
+    background-color: #FFFFFF;
+    color: #34622C;
+    font-family: "Gruppo", sans-serif;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    margin-top: -10px;
+}
+
+.logout-button:hover {
     background-color: #CCCCCC;
 }

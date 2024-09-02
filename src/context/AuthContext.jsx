@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {jwtDecode} from 'jwt-decode';  // Correct the import, remove braces for default export
+import { jwtDecode } from 'jwt-decode';  // Corrected import for jwt-decode
 import axios from 'axios';
 
 export const AuthContext = createContext({});
@@ -14,6 +14,7 @@ function AuthContextProvider({ children }) {
         token: null,
         status: 'pending',
     });
+
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,10 +23,10 @@ function AuthContextProvider({ children }) {
         if (token && isValidToken(token)) {
             try {
                 const decoded = jwtDecode(token);
+                console.log('Decoded token:', decoded); // Debugging line
                 fetchUserData(decoded.sub, token);
             } catch (error) {
-                console.error("Failed to decode JWT:", error);
-                // Handle decoding error by clearing invalid token
+                console.error('Failed to decode JWT:', error);
                 localStorage.removeItem('token');
                 setAuthState((prevState) => ({ ...prevState, status: 'done' }));
             }
@@ -46,12 +47,13 @@ function AuthContextProvider({ children }) {
             localStorage.setItem('token', JWT);
             try {
                 const decoded = jwtDecode(JWT);
-                fetchUserData(decoded.sub, JWT, '/mysync');
+                console.log('Decoded token during login:', decoded); // Debugging line
+                fetchUserData(decoded.sub, JWT);
             } catch (error) {
-                console.error("Failed to decode JWT during login:", error);
+                console.error('Failed to decode JWT during login:', error);
             }
         } else {
-            console.error("Invalid JWT received:", JWT);
+            console.error('Invalid JWT received:', JWT);
         }
     }
 
@@ -69,12 +71,13 @@ function AuthContextProvider({ children }) {
         console.log('User is signed out!');
         navigate('/');
     }
-    useEffect(()=>{console.log(authState)},[authState]);
-    async function fetchUserData(username, token, redirectUrl) {
+
+    async function fetchUserData(username, token) {
         try {
-            const result = await axios.get(`http://localhost:8080/users/me`, {
+            console.log('Fetching user data with token:', token); // Debugging line
+            const result = await axios.get('http://localhost:8080/users', {
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                     Authorization: `Bearer ${token}`,
                 },
             });
@@ -83,17 +86,18 @@ function AuthContextProvider({ children }) {
                 isAuth: true,
                 username: result.data.username,
                 name: result.data.name,
-                roles: result.data.authorities,
+                roles: result.data.authorities || [],
                 token: token,
                 status: 'done',
             });
 
-            if (redirectUrl) {
-                navigate(redirectUrl);
+            if (result.data.authorities[0].authority === 'ROLE_ADMIN') {
+                navigate('/blog');
+            } else {
+                navigate('/mysync');
             }
-
         } catch (e) {
-            console.error("Error fetching user data:", e);
+            console.error('Error fetching user data:', e);
             setAuthState({
                 isAuth: false,
                 username: null,
@@ -105,7 +109,6 @@ function AuthContextProvider({ children }) {
         }
     }
 
-    // Helper function to validate JWT
     function isValidToken(token) {
         return typeof token === 'string' && token.split('.').length === 3;
     }
@@ -118,7 +121,11 @@ function AuthContextProvider({ children }) {
 
     return (
         <AuthContext.Provider value={contextData}>
-            {authState.status === 'done' ? children : <p>Loading...</p>}
+            {authState.status === 'done' ? (
+                <div>{children}</div>
+            ) : (
+                <p>Loading...</p>
+            )}
         </AuthContext.Provider>
     );
 }

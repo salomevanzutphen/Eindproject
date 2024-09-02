@@ -1,0 +1,104 @@
+.blogmodal-imagecard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.blogmodal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.blogpost-info {
+    height: 500px;
+    max-width: 400px;
+    background-color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.blogmodal-content img {
+    height: 500px;
+    width: auto;
+    object-fit: cover;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.blogpost-text {
+    flex-grow: 1;
+    margin-top: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.blogpost-text h2 {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blogpost-text h3 {
+    font-size: 20px;
+    font-style: italic;
+    color: #666;
+}
+
+.blogpost-text p {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6em;
+}
+
+.admin-editing {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}

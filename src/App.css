@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 :root {
   --green: #7EBC89;
+  --green-light: #A1D2AA;
+
   --blue: #85ACF9;
-  --violet: #CDC7E5;
+  --blue-light: #A8C5FB;
+
   --red: #E3655B;
-  --purple: rgba(217, 79, 164, 0.84);
+  --red-light: #F08A81;
+
   --orange: #F2C078;
-  --blueviolet: #719DF2;
+  --orange-light: #F6D1A3;
+
+  --background: #F6F0ED;
+}
+
+body {
+  background-color: #F6F0ED;
 }
 
 *{
@@ -22,46 +36,3 @@
   flex-direction: column;
 }
 
-
-/*#root {*/
-/*  max-width: 1280px;*/
-/*  margin: 0 auto;*/
-/*  padding: 2rem;*/
-/*  text-align: center;*/
-/*}*/
-
-/*.logo {*/
-/*  height: 6em;*/
-/*  padding: 1.5em;*/
-/*  will-change: filter;*/
-/*  transition: filter 300ms;*/
-/*}*/
-/*.logo:hover {*/
-/*  filter: drop-shadow(0 0 2em #646cffaa);*/
-/*}*/
-/*.logo.react:hover {*/
-/*  filter: drop-shadow(0 0 2em #61dafbaa);*/
-/*}*/
-
-/*@keyframes logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  a:nth-of-type(2) .logo {*/
-/*    animation: logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
-
-/*.card {*/
-/*  padding: 2em;*/
-/*}*/
-
-/*.read-the-docs {*/
-/*  color: #888;*/
-/*}*/

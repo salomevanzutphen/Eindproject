@@ -1,0 +1,224 @@
+.phase2-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    padding-bottom: 200px;
+}
+
+.phase-welcome-script{
+    font-size: 30px;
+    font-family: "La Belle Aurore", cursive;
+}
+
+.phase2-title{
+    text-align: center;
+    font-size: 96px;
+    color: var(--green);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.phase-introduction{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.phase2-intro-text{
+    text-align: left;
+    flex-direction: column;
+    width: 620px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.phase2-intro-title{
+    color: var(--green);
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 295px;
+    padding: 15px;
+    font-size: 33px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.phase2-intro-text p{
+    font-size: 33px;
+    color: #000000;
+    width: 660px;
+    font-weight: 250;
+}
+
+.phase-activities{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 60px;
+
+}
+
+.phase2-activity{
+    text-align: center;
+    color: var(--green);
+    font-size: 32px;
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.innovate-image, .read-image, .travel-image{
+    width: 223px;
+    height: 263px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.estrogenimage{
+    margin-top: 15px;
+}
+
+.cycle-graph-image{
+    width: 800px;
+    margin-top: 50px;
+    border-radius: 40px;
+    background-color: white;
+    padding: 20px;
+}
+
+.cycle-graph-image-subtext{
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 820px;
+}
+
+.estrogen-information{
+    flex-direction: row;
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.estrogen-description{
+    width: 500px;
+    height: 520px;
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #FFFFFF;
+    border-radius: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.estrogen-description h2{
+    font-size: 32px;
+    color: var(--green);
+    font-weight: 450;
+    margin-top: 20px;
+}
+
+.estrogen-description p{
+    font-size: 24px;
+    margin-top: 10px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.estrogen-video{
+    width: 443px;
+    height: 743px;
+    border-radius: 40px;
+}
+
+
+.nutrient-wrapper{
+    flex-direction: column;
+    display: flex;
+    margin-top: 110px;
+}
+
+.nutrient-title-p2{
+    font-size: 64px;
+    color: var(--green);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 30px;
+}
+
+
+.nutrient-video{
+    width: 450px;
+    height: 820px;
+    border-radius: 40px;
+}
+
+.green-background {
+    background-color: var(--green);
+}
+
+
+.nutrient-wrapper3-p2{
+    flex-direction: column;
+    display: flex;
+    margin-top: 0;
+}
+
+.liver-information{
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 40px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.nutrient-subtitle-p2{
+    font-size: 36px;
+    font-family: "Newsreader", serif;
+    font-weight: 300;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.nutrients{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 800px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.hormones-info-p2{
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 40px;
+    margin-top: 60px;
+}
+
+.hormones-title-p2{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--green);
+}
+
+.hormones-info-p2 p{
+    font-size: 27px;
+    font-weight: 300;
+}
+

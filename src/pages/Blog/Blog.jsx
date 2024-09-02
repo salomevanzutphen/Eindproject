@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Blog.css';
-import ImageCard from './ImageCard/ImageCard.jsx'; // Import the ImageCard component
-import ImageModal from './ImageModal/ImageModal.jsx'; // Import the ImageModal component
+import PostView from './postView/PostView.jsx';
+import ImageCard from './imageCard/ImageCard.jsx';
+import { AuthContext } from '../../context/AuthContext';
+import Button from '../../components/button/Button.jsx';
 
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState(null);
+    const { roles } = useContext(AuthContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -53,24 +56,28 @@ const Blog = () => {
     };
 
     return (
-        <>
+        <div className="blog-page-container">
             <div className="blog-page">
-                <button className="create-post-button" onClick={handleCreateNewPost}>
-                    Create New Post
-                </button>
+                {roles.length > 0 && roles[0].authority === 'ROLE_ADMIN' && (
+                    <Button
+                        text="Create Post"
+                        backgroundColor="#90BE6D" // Customize button color as needed
+                        onClick={handleCreateNewPost}
+                    />
+                )}
                 <div className="posts">
                     {posts.map((post) => (
-                        <ImageCard key={post.id} post={post} onImageClick={handleImageClick} />
+                        <PostView key={post.id} post={post} onImageClick={handleImageClick} />
                     ))}
                 </div>
-                <ImageModal
+                <ImageCard
                     selectedPost={selectedPost}
                     onClose={handleCloseModal}
                     onEdit={handleEditPost}
                     onDelete={handleDeletePost}
                 />
             </div>
-        </>
+        </div>
     );
 };
 

@@ -1,16 +1,15 @@
 .custom-button {
-    background-color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
     border: none;
     border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    /* Add shadow effect */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #e0e0e0;
 }
 
 .custom-button:hover {
-    /* Increase shadow on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #808080 !important;
 }
