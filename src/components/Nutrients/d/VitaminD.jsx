@@ -1,3 +1,4 @@
+import React from 'react';
 import "./VitaminD.css";
 
 function VitaminD({ backgroundColorClass, description, showDescription, onClick }){

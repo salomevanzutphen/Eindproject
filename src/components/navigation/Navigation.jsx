@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { AuthContext } from "../../context/AuthContext.jsx";
@@ -13,6 +13,7 @@ function Navbar() {
     const [showUserProfile, setShowUserProfile] = useState(false);
 
     useEffect(() => {
+        // Change background color based on the location
         if (location.pathname === "/") {
             setBgColor("transparent");
         } else {
@@ -25,23 +26,39 @@ function Navbar() {
         navigate("/");
     };
 
-    const isRegularUser = roles.length > 0 && roles[0].authority === 'ROLE_USER';
-
     const toggleUserProfile = () => {
         setShowUserProfile(!showUserProfile);
     };
+
+    useEffect(() => {
+        // Debugging: Log roles to check if the roles are properly set
+        console.log("Navbar - Auth Status:", isAuth);
+        console.log("Navbar - User Roles:", roles);
+    }, [isAuth, roles]);
+
+    // Check if the user has the specific role
+    const hasRole = (role) => roles.some(r => r.authority === role);
 
     return (
         <div className="navbar" style={{ backgroundColor: bgColor }}>
             <ul className="main-navigation-links">
                 <div className="nav-items">
                     <li>
-                        <NavLink to="/" activeClassName="active">Home</NavLink>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => (isActive ? "active" : "")}
+                        >
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/about" activeClassName="active">About</NavLink>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => (isActive ? "active" : "")}
+                        >
+                            About
+                        </NavLink>
                     </li>
-                    {/* Blog link accessible to everyone */}
                     <li>
                         <NavLink
                             to="/blog"
@@ -51,7 +68,8 @@ function Navbar() {
                         </NavLink>
                     </li>
 
-                    {isRegularUser && (
+                    {/* Check if the user has ROLE_USER */}
+                    {isAuth && hasRole('ROLE_USER') && (
                         <li>
                             <NavLink
                                 to="/mysync"
@@ -77,7 +95,8 @@ function Navbar() {
                         )}
                     </li>
 
-                    {isRegularUser && (
+                    {/* Render profile icon to the right of the connect / log out button */}
+                    {isAuth && hasRole('ROLE_USER') && (
                         <li>
                             <img
                                 className="profile-icon"

@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Catechins.css";
 function Catechins({ backgroundColorClass, description, showDescription, onClick }){
 

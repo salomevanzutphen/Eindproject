@@ -1,4 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
+import { useState, useContext } from 'react';
 import './ImageCard.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';

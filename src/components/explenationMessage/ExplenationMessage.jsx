@@ -1,3 +1,4 @@
+import React from 'react';
 import './ExplenationMessage.css';
 
 const ExplenationMessage = ({ show, onClose }) => {

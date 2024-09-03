@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calendar.css';
 import FullCalendar from '../fullCalendar/FullCalendar.jsx';
 import questionmark from "../../assets/question.png";
 import ExplenationMessage from '../explenationMessage/ExplenationMessage.jsx';
 import { getNextSixDays, getPhaseForDate, formatDate } from '../../helpers/calendarHelpers.jsx';
 
-const Calendar = ({ onPhaseChange }) => {
+const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [showFullCalendar, setShowFullCalendar] = useState(false);
     const [phases, setPhases] = useState([]);
+    const [currentPhase, setCurrentPhase] = useState(''); // State to store current phase
     const [showExplenation, setShowExplenation] = useState(false);
 
     useEffect(() => {
@@ -18,26 +19,32 @@ const Calendar = ({ onPhaseChange }) => {
     const fetchCycle = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:8080/cycles/mycycle', {
+            if (!token) {
+                throw new Error("User is not authenticated");
+            }
+
+            const response = await fetch('http://localhost:8080/cycles', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             });
+
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+
             const data = await response.json();
             setPhases(data.phases);
-            updateCurrentPhase(currentDate);
+            updateCurrentPhase(new Date(), data.phases); // Update phase with fetched data immediately
         } catch (error) {
             console.error('Error fetching cycle:', error);
         }
     };
 
-    const updateCurrentPhase = (date) => {
-        const phase = getPhaseForDate(date, phases);
-        onPhaseChange(phase ? phase.phaseName : "No Phase");
+    const updateCurrentPhase = (date, fetchedPhases = phases) => {
+        const phase = getPhaseForDate(date, fetchedPhases);
+        setCurrentPhase(phase ? phase.phaseName : "No Phase");
     };
 
     const handlePrevDay = () => {
@@ -53,13 +60,12 @@ const Calendar = ({ onPhaseChange }) => {
     };
 
     const nextSixDays = getNextSixDays(currentDate);
-    const currentPhase = getPhaseForDate(currentDate, phases);
-    const title = currentPhase ? currentPhase.phaseName : (phases.length === 0 ? "Sync your Cycle" : "No Phase");
-    const phaseClass = currentPhase ? currentPhase.phaseName.toLowerCase() : "";
+    const phaseClass = currentPhase ? currentPhase.toLowerCase() : "";
 
     return (
         <div className="calendar-container">
-            <h2 className={phaseClass}>{title}</h2>
+            {/* Display current phase */}
+            <h2 className={phaseClass}>{currentPhase}</h2>
             <div className="calendar-date-display">
                 <button onClick={handlePrevDay}>&lt;</button>
                 <div className={`calendar-current-day ${phaseClass}`}>

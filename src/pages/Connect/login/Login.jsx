@@ -1,15 +1,17 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
 import { AuthContext } from '../../../context/AuthContext.jsx';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-const Login = ({ close }) => {  // Accept a 'close' function prop
+const Login = ({ close }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, toggleError] = useState(false);
     const [loading, setLoading] = useState(false);
     const { login } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -17,13 +19,46 @@ const Login = ({ close }) => {  // Accept a 'close' function prop
         setLoading(true);
 
         try {
-            const result = await axios.post('http://localhost:8080/authenticate', {
-                username: username,
-                password: password,
-            });
+            // Send the login request
+            const result = await axios.post(
+                'http://localhost:8080/authenticate',
+                {
+                    username: username,
+                    password: password,
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
 
             console.log("Login successful", result.data);
-            login(result.data.jwt);
+
+            // Extract JWT and roles from the response data
+            const { jwt, roles } = result.data;
+
+            if (!jwt) {
+                throw new Error("Token is missing");
+            }
+
+            if (!roles || !Array.isArray(roles) || roles.length === 0) {
+                throw new Error("Roles are missing or improperly formatted");
+            }
+
+            // Pass both JWT and roles to the login function
+            login(jwt, roles);
+
+            // Redirect based on the user's role
+            if (roles.includes('ROLE_ADMIN')) {
+                navigate('/blog');
+            } else if (roles.includes('ROLE_USER')) {
+                navigate('/mysync');
+            } else {
+                // Default redirection if no role matches
+                navigate('/');
+            }
+
         } catch (e) {
             console.error("Login failed", e);
             toggleError(true);

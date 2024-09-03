@@ -1,3 +1,4 @@
+import React from 'react';
 import "./VitaminC.css";
 
 function VitaminC({ backgroundColorClass, description, showDescription, onClick }){

@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Fiber.css";
 
 function Fiber({ backgroundColorClass, description, showDescription, onClick }){

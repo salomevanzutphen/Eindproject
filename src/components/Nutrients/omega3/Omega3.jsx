@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Omega3.css";
 
 function Omega3({ backgroundColorClass, description, showDescription, onClick }){

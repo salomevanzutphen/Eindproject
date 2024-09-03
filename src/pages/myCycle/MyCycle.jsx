@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './MyCycle.css';
 import Phase1 from "../Phases/phase1/Phase1.jsx";
 import Phase2 from "../Phases/phase2/Phase2.jsx";
@@ -38,7 +38,8 @@ function MyCycle() {
         };
 
         try {
-            const response = await axios.get('http://localhost:8080/cycles/mycycle', config);
+            // Make a GET request to fetch the cycle data for the authenticated user
+            const response = await axios.get('http://localhost:8080/cycles', config);
             if (response.status === 200 && response.data && response.data.phases) {
                 if (response.data.phases.length === 0) {
                     setCurrentPhase('Welcome');

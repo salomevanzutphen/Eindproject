@@ -1,3 +1,4 @@
+import React from 'react';
 import "./FolicAcid.css";
 
 function FolicAcid({ backgroundColorClass, description, showDescription, onClick }){

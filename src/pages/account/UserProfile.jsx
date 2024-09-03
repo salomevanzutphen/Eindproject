@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserProfile.css';
@@ -28,7 +29,7 @@ const UserProfile = ({ onClose }) => {
     useEffect(() => {
         async function fetchUserDetails() {
             try {
-                const response = await axios.get('http://localhost:8080/users/me', {
+                const response = await axios.get('http://localhost:8080/users', {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },

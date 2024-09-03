@@ -1,6 +1,5 @@
-import {useState} from 'react';
+import React, { useState } from 'react';
 import './Phase1.css';
-
 
 import VitaminD from "../../../components/Nutrients/d/VitaminD.jsx";
 import VitaminB from "../../../components/Nutrients/b/VitaminB.jsx";
@@ -12,10 +11,9 @@ import JournalPrompt from "../../../components/journalprompt/JournalPrompt.jsx";
 import Fiber from "../../../components/Nutrients/fiber/Fiber.jsx";
 import VitaminC from "../../../components/Nutrients/c/VitaminC.jsx";
 
-
-
 function Phase1() {
     const [openDescription, setOpenDescription] = useState(null);
+    const [currentPhase, setCurrentPhase] = useState('');
 
     const handleToggleDescription = (name) => {
         if (openDescription === name) {
@@ -25,31 +23,32 @@ function Phase1() {
         }
     };
 
-    const descriptionMagnesium1 = "Magnesium can reduce water retention, bloating and relax your muscles. This may ease up any stomach cramps and contribute to deeper sleep. Craving sugar could be a sign that your body has a magnesium deficiency, because it also regulates your glucose and insulin levels. This might be helpful if you struggle with weight gain due to hormonal cravings."
-    const descriptionVitaminD1 ='Vitamin D is important for your immune system, regulating your hormone cycle and it contains anti-inflammatory properties. This can help alleviate menstrual pain and discomfort, as your body is better equipped to handle the stress and inflammation. Vitamin D also contributes to the adrenaline and dopamine production. These hormones are known as the ‘feel-good’ hormones, because they elevate your mood. Bone pain, muscle weakness, low mood, hair loss, fatigue and slow wound healing could be a sign of deficiency.'
-    const descriptionVitaminB1 ='B vitamins, especially B6 and B12, can help alleviate mood swings and fatigue. Vitamin B6 aids in the production of serotonin and dopamine, which can stabilize and uplift your mood, while B12 supports red blood cell formation and energy production. During menstruation you lose red blood cells, so this is key! Concentration issues, insatiable mood, weak immune system and fatigue could signal deficiency.'
-    const descriptionVitaminC1 = 'Vitamin C improves iron absorption, strengthens your immune system, boosts energy levels and reduces inflammation. It also helps with the regulation of adrenal glands and cortisol production, thereby reducing feelings of stress and anxiety. These factors help to alleviate menstrual discomfort. Fatigue, irritability, bruising easily, brittle hair, dry skin and poor gum health could signal deficiency.'
-    const descriptionIron1 = "Menstruation can lead to the loss of iron-rich blood, which can significantly impact a woman's overall health if not replenished. Adequate iron levels are essential for maintaining energy levels, overall vitality, and cognitive function. Pair the intake with vitamin C, which enhances the absorption of iron into the body. Brittle nails, cold hands and feet, headaches, poor appetite, hair loss, difficulty concentrating and fatigue could signal deficiency."
-    const descriptionFiber1 = 'Fiber can contribute to a feeling of fullness and may help to reduce bloating. It can also stabilize your blood sugar levels.  If you struggle with tiredness after eating and constantly crave snacks to boost your energy, try eating vegetables before consuming carbohydrates and sugars. This decreases your blood sugar spike and keeps your energy more stable throughout the day.'
+    // Function to handle phase change
+    const handlePhaseChange = (phaseName) => {
+        console.log("Current phase is:", phaseName);
+        setCurrentPhase(phaseName); // Update the phase state
+    };
 
-
-
-
-
+    const descriptionMagnesium1 = "Magnesium can reduce water retention, bloating and relax your muscles...";
+    const descriptionVitaminD1 = 'Vitamin D is important for your immune system, regulating your hormone cycle...';
+    const descriptionVitaminB1 = 'B vitamins, especially B6 and B12, can help alleviate mood swings and fatigue...';
+    const descriptionVitaminC1 = 'Vitamin C improves iron absorption, strengthens your immune system...';
+    const descriptionIron1 = "Menstruation can lead to the loss of iron-rich blood...";
+    const descriptionFiber1 = 'Fiber can contribute to a feeling of fullness and may help to reduce bloating...';
 
     return (
-<div className="phase1-wrapper">
-    <p className="phase-welcome-script">Welcome to your</p>
-    <h1 className="phase1-title">
-        Menstrual Phase
-    </h1>
-    <div className="keyword-container">
-        <Keyword text="Reflect" />
-        <Keyword text="Recharge" />
-        <Keyword text="Renew" />
-    </div>
-    <div className="phase1-introduction">
-        <Calendar />
+        <div className="phase1-wrapper">
+            <p className="phase-welcome-script">Welcome to your</p>
+            <h1 className="phase1-title">Menstrual Phase</h1>
+            <div className="keyword-container">
+                <Keyword text="Reflect" />
+                <Keyword text="Recharge" />
+                <Keyword text="Renew" />
+            </div>
+            <div className="phase1-introduction">
+
+                {/* Pass handlePhaseChange to Calendar component */}
+                <Calendar onPhaseChange={handlePhaseChange} />
         <div className="phase1-intro-text">
             <h3 className="phase1-intro-title">Cycle of Renewal</h3>
             <p>

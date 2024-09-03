@@ -1,3 +1,4 @@
+import React from 'react';
 import './PostView.css';
 
 const PostView = ({ post, onImageClick }) => {

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FullCalendar.css';
-import {getDaysInMonth, getFirstDayOfMonth, findPhaseForDate, isSelectedDate} from '../../helpers/FullCalendarHelpers.jsx';
+import { getDaysInMonth, getFirstDayOfMonth, findPhaseForDate, isSelectedDate } from '../../helpers/FullCalendarHelpers.jsx';
 
 const FullCalendar = ({ onClose, onSave }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -8,6 +8,37 @@ const FullCalendar = ({ onClose, onSave }) => {
     const [phases, setPhases] = useState([]);
     const [editMode, setEditMode] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
+    useEffect(() => {
+        const fetchUserCycle = async () => {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                setErrorMessage('Authentication token not found. Please log in again.');
+                return;
+            }
+            try {
+                const response = await fetch('http://localhost:8080/cycles', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.status === 404) {
+                    setErrorMessage('Log the start date of your last menstruation.');
+                    return;
+                }
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch cycle, status: ${response.status}`);
+                }
+                const data = await response.json();
+                setPhases(data.phases);
+            } catch (error) {
+                console.error('Error fetching user cycle:', error);
+                setErrorMessage(error.message || 'Error fetching user cycle');
+            }
+        };
+        fetchUserCycle();
+    }, []);
 
     const renderDays = () => {
         const year = currentDate.getFullYear();
@@ -98,36 +129,6 @@ const FullCalendar = ({ onClose, onSave }) => {
         }
     };
 
-    useEffect(() => {
-        const fetchUserCycle = async () => {
-            const token = localStorage.getItem('token');
-            if (!token) {
-                setErrorMessage('Authentication token not found. Please log in again.');
-                return;
-            }
-            try {
-                const response = await fetch(`http://localhost:8080/cycles/mycycle`, {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                });
-                if (response.status === 404) {
-                    setErrorMessage('Log the start date of your last menstruation.');
-                    return;
-                }
-                if (!response.ok) {
-                    throw new Error(`Failed to fetch cycle, status: ${response.status}`);
-                }
-                const data = await response.json();
-                setPhases(data.phases);
-            } catch (error) {
-                console.error('Error fetching user cycle:', error);
-                setErrorMessage(error.message || 'Error fetching user cycle');
-            }
-        };
-        fetchUserCycle();
-    }, []);
-
     return (
         <div className="full-calendar-overlay">
             <div className="full-calendar">
@@ -135,8 +136,8 @@ const FullCalendar = ({ onClose, onSave }) => {
                 <div className="full-calendar-header">
                     <button onClick={handlePrevMonth}>&lt;</button>
                     <span>
-                       {currentDate.toLocaleString('en-US', { month: 'long' })} {currentDate.getFullYear()}
-                   </span>
+                        {currentDate.toLocaleString('en-US', { month: 'long' })} {currentDate.getFullYear()}
+                    </span>
                     <button onClick={handleNextMonth}>&gt;</button>
                 </div>
                 <div className="full-calendar-grid">

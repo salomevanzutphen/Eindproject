@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Calcium.css";
 
 function Calcium({ backgroundColorClass, description, showDescription, onClick }){
