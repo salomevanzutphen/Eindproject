@@ -69,7 +69,7 @@
 .homepage-pillars{
     flex-direction: row;
     display: flex;
-    gap: 40px;
+    gap: 70px;
     justify-content: center;
     align-items: center;
 }

@@ -85,18 +85,18 @@
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: var(--green);
     color: white;
     transition: background-color 0.3s;
     font-family: "Josefin Sans", sans-serif;
 }
 
 .delete-button {
-    background-color: #dc3545;
+    background-color: var(--red);
 }
 
 .edit-button:hover {
-    background-color: #0056b3;
+    background-color: #008000;
 }
 
 .delete-button:hover {
