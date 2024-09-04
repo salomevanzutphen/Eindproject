@@ -34,7 +34,7 @@ function Home() {
                 </div>
 
                 <blockquote className="homepage-quote">
-                    "When my mother got sick, I wanted to find the root of the problem. Or is medication the only solution?" - Salomé
+                    "When my mother got sick, I wanted to find the root of the problem. Is our modern-day lifestyle to blame?" - Salomé
                 </blockquote>
                     <button className="mystory" onClick={() => navigate('/about')}>Read my story</button>
 

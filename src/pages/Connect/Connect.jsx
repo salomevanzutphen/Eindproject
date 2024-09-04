@@ -30,8 +30,7 @@ const Connect = () => {
                 <div className="connect-innercontainer">
                     <h1>Start tracking your cycle today!</h1>
                     <p>
-                        Join our community to stay in sync with your wellness journey. However, please remember that all the information provided here is meant to guide, not replace, professional medical advice. We strongly urge you to consult with a healthcare expert before making any health-related decisions. This is just a friendly reminder to ensure you're making informed choices, as we can't be held responsible for any outcomes from using the information provided. Stay safe, stay informed, and enjoy your journey with us!
-                    </p>
+                        Welcome to living in sync! Transform your health, by connecting to your cycle’s rhythm. However, please remember that all the information provided here is meant to guide, not replace, professional medical advice. We can't be held responsible for any outcomes from using the information provided. Its purpose is merely to help spread awareness and help women live a healthier, more mindful lifestyle. </p>
                 </div>
                 <div className="connect-buttons">
                     {isAuth ? (
