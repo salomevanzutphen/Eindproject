@@ -76,7 +76,7 @@ function Phase4() {
             <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="cyclegraph"/>
             <div className="progesterone-info">
                 <h2>How progesterone shapes your luteal phase experience</h2>
-                <p>As estrogen levels drop, progesterone begins to rise, playing a crucial role in your body's hormonal balance. Progesterone helps soothe your mood by stimulating GABA receptors in your brain, making you feel more calm and collected. Its mild sedative properties also promote better sleep. Additionally, progesterone acts as a natural diuretic, helping to release excess fluid from your body. If you experience chronic anxiety, mood swings, insomnia, and excessive bloating during the luteal phase, it could indicate that your progesterone levels are too low.
+                <p>As estrogen levels drop, progesterone begins to rise, playing a crucial role in your body's hormonal balance. Progesterone helps soothe your mood by stimulating GABA receptors in your brain, making you feel more calm and collected. Its mild sedative properties also promote better sleep. Additionally, progesterone acts as a natural diuretic, helping to release excess fluid from your body. Therefore, if you experience increased anxiety, mood swings, insomnia, and excessive bloating during the this phase, it could indicate that your progesterone levels are too low.
                 </p>
 
             </div>
