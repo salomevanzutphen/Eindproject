@@ -72,7 +72,7 @@ function Phase3(){
 
             <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="cyclegraph"/>
             <h3 className="menstrualcycle-subtext">
-                Welcome to ovulation! During this phase one of your eggs gets released from the ovary. It's the peak moment of your cycle, so expect to feel more energy than usual!
+                Welcome to ovulation! During this phase one of your eggs gets released from the ovary. It's the peak moment of your cycle, so expect to feel more energy than usual & an increased sex drive!
             </h3>
 
 
@@ -143,7 +143,7 @@ function Phase3(){
 
                         <div className="hormones-info-p3">
                             <h3 className="hormones-title-p3">Hormones during ovulation</h3>
-                            <p>Your hormones reach their peak during ovulation, which is accompanied with increased libido and energy. The egg in the dominant follicle that grew and matured during the follicular phase will now be released from the ovary. This egg then goes into the fallopian tube, ready for a chance to be fertilized. The boost of testosterone in this phase will give you increased sex drive and energy.
+                            <p>The egg in the dominant follicle that grew and matured during the follicular phase will now be released from the ovary. This egg then goes into the fallopian tube, ready for a chance to be fertilized. The boost of testosterone in this phase will give you increased sex drive and energy.
                             </p>
                         </div>
 

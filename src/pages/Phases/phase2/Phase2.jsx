@@ -24,14 +24,10 @@ function Phase2() {
 
 
     const descriptionMagnesium2 = "Magnesium is a cofactor for various enzymes involved in detoxification pathways, aiding in the elimination of toxins from the liver. It also helps to regulate inflammation, maintain healthy blood sugar levels and promotes overall liver health.";
-    const descriptionSelenium2 = "Selenium is an antioxidant that is used to make glutathione, which is essential for the detoxification process of the liver. The mineral also helps to reduce the toxicity of heavy metals like cadmium and mercury from the body. Be mindful of cooking methods as selenium content can be affected. Steaming and baking tend to preserve selenium better than boiling.";
+    const descriptionSelenium2 = "Selenium is an antioxidant that is used to make glutathione, which is essential for the detoxification process of the liver. The mineral also helps to reduce the toxicity of heavy metals like cadmium and mercury from the body. Be mindful of cooking methods as selenium content can be affected by it. Steaming and baking tend to preserve selenium better than boiling.";
     const descriptionCatechins2 = 'Catechins have antioxidant properties which help reduce oxidative stress and inflammation that harms the liver. They protect the liver cells from damage caused by toxins and free radicals, promoting detoxification and improving liver function.'
-    const descriptionIndole2 = 'Indole-3 Carbinol supports liver health by boosting its detoxification processes, helping convert harmful toxins into less harmful forms that are easier for the body to eliminate. Moreover, I3C plays a role in hormonal balance by aiding in the metabolism of estrogen, which can contribute to overall hormonal health. It is naturally found in cruciferous vegetables.'
+    const descriptionIndole2 = 'Indole-3 Carbinol supports liver health by boosting its detoxification processes, helping convert harmful toxins into less harmful forms that are easier for the body to eliminate. Moreover, I3C plays a role in hormonal balance by aiding in the metabolism of estrogen, which can contribute to overall hormonal health.'
     const descriptionGlycine2 = 'Glycine supports synthesis of glutathione, an antioxidant which is essential for the detoxification process of the liver. It is also involved in collagen synthesis, which helps to maintain the structural integrity of the liver. Glycine also helps reduce the harmful effects of high-fat diets on the liver.'
-
-
-
-
 
     return (
         <div className="phase2-wrapper">
@@ -46,7 +42,7 @@ function Phase2() {
                 <Calendar />
                 <div className="phase2-intro-text">
                     <h3 className="phase2-intro-title">Boost of Energy</h3>
-                    <p>The follicular phase brings a surge of energy and enthusiasm for life! Your creativity and problem-solving skills are increasing, making it an ideal period for tackling complex tasks or learning a new skill. This is the perfect time to go out of your comfort zone, as your tolerance to stress and anxiety is much higher than before. Use this energy to take on any challenges with confidence! Initiate new projects, start a hobby and engage in networking opportunities. Expand your physical, social and mental horizons.
+                    <p>The follicular phase brings a surge of energy and enthusiasm for life! Your creativity and problem-solving skills are increasing, making it an ideal period for tackling complex tasks or learning a new skill. This is the perfect time to go out of your comfort zone, as your tolerance to stress and anxiety is much higher than before. Use this energy to take on any challenges with confidence! Initiate new projects, start a hobby and engage in networking opportunities. Expand your physical, social and mental horizons to make the most of this phase.
                     </p>
                 </div>
             </div>
@@ -77,7 +73,7 @@ function Phase2() {
                 <div className="estrogen-description">
                     <h2>Estrogen Dominance</h2>
                     <p>
-                        During the follicular phase, estrogen rises. As a result, you're likely to be in a better mood and feel more energized. However, many women struggle with estrogen dominance. This refers to an imbalance of too much estrogen compared to progesterone. If this is you, you might suffer from irregular periods, sensitive breasts, low libido, fatigue, difficulty concentrating and an increased risk of certain cancers. You are also likely to have increased PMS (premenstrual syndrome) symptoms, which are a mixture of physical and emotional symptoms during the luteal phase (phase before menstruation).
+                        During the follicular phase, estrogen rises. As a result, you're likely to be in a better mood and feel more energized. However, many women struggle with estrogen dominance. This refers to an imbalance of too much estrogen compared to progesterone. If this is you, you might suffer from irregular periods, sensitive breasts, low libido, fatigue, difficulty concentrating and an increased risk of certain cancers. You are also likely to have increased PMS (premenstrual syndrome) symptoms, which are a mixture of physical and emotional symptoms during the luteal phase (phase before menstruation). Learn more about estrogen dominance by watching the video.
                     </p>
 
                 </div>
