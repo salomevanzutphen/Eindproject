@@ -69,7 +69,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #679A51;
+    background-color: grey;
 }
 
 .success-message {
