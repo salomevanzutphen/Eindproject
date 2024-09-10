@@ -9,7 +9,7 @@
 
 .journalprompts h3 {
     background-color: #FFFFFF;
-    color: black;
+    color: #403C3C;
     padding: 15px;
     border-radius: 20px;
     width: 400px;
@@ -20,7 +20,7 @@
 
 .journalprompts p {
     max-width: 1000px;
-    height: 180px;
+    height: 150px;
     text-align: center;
     margin: 15px;
     border-radius: 20px;
