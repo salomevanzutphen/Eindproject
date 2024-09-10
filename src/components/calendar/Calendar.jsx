@@ -9,7 +9,7 @@ const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [showFullCalendar, setShowFullCalendar] = useState(false);
     const [phases, setPhases] = useState([]);
-    const [currentPhase, setCurrentPhase] = useState(''); // State to store current phase
+    const [currentPhase, setCurrentPhase] = useState('Sync Your Cycle'); // Default to "Sync Your Cycle"
     const [showExplenation, setShowExplenation] = useState(false);
 
     useEffect(() => {
@@ -44,7 +44,7 @@ const Calendar = () => {
 
     const updateCurrentPhase = (date, fetchedPhases = phases) => {
         const phase = getPhaseForDate(date, fetchedPhases);
-        setCurrentPhase(phase ? phase.phaseName : "No Phase");
+        setCurrentPhase(phase ? phase.phaseName : "Sync Your Cycle"); // Default to "Sync Your Cycle" if no phase
     };
 
     const handlePrevDay = () => {
@@ -60,11 +60,11 @@ const Calendar = () => {
     };
 
     const nextSixDays = getNextSixDays(currentDate);
-    const phaseClass = currentPhase ? currentPhase.toLowerCase() : "";
+    const phaseClass = currentPhase.toLowerCase().replace(/\s+/g, '-'); // Converts phase name to lowercase CSS class format
 
     return (
         <div className="calendar-container">
-            {/* Display current phase */}
+            {/* Display title or current phase */}
             <h2 className={phaseClass}>{currentPhase}</h2>
             <div className="calendar-date-display">
                 <button onClick={handlePrevDay}>&lt;</button>

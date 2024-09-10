@@ -72,7 +72,8 @@ function Phase3(){
 
             <img className="menstrualcycle" src="https://i.pinimg.com/736x/0f/fc/30/0ffc30e35bb8d15055c268e83a0c26bd.jpg" alt="cyclegraph"/>
             <h3 className="menstrualcycle-subtext">
-                Welcome to ovulation! During this phase one of your eggs gets released from the ovary. It's the peak moment of your cycle, so expect to feel more energy than usual & an increased sex drive!
+                Welcome to ovulation! During this phase, one of your eggs gets released from the ovary. It's the peak moment of your cycle, so expect to feel more energy than usual
+                <br /> & an increased sex drive!
             </h3>
 
 
