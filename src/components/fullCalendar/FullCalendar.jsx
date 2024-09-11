@@ -155,7 +155,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                     </button>
                     <button
                         type="submit"
-                        className={`save-button ${selectedDate ? 'active' : ''}`}
+                        className={`calendar-save-button ${selectedDate ? 'active' : ''}`}
                         onClick={handleSave}
                         disabled={!selectedDate}
                     >

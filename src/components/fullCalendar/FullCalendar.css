@@ -147,14 +147,28 @@
     background-color: grey;
 }
 
-.save-button:disabled {
+.calendar-save-button:disabled {
     background-color: #ccc;
     color: #333;
     cursor: not-allowed;
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
 }
 
-.save-button.active {
-    background-color: green;
+.calendar-save-button.active {
+    background-color: var(--green);
+    font-size: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .error-message {
