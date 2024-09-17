@@ -42,7 +42,7 @@ const ImageCard = ({ selectedPost, onClose }) => {
         setShowDeleteConfirmation(false);
     };
 
-    // Convert new lines to <br> tags
+
     const formatDescription = (text) => {
         return text.split('\n').map((str, index) => (
             <React.Fragment key={index}>

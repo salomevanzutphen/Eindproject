@@ -1,4 +1,3 @@
-import React from 'react';
 import {useState} from "react";
 import './Phase4.css';
 
@@ -104,12 +103,14 @@ function Phase4() {
                         <p className="nutrient-subtitle">Select a nutrient for more information</p>
                         <div className="nutrients">
 
+
                             <VitaminD
                                 backgroundColorClass="blue-background"
                                 description={descriptionVitaminD4}
                                 showDescription={openDescription === 'VitaminD'}
                                 onClick={() => handleToggleDescription('VitaminD')}
                             />
+
 
                             <Calcium
                                 backgroundColorClass="blue-background"
@@ -118,12 +119,25 @@ function Phase4() {
                                 onClick={() => handleToggleDescription('Calcium')}
                             />
 
-
+                            <Fiber
+                                backgroundColorClass="blue-background"
+                                description={descriptionFiber4}
+                                showDescription={openDescription === 'Fiber'}
+                                onClick={() => handleToggleDescription('Fiber')}
+                            />
                             <Zinc
                                 backgroundColorClass="blue-background"
                                    description={descriptionZinc4}
                                    showDescription={openDescription === 'Zinc'}
                                    onClick={() => handleToggleDescription('Zinc')}
+                            />
+
+
+                            <Omega3
+                                backgroundColorClass="blue-background"
+                                description={descriptionOmega4}
+                                showDescription={openDescription === 'Omega3'}
+                                onClick={() => handleToggleDescription('Omega3')}
                             />
 
                             <Magnesium
@@ -133,19 +147,6 @@ function Phase4() {
                                 onClick={() => handleToggleDescription('Magnesium')}
                             />
 
-                            <Omega3
-                                backgroundColorClass="blue-background"
-                                description={descriptionOmega4}
-                                showDescription={openDescription === 'Omega3'}
-                                onClick={() => handleToggleDescription('Omega3')}
-                            />
-
-                            <Fiber
-                                backgroundColorClass="blue-background"
-                                description={descriptionFiber4}
-                                showDescription={openDescription === 'Fiber'}
-                                onClick={() => handleToggleDescription('Fiber')}
-                            />
 
 
 

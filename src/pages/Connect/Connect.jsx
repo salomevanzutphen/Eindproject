@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useContext } from 'react';
 import './Connect.css';
 import Login from './login/Login.jsx';

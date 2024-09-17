@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Selenium.css";
 
 function Selenium2({ backgroundColorClass, description, showDescription, onClick }){

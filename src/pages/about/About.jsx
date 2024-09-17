@@ -1,4 +1,3 @@
-import React from 'react';
 import "./About.css";
 import logo from '../../assets/namelogo.png';
 import instagram from "../../assets/instagram.png";

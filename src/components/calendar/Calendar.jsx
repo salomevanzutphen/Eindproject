@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Calendar.css';
 import FullCalendar from '../fullCalendar/FullCalendar.jsx';
 import questionmark from "../../assets/question.png";

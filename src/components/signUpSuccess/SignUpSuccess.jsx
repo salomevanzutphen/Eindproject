@@ -1,4 +1,3 @@
-import React from 'react';
 import './SignUpSuccess.css';
 
 const SignUpSuccess = ({ close }) => {

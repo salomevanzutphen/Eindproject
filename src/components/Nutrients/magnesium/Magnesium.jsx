@@ -1,4 +1,3 @@
-import React from 'react';
 import './Magnesium.css';
 
 function Magnesium({ backgroundColorClass, description, showDescription, onClick }){

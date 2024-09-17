@@ -171,7 +171,7 @@
     cursor: pointer;
 }
 
-.error-message {
+.calendar-error-message {
     color: var(--red);
     text-align: center;
     margin-top: 10px;

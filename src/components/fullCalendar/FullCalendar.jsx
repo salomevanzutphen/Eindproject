@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './FullCalendar.css';
 import { getDaysInMonth, getFirstDayOfMonth, findPhaseForDate, isSelectedDate } from '../../helpers/FullCalendarHelpers.jsx';
 
@@ -164,7 +164,7 @@ const FullCalendar = ({ onClose, onSave }) => {
                 </div>
                 {errorMessage && (
                     <div className="error-message-container">
-                        <p className="error-message">{errorMessage}</p>
+                        <p className="calendar-error-message">{errorMessage}</p>
                         {errorMessage.includes('Log the start date') && (
                             <p className="error-subtext">
                                 If you don't remember the exact date, don't worry, just take a guess! When your period arrives, you can update your cycle for more accurate results.

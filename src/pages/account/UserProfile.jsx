@@ -1,9 +1,8 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './UserProfile.css';
-import DeleteConfirmation from '../../components/deleteConfirmation/DeleteConfirmation'; // Import the DeleteConfirmation component
-import Button from '../../components/button/Button.jsx'; // Import the reusable Button component
+import DeleteConfirmation from '../../components/deleteConfirmation/DeleteConfirmation';
+import Button from '../../components/button/Button.jsx';
 
 const UserProfile = ({ onClose }) => {
     const [userData, setUserData] = useState({

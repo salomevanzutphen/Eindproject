@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './MyCycle.css';
 import Phase1 from "../Phases/phase1/Phase1.jsx";
 import Phase2 from "../Phases/phase2/Phase2.jsx";

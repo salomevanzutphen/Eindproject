@@ -72,14 +72,3 @@ button[type="submit"]:hover {
     background-color: grey;
 }
 
-.success-message {
-    color: green;
-    font-weight: bold;
-    text-align: center;
-}
-
-.error-message {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-}

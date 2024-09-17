@@ -1,4 +1,3 @@
-import React from 'react';
 import "./Indole.css";
 
 function Indole3Carbinol({ backgroundColorClass, description, showDescription, onClick }){
