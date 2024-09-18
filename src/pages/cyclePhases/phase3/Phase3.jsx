@@ -1,14 +1,14 @@
 import {useState} from "react";
 import './Phase3.css';
 
-import Calcium from "../../../components/Nutrients/calcium/Calcium.jsx";
-import Zinc from "../../../components/Nutrients/zinc/Zinc.jsx";
-import Selenium from "../../../components/Nutrients/selenium/Selenium.jsx";
-import VitaminE from "../../../components/Nutrients/e/VitaminE.jsx";
+import Calcium from "../../../components/nutrient/calcium/Calcium.jsx";
+import Zinc from "../../../components/nutrient/zinc/Zinc.jsx";
+import Selenium from "../../../components/nutrient/selenium/Selenium.jsx";
+import VitaminE from "../../../components/nutrient/e/VitaminE.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
-import Iodine from "../../../components/Nutrients/iodine/Iodine.jsx";
-import FolicAcid from "../../../components/Nutrients/folicAcid/FolicAcid.jsx";
+import Iodine from "../../../components/nutrient/iodine/Iodine.jsx";
+import FolicAcid from "../../../components/nutrient/folicAcid/FolicAcid.jsx";
 
 function Phase3(){
     const [openDescription, setOpenDescription] = useState(null);

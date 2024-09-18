@@ -1,13 +1,13 @@
 import {useState} from "react";
 import './Phase2.css';
 
-import Magnesium from "../../../components/Nutrients/magnesium/Magnesium.jsx";
-import Glycine from "../../../components/Nutrients/glycine/Glycine.jsx";
-import Catechins from "../../../components/Nutrients/catechins/Catechins.jsx";
-import Indole3Carbinol from "../../../components/Nutrients/indole-3Carbinol/Indole.jsx";
+import Magnesium from "../../../components/nutrient/magnesium/Magnesium.jsx";
+import Glycine from "../../../components/nutrient/glycine/Glycine.jsx";
+import Catechins from "../../../components/nutrient/catechins/Catechins.jsx";
+import Indole3Carbinol from "../../../components/nutrient/indole-3Carbinol/Indole.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
-import Selenium from "../../../components/Nutrients/selenium/Selenium.jsx";
+import Selenium from "../../../components/nutrient/selenium/Selenium.jsx";
 import estrogenimage from "../../../assets/estrogen-dominance-symptoms.png";
 
 function Phase2() {

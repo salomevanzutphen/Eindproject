@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import './MyCycle.css';
-import Phase1 from "../Phases/phase1/Phase1.jsx";
-import Phase2 from "../Phases/phase2/Phase2.jsx";
-import Phase3 from "../Phases/phase3/Phase3.jsx";
-import Phase4 from "../Phases/phase4/Phase4.jsx";
-import WelcomePhase from "../Phases/welcomePhase/WelcomePhase.jsx";
+import Phase1 from "../cyclePhases/phase1/Phase1.jsx";
+import Phase2 from "../cyclePhases/phase2/Phase2.jsx";
+import Phase3 from "../cyclePhases/phase3/Phase3.jsx";
+import Phase4 from "../cyclePhases/phase4/Phase4.jsx";
+import WelcomePhase from "../cyclePhases/welcomePhase/WelcomePhase.jsx";
 import axios from 'axios';
 
 function MyCycle() {

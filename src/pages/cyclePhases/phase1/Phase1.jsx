@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import './Phase1.css';
 
-import VitaminD from "../../../components/Nutrients/d/VitaminD.jsx";
-import VitaminB from "../../../components/Nutrients/b/VitaminB.jsx";
-import Magnesium from "../../../components/Nutrients/magnesium/Magnesium.jsx";
-import Iron from "../../../components/Nutrients/iron/Iron.jsx";
+import VitaminD from "../../../components/nutrient/d/VitaminD.jsx";
+import VitaminB from "../../../components/nutrient/b/VitaminB.jsx";
+import Magnesium from "../../../components/nutrient/magnesium/Magnesium.jsx";
+import Iron from "../../../components/nutrient/iron/Iron.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
 import JournalPrompt from "../../../components/journalprompt/JournalPrompt.jsx";
-import Fiber from "../../../components/Nutrients/fiber/Fiber.jsx";
-import VitaminC from "../../../components/Nutrients/c/VitaminC.jsx";
+import Fiber from "../../../components/nutrient/fiber/Fiber.jsx";
+import VitaminC from "../../../components/nutrient/c/VitaminC.jsx";
 
 function Phase1() {
     const [openDescription, setOpenDescription] = useState(null);

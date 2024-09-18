@@ -95,7 +95,7 @@ function Navbar() {
                         )}
                     </li>
 
-                    {/* Render profile icon to the right of the connect / log out button */}
+                    {/* Render profile icon to the right of the connectPage / log out button */}
                     {isAuth && hasRole('ROLE_USER') && (
                         <li>
                             <img

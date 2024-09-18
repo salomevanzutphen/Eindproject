@@ -1,14 +1,14 @@
 import {useState} from "react";
 import './Phase4.css';
 
-import Calcium from "../../../components/Nutrients/calcium/Calcium.jsx";
-import Zinc from "../../../components/Nutrients/zinc/Zinc.jsx";
-import Magnesium from "../../../components/Nutrients/magnesium/Magnesium.jsx";
-import VitaminD from "../../../components/Nutrients/d/VitaminD.jsx";
+import Calcium from "../../../components/nutrient/calcium/Calcium.jsx";
+import Zinc from "../../../components/nutrient/zinc/Zinc.jsx";
+import Magnesium from "../../../components/nutrient/magnesium/Magnesium.jsx";
+import VitaminD from "../../../components/nutrient/d/VitaminD.jsx";
 import Calendar from "../../../components/calendar/Calendar.jsx";
 import Keyword from "../../../components/keyword/Keyword.jsx";
-import Fiber from "../../../components/Nutrients/fiber/Fiber.jsx";
-import Omega3 from "../../../components/Nutrients/omega3/Omega3.jsx";
+import Fiber from "../../../components/nutrient/fiber/Fiber.jsx";
+import Omega3 from "../../../components/nutrient/omega3/Omega3.jsx";
 import PMSsymptoms from "../../../assets/pms-sympomts.png";
 
 

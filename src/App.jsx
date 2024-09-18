@@ -11,7 +11,7 @@ const EditPost = lazy(() => import("./pages/Blog/posts/editPost/EditPost.jsx"));
 const Blog = lazy(() => import("./pages/Blog/Blog.jsx"));
 const MyCycle = lazy(() => import("./pages/myCycle/MyCycle.jsx"));
 const CreatePost = lazy(() => import("./pages/Blog/posts/createPost/CreatePost.jsx"));
-const Connect = lazy(() => import("./pages/Connect/Connect.jsx"));
+const Connect = lazy(() => import("./pages/connectPage/Connect.jsx"));
 const NotFound = lazy(() => import('./pages/notFound/NotFound.jsx'));
 
 function App() {
