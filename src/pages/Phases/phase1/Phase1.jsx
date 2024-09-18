@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Phase1.css';
 
 import VitaminD from "../../../components/Nutrients/d/VitaminD.jsx";
@@ -13,7 +13,6 @@ import VitaminC from "../../../components/Nutrients/c/VitaminC.jsx";
 
 function Phase1() {
     const [openDescription, setOpenDescription] = useState(null);
-    const [currentPhase, setCurrentPhase] = useState('');
 
     const handleToggleDescription = (name) => {
         if (openDescription === name) {
@@ -23,11 +22,6 @@ function Phase1() {
         }
     };
 
-
-    const handlePhaseChange = (phaseName) => {
-        console.log("Current phase is:", phaseName);
-        setCurrentPhase(phaseName);
-    };
 
     const descriptionMagnesium1 = "Magnesium can reduce water retention, bloating and relax your muscles. This may ease up any stomach cramps and contribute to deeper sleep. Craving sugar could be a sign that your body has a magnesium deficiency, because it also regulates your glucose and insulin levels. This might be helpful if you struggle with weight gain due to hormonal cravings.";
     const descriptionVitaminD1 = 'Vitamin D contains anti-inflammatory properties and benefits  your immune system. This can help alleviate menstrual pain and discomfort, as your body is better equipped to handle the stress and inflammation. Vitamin D also contributes to your adrenaline and dopamine production. These hormones are known as the ‘feel-good’ hormones, because they elevate your mood. Bone pain, muscle weakness, mood changes, hair loss, fatigue and slow wound healing could be a sign of deficiency.';
@@ -46,7 +40,7 @@ function Phase1() {
                 <Keyword text="Renew" />
             </div>
             <div className="phase1-introduction">
-                <Calendar onPhaseChange={handlePhaseChange} />
+                <Calendar />
         <div className="phase1-intro-text">
             <h3 className="phase1-intro-title">Cycle of Renewal</h3>
             <p>
