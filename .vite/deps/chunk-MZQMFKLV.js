@@ -9688,7 +9688,7 @@ var require_react_dom_development = __commonJS({
             if (didWarnAboutUnsafeLifecycles.has(fiber.type)) {
               return;
             }
-            if (typeof instance.componentWillMount === "function" && // Don't warn about react-lifecycles-compat polyfilled components.
+            if (typeof instance.componentWillMount === "function" && // Don't warn aboutPage react-lifecycles-compat polyfilled components.
             instance.componentWillMount.__suppressDeprecationWarning !== true) {
               pendingComponentWillMountWarnings.push(fiber);
             }
@@ -9816,7 +9816,7 @@ var require_react_dom_development = __commonJS({
               var sortedNames = setToSortedString(uniqueNames);
               try {
                 setCurrentFiber(firstFiber);
-                error("Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", sortedNames);
+                error("Legacy context API has been detected within a strict-mode tree.\n\nThe old API will be supported in all 16.x releases, but applications using it should migrate to the new version.\n\nPlease update the following components: %s\n\nLearn more aboutPage this warning here: https://reactjs.org/link/legacy-context", sortedNames);
               } finally {
                 resetCurrentFiber();
               }
@@ -10841,7 +10841,7 @@ var require_react_dom_development = __commonJS({
                 var newApiName = typeof ctor.getDerivedStateFromProps === "function" ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()";
                 if (!didWarnAboutLegacyLifecyclesAndDerivedState.has(_componentName)) {
                   didWarnAboutLegacyLifecyclesAndDerivedState.add(_componentName);
-                  error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
+                  error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more aboutPage this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
                 }
               }
             }
@@ -11141,12 +11141,12 @@ var require_react_dom_development = __commonJS({
             {
               if ((returnFiber.mode & StrictLegacyMode || warnAboutStringRefs) && // We warn in ReactElement.js if owner and self are equal for string refs
               // because these cannot be automatically converted to an arrow function
-              // using a codemod. Therefore, we don't have to warn about string refs again.
+              // using a codemod. Therefore, we don't have to warn aboutPage string refs again.
               !(element._owner && element._self && element._owner.stateNode !== element._self)) {
                 var componentName = getComponentNameFromFiber(returnFiber) || "Component";
                 if (!didWarnAboutStringRefs[componentName]) {
                   {
-                    error('A string ref, "%s", has been found within a strict mode tree. String refs are a source of potential bugs and should be avoided. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', mixedRef);
+                    error('A string ref, "%s", has been found within a strict mode tree. String refs are a source of potential bugs and should be avoided. We recommend using useRef() or createRef() instead. Learn more aboutPage using refs safely here: https://reactjs.org/link/strict-mode-string-ref', mixedRef);
                   }
                   didWarnAboutStringRefs[componentName] = true;
                 }
@@ -11158,7 +11158,7 @@ var require_react_dom_development = __commonJS({
               if (owner) {
                 var ownerFiber = owner;
                 if (ownerFiber.tag !== ClassComponent) {
-                  throw new Error("Function components cannot have string refs. We recommend using useRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref");
+                  throw new Error("Function components cannot have string refs. We recommend using useRef() instead. Learn more aboutPage using refs safely here: https://reactjs.org/link/strict-mode-string-ref");
                 }
                 inst = ownerFiber.stateNode;
               }
@@ -11600,7 +11600,7 @@ var require_react_dom_development = __commonJS({
               throw new Error("An object is not an iterable. This error is likely caused by a bug in React. Please file an issue.");
             }
             {
-              if (typeof Symbol === "function" && // $FlowFixMe Flow doesn't know about toStringTag
+              if (typeof Symbol === "function" && // $FlowFixMe Flow doesn't know aboutPage toStringTag
               newChildrenIterable[Symbol.toStringTag] === "Generator") {
                 if (!didWarnAboutGenerators) {
                   error("Using Generators as children is unsupported and will likely yield unexpected results because enumerating a generator mutates it. You may convert it to an array with `Array.from()` or the `[...spread]` operator before rendering. Keep in mind you might need to polyfill these features for older browsers.");
@@ -12101,7 +12101,7 @@ var require_react_dom_development = __commonJS({
           }
         }
         function throwInvalidHookError() {
-          throw new Error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.");
+          throw new Error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips aboutPage how to debug and fix this problem.");
         }
         function areHookInputsEqual(nextDeps, prevDeps) {
           {
@@ -14007,7 +14007,7 @@ var require_react_dom_development = __commonJS({
               var componentNameMessage = componentName ? "The above error occurred in the <" + componentName + "> component:" : "The above error occurred in one of your React components:";
               var errorBoundaryMessage;
               if (boundary.tag === HostRoot) {
-                errorBoundaryMessage = "Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://reactjs.org/link/error-boundaries to learn more about error boundaries.";
+                errorBoundaryMessage = "Consider adding an error boundary to your tree to customize error handling behavior.\nVisit https://reactjs.org/link/error-boundaries to learn more aboutPage error boundaries.";
               } else {
                 var errorBoundaryName = getComponentNameFromFiber(boundary) || "Anonymous";
                 errorBoundaryMessage = "React will try to recreate this component tree from scratch " + ("using the error boundary you provided, " + errorBoundaryName + ".");
@@ -16908,7 +16908,7 @@ var require_react_dom_development = __commonJS({
                     if (destroy === null) {
                       addendum = " You returned null. If your effect does not require clean up, return undefined (or nothing).";
                     } else if (typeof destroy.then === "function") {
-                      addendum = "\n\nIt looks like you wrote " + hookName + "(async () => ...) or returned a Promise. Instead, write the async function inside your effect and call it immediately:\n\n" + hookName + "(() => {\n  async function fetchData() {\n    // You can await here\n    const response = await MyAPI.getData(someId);\n    // ...\n  }\n  fetchData();\n}, [someId]); // Or [] if effect doesn't need props or state\n\nLearn more about data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching";
+                      addendum = "\n\nIt looks like you wrote " + hookName + "(async () => ...) or returned a Promise. Instead, write the async function inside your effect and call it immediately:\n\n" + hookName + "(() => {\n  async function fetchData() {\n    // You can await here\n    const response = await MyAPI.getData(someId);\n    // ...\n  }\n  fetchData();\n}, [someId]); // Or [] if effect doesn't need props or state\n\nLearn more aboutPage data fetching with Hooks: https://reactjs.org/link/hooks-data-fetching";
                     } else {
                       addendum = " You returned: " + destroy;
                     }
@@ -18361,7 +18361,7 @@ var require_react_dom_development = __commonJS({
         function isLegacyActEnvironment(fiber) {
           {
             var isReactActEnvironmentGlobal = (
-              // $FlowExpectedError – Flow doesn't know about IS_REACT_ACT_ENVIRONMENT global
+              // $FlowExpectedError – Flow doesn't know aboutPage IS_REACT_ACT_ENVIRONMENT global
               typeof IS_REACT_ACT_ENVIRONMENT !== "undefined" ? IS_REACT_ACT_ENVIRONMENT : void 0
             );
             var jestIsDefined = typeof jest !== "undefined";
@@ -18371,7 +18371,7 @@ var require_react_dom_development = __commonJS({
         function isConcurrentActEnvironment() {
           {
             var isReactActEnvironmentGlobal = (
-              // $FlowExpectedError – Flow doesn't know about IS_REACT_ACT_ENVIRONMENT global
+              // $FlowExpectedError – Flow doesn't know aboutPage IS_REACT_ACT_ENVIRONMENT global
               typeof IS_REACT_ACT_ENVIRONMENT !== "undefined" ? IS_REACT_ACT_ENVIRONMENT : void 0
             );
             if (!isReactActEnvironmentGlobal && ReactCurrentActQueue.current !== null) {
@@ -20670,9 +20670,9 @@ var require_react_dom_development = __commonJS({
                 try {
                   setCurrentFiber(hostFiber);
                   if (fiber.mode & StrictLegacyMode) {
-                    error("%s is deprecated in StrictMode. %s was passed an instance of %s which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
+                    error("%s is deprecated in StrictMode. %s was passed an instance of %s which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more aboutPage using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
                   } else {
-                    error("%s is deprecated in StrictMode. %s was passed an instance of %s which renders StrictMode children. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
+                    error("%s is deprecated in StrictMode. %s was passed an instance of %s which renders StrictMode children. Instead, add a ref directly to the element you want to reference. Learn more aboutPage using refs safely here: https://reactjs.org/link/strict-mode-find-node", methodName, methodName, componentName);
                   }
                 } finally {
                   if (previousFiber) {

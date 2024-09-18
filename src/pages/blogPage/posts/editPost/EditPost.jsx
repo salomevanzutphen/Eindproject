@@ -1,16 +1,18 @@
 import React from 'react';
 import { useState, useRef, useEffect, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import '../CreateEditPost.css';
 import { AuthContext } from '../../../../context/AuthContext.jsx';
 
-function CreatePost() {
-    const [title, setTitle] = useState('');
-    const [subtitle, setSubtitle] = useState('');
-    const [description, setDescription] = useState('');
+function EditPost() {
+    const { id } = useParams();
+    const location = useLocation();
+    const { post } = location.state || {};
+    const [title, setTitle] = useState(post?.title || '');
+    const [subtitle, setSubtitle] = useState(post?.subtitle || '');
+    const [description, setDescription] = useState(post?.description || '');
     const [image, setImage] = useState(null);
-    const [addSuccess, setAddSuccess] = useState(false);
     const fileInputRef = useRef(null);
     const navigate = useNavigate();
     const { roles } = useContext(AuthContext);
@@ -22,7 +24,7 @@ function CreatePost() {
         }
     }, [roles, navigate]);
 
-    async function addPost(e) {
+    async function updatePost(e) {
         e.preventDefault();
 
         const formData = new FormData();
@@ -32,14 +34,11 @@ function CreatePost() {
 
         if (fileInputRef.current.files[0]) {
             formData.append('image', fileInputRef.current.files[0]);
-        } else {
-            console.error('No image file selected');
-            return;
         }
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('http://localhost:8080/posts', formData, {
+            const response = await axios.put(`http://localhost:8080/posts/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`,
@@ -47,17 +46,9 @@ function CreatePost() {
             });
 
             console.log(response.data);
-            setAddSuccess(true);
-
-            setTitle('');
-            setSubtitle('');
-            setDescription('');
-            setImage(null);
-            fileInputRef.current.value = null;
-
-            navigate('/blog');
+            navigate('/blogPage');
         } catch (error) {
-            console.error('Error creating post:', error);
+            console.error('Error updating post:', error);
         }
     }
 
@@ -67,9 +58,8 @@ function CreatePost() {
 
     return (
         <div className="create-post-page">
-            <h1>Create New Post</h1>
-            {addSuccess && <p>Post created successfully!</p>}
-            <form onSubmit={addPost}>
+            <h1>Edit Post</h1>
+            <form onSubmit={updatePost}>
                 <div className="form-group">
                     <label htmlFor="post-title">Title</label>
                     <input
@@ -110,14 +100,13 @@ function CreatePost() {
                         id="post-image"
                         onChange={handleImageChange}
                         ref={fileInputRef}
-                        required
                     />
                     {image && <img src={image} alt="Preview" className="image-preview" />}
                 </div>
-                <button type="submit">Submit</button>
+                <button type="submit">Update</button>
             </form>
         </div>
     );
 }
 
-export default CreatePost;
+export default EditPost;

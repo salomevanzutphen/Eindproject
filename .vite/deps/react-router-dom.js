@@ -4995,7 +4995,7 @@ function useLinkClickHandler(to, _temp) {
   }, [location, navigate, path, replaceProp, state, target, to, preventScrollReset, relative, unstable_viewTransition]);
 }
 function useSearchParams(defaultInit) {
-  true ? warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params\n\nIf you're unsure how to load polyfills, we recommend you check out https://polyfill.io/v3/ which provides some recommendations about how to load polyfills only for users that need them, instead of for every user.") : void 0;
+  true ? warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params\n\nIf you're unsure how to load polyfills, we recommend you check out https://polyfill.io/v3/ which provides some recommendations aboutPage how to load polyfills only for users that need them, instead of for every user.") : void 0;
   let defaultSearchParamsRef = React2.useRef(createSearchParams(defaultInit));
   let hasSetSearchParamsRef = React2.useRef(false);
   let location = useLocation();

@@ -5,12 +5,12 @@ import Navbar from "./components/navigation/Navigation.jsx";
 import ScrollToTop from './helpers/ScrollToTop.jsx';
 
 // Lazy load the components
-const Home = lazy(() => import("./pages/home/Home.jsx"));
-const About = lazy(() => import("./pages/about/About.jsx"));
-const EditPost = lazy(() => import("./pages/Blog/posts/editPost/EditPost.jsx"));
-const Blog = lazy(() => import("./pages/Blog/Blog.jsx"));
+const Home = lazy(() => import("./pages/homePage/Home.jsx"));
+const About = lazy(() => import("./pages/aboutPage/About.jsx"));
+const EditPost = lazy(() => import("./pages/blogPage/posts/editPost/EditPost.jsx"));
+const Blog = lazy(() => import("./pages/blogPage/Blog.jsx"));
 const MyCycle = lazy(() => import("./pages/myCycle/MyCycle.jsx"));
-const CreatePost = lazy(() => import("./pages/Blog/posts/createPost/CreatePost.jsx"));
+const CreatePost = lazy(() => import("./pages/blogPage/posts/createPost/CreatePost.jsx"));
 const Connect = lazy(() => import("./pages/connectPage/Connect.jsx"));
 const NotFound = lazy(() => import('./pages/notFound/NotFound.jsx'));
 

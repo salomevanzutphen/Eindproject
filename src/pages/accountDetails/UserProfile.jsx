@@ -127,8 +127,8 @@ const UserProfile = ({ onClose }) => {
             localStorage.removeItem('token');
             window.location.href = '/';
         } catch (error) {
-            console.error('Error deleting user account:', error);
-            setErrorMessage('An error occurred while deleting your account. Please try again.');
+            console.error('Error deleting user accountDetails:', error);
+            setErrorMessage('An error occurred while deleting your accountDetails. Please try again.');
         }
     };
 

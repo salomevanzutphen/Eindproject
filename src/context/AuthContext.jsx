@@ -74,7 +74,7 @@ function AuthContextProvider({ children }) {
         if (authState.status === 'done' && authState.isAuth) {
             // Check if the user has an admin role in the updated state
             if (authState.roles.includes('ROLE_ADMIN')) {
-                navigate('/blog');
+                navigate('/blogPage');
             } else if (authState.roles.includes('ROLE_USER')) {
                 navigate('/mysync');
             }

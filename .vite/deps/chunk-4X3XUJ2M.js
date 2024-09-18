@@ -442,7 +442,7 @@ var require_react_development = __commonJS({
             if (typeof config.ref === "string" && ReactCurrentOwner.current && config.__self && ReactCurrentOwner.current.stateNode !== config.__self) {
               var componentName = getComponentNameFromType(ReactCurrentOwner.current.type);
               if (!didWarnAboutStringRefs[componentName]) {
-                error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
+                error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. This case cannot be automatically converted to an arrow function. We ask you to manually fix this case by using useRef() or createRef() instead. Learn more aboutPage using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, config.ref);
                 didWarnAboutStringRefs[componentName] = true;
               }
             }
@@ -1042,7 +1042,7 @@ var require_react_development = __commonJS({
           var dispatcher = ReactCurrentDispatcher.current;
           {
             if (dispatcher === null) {
-              error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips about how to debug and fix this problem.");
+              error("Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://reactjs.org/link/invalid-hook-call for tips aboutPage how to debug and fix this problem.");
             }
           }
           return dispatcher;

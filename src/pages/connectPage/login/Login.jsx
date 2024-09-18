@@ -51,7 +51,7 @@ const Login = ({ close }) => {
 
             // Redirect based on the user's role
             if (roles.includes('ROLE_ADMIN')) {
-                navigate('/blog');
+                navigate('/blogPage');
             } else if (roles.includes('ROLE_USER')) {
                 navigate('/mysync');
             } else {

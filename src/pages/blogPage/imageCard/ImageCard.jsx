@@ -25,7 +25,7 @@ const ImageCard = ({ selectedPost, onClose }) => {
                     'Authorization': `Bearer ${token}`,
                 }
             });
-            navigate('/blog', { replace: true });
+            navigate('/blogPage', { replace: true });
             window.location.reload();
         } catch (error) {
             console.error('Error deleting post:', error);

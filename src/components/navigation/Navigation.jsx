@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import profileIcon from "../../assets/profile.png";
-import UserProfile from "../../pages/account/UserProfile.jsx";
+import UserProfile from "../../pages/accountDetails/UserProfile.jsx";
 
 function Navbar() {
     const location = useLocation();
