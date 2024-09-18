@@ -1,0 +1,264 @@
+.phase4-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    padding-bottom: 200px;
+}
+
+.phase-welcome-script{
+    font-size: 30px;
+    font-family: "La Belle Aurore", cursive;
+}
+
+
+.phase4-title{
+    text-align: center;
+    font-size: 96px;
+    color: var(--blue);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.phase-introduction{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.calendar{
+    width: 570px;
+    height: 550px;
+}
+
+
+.phase-intro-text{
+    text-align: left;
+    flex-direction: column;
+    width: 600px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.phase4-intro-title{
+    color: var(--blue);
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    width: 295px;
+    padding: 15px;
+    font-size: 33px;
+    font-style: italic;
+    text-align: center;
+    font-weight: 600;
+
+}
+
+.phase-intro-text p{
+    font-size: 33px;
+    color: #000000;
+    font-weight: 250;
+}
+
+
+
+
+.phase-activities{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 60px;
+
+}
+
+
+.phase4-activity{
+    text-align: center;
+    color: var(--blue);
+    font-size: 32px;
+    font-style: italic;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
+.declutter-image, .to-dolist-image, .planning-image{
+    width: 223px;
+    height: 263px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+
+
+
+.menstrualcycle{
+    width: 800px;
+    margin-top: 90px;
+    border-radius: 40px;
+    background-color: white;
+    padding: 20px;
+}
+
+
+
+
+
+.progesterone-info{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+.progesterone-info h2{
+    margin-top: 30px;
+    color: var(--blue);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    z-index: 1;
+}
+
+.progesterone-info p{
+    color: black;
+    width: 940px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 40px;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+}
+
+
+.PMS-info{
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+}
+
+
+
+.PMS-symptoms{
+    height: 350px;
+    width: auto;
+}
+
+.PMS-info p{
+    background-color: white;
+    color: black;
+    padding: 20px 25px;
+    width: 850px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    font-style: italic;
+    border-radius: 40px;
+    margin-left: 50px;
+
+}
+
+
+.nutrient-wrapper{
+    flex-direction: column;
+    display: flex;
+    margin-top: 70px;
+}
+
+
+.nutrient-title-p4{
+    font-size: 64px;
+    color: var(--blue);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 30px;
+}
+
+
+.nutrient-wrapper2{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+
+.nutrient-video{
+    width: 450px;
+    height: 820px;
+    border-radius: 40px;
+}
+
+
+.blue-background {
+    background-color: var(--blue);
+}
+
+
+.nutrient-wrapper3{
+    flex-direction: column;
+    display: flex;
+    margin-top: 0;
+}
+
+
+
+.nutrient-subtitle{
+    font-size: 36px;
+    font-family: "Newsreader", serif;
+    font-weight: 300;
+}
+
+.nutrients{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 800px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.hormones-info-p4{
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 40px;
+    margin-top: 60px;
+}
+
+.hormones-title-p4{
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--blue);
+}
+
+.hormones-info-p4 p{
+    font-size: 27px;
+    font-weight: 300;
+}
+
+
+.mealtip-phase4{
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.meal4{
+    width: 222px;
+    height: 222px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.tip-phase4{
+    max-width: 500px;
+    font-family: "La Belle Aurore", cursive;
+    font-size: 30px;
+    align-content: center;
+    margin-left: 25px;
+    text-align: left;
+}
