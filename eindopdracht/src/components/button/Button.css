@@ -1,0 +1,15 @@
+.custom-button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: background-color 0.3s;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #e0e0e0;
+}
+
+.custom-button:hover {
+    background-color: #808080 !important;
+}

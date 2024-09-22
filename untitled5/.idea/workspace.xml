@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="add44350-6dad-4d34-aff3-81f3dc5ea0a5" name="Changes" comment="update: add colour green">
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/_metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/axios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/axios.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-4X3XUJ2M.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-4X3XUJ2M.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-G3PMV62Z.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-G3PMV62Z.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-MZQMFKLV.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/chunk-MZQMFKLV.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/jwt-decode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/jwt-decode.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/prop-types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/prop-types.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react-router-dom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react-router-dom.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/.vite/deps/react.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/backgroundsalome.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/estrogen-dominance-symptoms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/letsconnectsticker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/logotrans.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/namelogo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/pms-sympomts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/profile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/assets/question.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/button/Button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/button/Button.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/calendar/Calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/calendar/Calendar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/deleteConfirmation/DeleteConfirmation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/deleteConfirmation/DeleteConfirmation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/explenationMessage/ExplenationMessage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/explenationMessage/ExplenationMessage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/fullCalendar/FullCalendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/fullCalendar/FullCalendar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/journalprompt/JournalPrompt.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/journalprompt/JournalPrompt.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/keyword/Keyword.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/keyword/Keyword.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/navigation/Navigation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/navigation/Navigation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/b/VitaminB.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/b/VitaminB.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/c/VitaminC.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/c/VitaminC.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/calcium/Calcium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/calcium/Calcium.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/catechins/Catechins.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/catechins/Catechins.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/d/VitaminD.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/d/VitaminD.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/e/VitaminE.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/e/VitaminE.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/fiber/Fiber.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/fiber/Fiber.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/folicAcid/FolicAcid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/folicAcid/FolicAcid.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/glycine/Glycine.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/glycine/Glycine.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/indole-3Carbinol/Indole.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/indole-3Carbinol/Indole.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/iodine/Iodine.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/iodine/Iodine.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/iron/Iron.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/iron/Iron.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/magnesium/Magnesium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/magnesium/Magnesium.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/omega3/Omega3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/omega3/Omega3.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/selenium/Selenium.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/selenium/Selenium.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/zinc/Zinc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/nutrient/zinc/Zinc.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/signUpSuccess/SignUpSuccess.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/components/signUpSuccess/SignUpSuccess.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/context/AuthContext.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/helpers/CalendarHelpers.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/helpers/FullCalendarHelpers.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/helpers/ScrollToTop.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/aboutPage/About.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/aboutPage/About.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/accountDetails/UserProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/accountDetails/UserProfile.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/Blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/Blog.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/imageCard/ImageCard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/imageCard/ImageCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/postView/PostView.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/postView/PostView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/posts/CreateEditPost.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/posts/createPost/CreatePost.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/blogPage/posts/editPost/EditPost.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/Connect.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/Connect.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/login/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/signUp/SignUp.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/connectPage/signUp/SignUp.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase1/Phase1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase1/Phase1.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase2/Phase2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase2/Phase2.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase3/Phase3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase3/Phase3.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase4/Phase4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/phase4/Phase4.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/welcomePhase/WelcomePhase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/cyclePhases/welcomePhase/WelcomePhase.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/homePage/Home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/homePage/Home.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/myCycle/MyCycle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/myCycle/MyCycle.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/notFound/NotFound.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/src/pages/notFound/NotFound.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../eindopdracht/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="4" />
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../Finalversie-eindopdracht" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="final-styling-blogpage" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2exS7BBfLRsQj21bztdRxaTqNwk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/31615/WebstormProjects/component/eindproject/eindopdracht/src/assets",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.2.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\31615\WebstormProjects\component\eindproject\eindopdracht\src\assets" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\assets" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\assets\Gallery" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\components\Nutrients\Vitamin B\VitaminB-assets" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\pages\Phases\Phase3\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\components\Nutrients\omega3" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\pages\myCycle" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\pages\Blog\posts" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\pages\Blog" />
+      <recent name="C:\Users\31615\WebstormProjects\component\untitled5\src\components\fullCalendar" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="npm dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="add44350-6dad-4d34-aff3-81f3dc5ea0a5" name="Changes" comment="" />
+      <created>1712844565306</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712844565306</updated>
+      <workItem from="1712844566298" duration="5846000" />
+      <workItem from="1713355470638" duration="14884000" />
+      <workItem from="1714478959289" duration="18855000" />
+      <workItem from="1714655108130" duration="10845000" />
+      <workItem from="1715001930270" duration="9881000" />
+      <workItem from="1715025488888" duration="9148000" />
+      <workItem from="1715178983136" duration="10388000" />
+      <workItem from="1715957270713" duration="13244000" />
+      <workItem from="1716201654469" duration="91410000" />
+      <workItem from="1717165644461" duration="106024000" />
+      <workItem from="1718219752163" duration="34532000" />
+      <workItem from="1719345130457" duration="33043000" />
+      <workItem from="1719741123340" duration="1640000" />
+      <workItem from="1721063437719" duration="12088000" />
+      <workItem from="1721080955434" duration="202934000" />
+      <workItem from="1723627004732" duration="120286000" />
+      <workItem from="1724483288105" duration="1430000" />
+      <workItem from="1724484802592" duration="254000" />
+      <workItem from="1724497089363" duration="6638000" />
+      <workItem from="1724528096924" duration="162000" />
+      <workItem from="1724528314399" duration="2138000" />
+      <workItem from="1724531381530" duration="9000" />
+      <workItem from="1724658111579" duration="126980000" />
+      <workItem from="1726562046161" duration="1527000" />
+      <workItem from="1726564977139" duration="9859000" />
+      <workItem from="1726641191578" duration="1215000" />
+      <workItem from="1726643934472" duration="3866000" />
+      <workItem from="1726779757600" duration="2526000" />
+    </task>
+    <task id="LOCAL-00001" summary="frontpagina">
+      <option name="closed" value="true" />
+      <created>1723205062842</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723205062842</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Juiste informatiecomponent renderen met calenderfase">
+      <option name="closed" value="true" />
+      <created>1723334621397</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723334621397</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updated homepage">
+      <option name="closed" value="true" />
+      <created>1723411329097</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723411329097</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated homepage">
+      <option name="closed" value="true" />
+      <created>1723411352917</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723411352917</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Welcome page basic set up">
+      <option name="closed" value="true" />
+      <created>1723670886408</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723670886408</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Blogpagina">
+      <option name="closed" value="true" />
+      <created>1723738622609</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723738622609</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Blogpagina &amp; post changes">
+      <option name="closed" value="true" />
+      <created>1723820715644</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820715644</updated>
+    </task>
+    <task id="LOCAL-00008" summary="sign up changes">
+      <option name="closed" value="true" />
+      <created>1723820749263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820749263</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Wie ziet welke elementen van de navigatiebar?">
+      <option name="closed" value="true" />
+      <created>1723820773013</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820773013</updated>
+    </task>
+    <task id="LOCAL-00010" summary="kalender aanpassingen">
+      <option name="closed" value="true" />
+      <created>1723820797711</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820797711</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Homepagina + verwijzing naar about pagina">
+      <option name="closed" value="true" />
+      <created>1723820823879</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820823879</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Phase aanpassingen">
+      <option name="closed" value="true" />
+      <created>1723820843414</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723820843414</updated>
+    </task>
+    <task id="LOCAL-00013" summary="updated typografie">
+      <option name="closed" value="true" />
+      <created>1724189497860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189497860</updated>
+    </task>
+    <task id="LOCAL-00014" summary="new vitamin styling">
+      <option name="closed" value="true" />
+      <created>1724189548913</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189548913</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updated phase styling">
+      <option name="closed" value="true" />
+      <created>1724189576514</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189576514</updated>
+    </task>
+    <task id="LOCAL-00016" summary="button colour change">
+      <option name="closed" value="true" />
+      <created>1724189607423</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189607423</updated>
+    </task>
+    <task id="LOCAL-00017" summary="styling changes">
+      <option name="closed" value="true" />
+      <created>1724189625043</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189625043</updated>
+    </task>
+    <task id="LOCAL-00018" summary="making sure the button doesn't move &amp; adding more prompts">
+      <option name="closed" value="true" />
+      <created>1724189642311</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189642311</updated>
+    </task>
+    <task id="LOCAL-00019" summary="authentication updates &amp; styling">
+      <option name="closed" value="true" />
+      <created>1724189670770</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189670770</updated>
+    </task>
+    <task id="LOCAL-00020" summary="user friendliness">
+      <option name="closed" value="true" />
+      <created>1724189691799</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189691799</updated>
+    </task>
+    <task id="LOCAL-00021" summary="new homepage styling (part 2)">
+      <option name="closed" value="true" />
+      <created>1724189714483</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189714483</updated>
+    </task>
+    <task id="LOCAL-00022" summary="vitamin styling update">
+      <option name="closed" value="true" />
+      <created>1724189737183</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189737183</updated>
+    </task>
+    <task id="LOCAL-00023" summary="adding userfriendliness &amp; styling">
+      <option name="closed" value="true" />
+      <created>1724189794486</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189794486</updated>
+    </task>
+    <task id="LOCAL-00024" summary="nutrient styling update">
+      <option name="closed" value="true" />
+      <created>1724189810334</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189810334</updated>
+    </task>
+    <task id="LOCAL-00025" summary="'post' has new components(name becomes subtitle), adjusting changes">
+      <option name="closed" value="true" />
+      <created>1724189854536</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189854536</updated>
+    </task>
+    <task id="LOCAL-00026" summary="button typography">
+      <option name="closed" value="true" />
+      <created>1724189886924</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189886924</updated>
+    </task>
+    <task id="LOCAL-00027" summary="styling">
+      <option name="closed" value="true" />
+      <created>1724189895226</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724189895226</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Cleaning up the code &amp; file structure">
+      <option name="closed" value="true" />
+      <created>1724289420008</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1724289420009</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Cleaning up the code &amp; file structure">
+      <option name="closed" value="true" />
+      <created>1724482096623</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1724482096623</updated>
+    </task>
+    <task id="LOCAL-00030" summary="clearing out to reduce size">
+      <option name="closed" value="true" />
+      <created>1724484465339</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1724484465339</updated>
+    </task>
+    <task id="LOCAL-00031" summary="clearing out to reduce size">
+      <option name="closed" value="true" />
+      <created>1724527912771</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724527912771</updated>
+    </task>
+    <task id="LOCAL-00032" summary="new layout">
+      <option name="closed" value="true" />
+      <created>1724781820932</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781820932</updated>
+    </task>
+    <task id="LOCAL-00033" summary="calendar cleanup with helpers">
+      <option name="closed" value="true" />
+      <created>1724781871773</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781871773</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update with new prompts">
+      <option name="closed" value="true" />
+      <created>1724781886163</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781886163</updated>
+    </task>
+    <task id="LOCAL-00035" summary="error message password">
+      <option name="closed" value="true" />
+      <created>1724781909157</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781909157</updated>
+    </task>
+    <task id="LOCAL-00036" summary="post blog updates">
+      <option name="closed" value="true" />
+      <created>1724781956948</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781956948</updated>
+    </task>
+    <task id="LOCAL-00037" summary="assets">
+      <option name="closed" value="true" />
+      <created>1724781980177</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781980177</updated>
+    </task>
+    <task id="LOCAL-00038" summary="change capital letter">
+      <option name="closed" value="true" />
+      <created>1724781999778</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1724781999778</updated>
+    </task>
+    <task id="LOCAL-00039" summary="button component">
+      <option name="closed" value="true" />
+      <created>1724936158030</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1724936158030</updated>
+    </task>
+    <task id="LOCAL-00040" summary="final changes">
+      <option name="closed" value="true" />
+      <created>1724936169560</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1724936169560</updated>
+    </task>
+    <task id="LOCAL-00041" summary="final changes">
+      <option name="closed" value="true" />
+      <created>1725111999076</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1725111999076</updated>
+    </task>
+    <task id="LOCAL-00042" summary="&quot;update: styling adjustments&quot;">
+      <option name="closed" value="true" />
+      <created>1725112138938</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1725112138938</updated>
+    </task>
+    <task id="LOCAL-00043" summary="final design create &amp; edit page">
+      <option name="closed" value="true" />
+      <created>1725113186933</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1725113186933</updated>
+    </task>
+    <task id="LOCAL-00044" summary="update: colour from app.css &amp; styling adjustments">
+      <option name="closed" value="true" />
+      <created>1725113856552</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1725113856552</updated>
+    </task>
+    <task id="LOCAL-00045" summary="update: add colour green">
+      <option name="closed" value="true" />
+      <created>1725114078612</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1725114078612</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="making sure the button doesn't move &amp; adding more prompts" />
+    <MESSAGE value="authentication updates &amp; styling" />
+    <MESSAGE value="user friendliness" />
+    <MESSAGE value="new homepage styling (part 2)" />
+    <MESSAGE value="vitamin styling update" />
+    <MESSAGE value="adding userfriendliness &amp; styling" />
+    <MESSAGE value="nutrient styling update" />
+    <MESSAGE value="'post' has new components(name becomes subtitle), adjusting changes" />
+    <MESSAGE value="button typography" />
+    <MESSAGE value="styling" />
+    <MESSAGE value="Cleaning up the code &amp; file structure" />
+    <MESSAGE value="clearing out to reduce size" />
+    <MESSAGE value="new layout" />
+    <MESSAGE value="calendar cleanup with helpers" />
+    <MESSAGE value="update with new prompts" />
+    <MESSAGE value="error message password" />
+    <MESSAGE value="post blog updates" />
+    <MESSAGE value="assets" />
+    <MESSAGE value="change capital letter" />
+    <MESSAGE value="button component" />
+    <MESSAGE value="final changes" />
+    <MESSAGE value="&quot;update: styling adjustments&quot;" />
+    <MESSAGE value="final design create &amp; edit page" />
+    <MESSAGE value="update: colour from app.css &amp; styling adjustments" />
+    <MESSAGE value="update: add colour green" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: add colour green" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../eindopdracht/src/components/nutrient/Vitamin B/VitaminB.jsx</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/../eindopdracht/src/components/nutrient/Indole-3 Carbinol/Indole.jsx</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
