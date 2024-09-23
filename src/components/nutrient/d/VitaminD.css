@@ -1,0 +1,58 @@
+.vitaminD-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vitaminD {
+    color: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.vitaminD:hover {
+    background-color: grey;
+}
+
+
+.vitaminD-description {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    width: 700px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vitaminD-description::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 33px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid white;
+}
+
+
+.vitaminD-description-content p{
+    margin-left: 10px;
+}
+
+
