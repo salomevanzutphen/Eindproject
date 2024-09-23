@@ -1,6 +1,6 @@
 import "./Home.css";
 import {useNavigate} from "react-router-dom";
-import mainimage from "../../assets/backgroundsalome.jpg";
+import mainimage from "../../assets/backgroundimage.jpg";
 
 
 function Home() {
@@ -35,7 +35,7 @@ function Home() {
                 <blockquote className="homepage-quote">
                     "When my mother got sick, I wanted to find the root of the problem. Is our modern-day lifestyle to blame?" - Salomé
                 </blockquote>
-                    <button className="mystory" onClick={() => navigate('/aboutPage')}>Read my story</button>
+                    <button className="mystory" onClick={() => navigate('/about')}>Read my story</button>
 
 
 
